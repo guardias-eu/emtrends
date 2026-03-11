@@ -47,6 +47,3 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
-
-# 1x1km grid of Europe
-data/external/EEA-1km-GRID-EU-2013.gdb/
