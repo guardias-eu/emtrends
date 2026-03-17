@@ -4,6 +4,8 @@ library(ggplot2)
 library(here)
 library(purrr)
 library(readr)
+library(rgbif)
+library(stringr)
 library(tidyr)
 
 # Load the most recent species occurrence cube ####
