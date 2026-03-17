@@ -38,8 +38,10 @@ grid <- grid %>%
   ) %>%
    dplyr::select(-cell_row)
 
-# Save grid cellcodes with LME information as csv file
+# Save grid cellcodes with LME information as csv file. Only keep cells that are assigned to an LME
+# and remove geometry for easier handling in R later on.
 output_file <- "data/output/grid_cells_with_lme_info.csv"
 grid %>%
+  dplyr::filter(!is.na(lme_id)) %>%
   st_set_geometry(NULL) %>%
-  readr::write_csv(output_file, na = "")
+  readr::write_csv(output_file)
