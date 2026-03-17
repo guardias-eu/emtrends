@@ -132,7 +132,8 @@ plot_indicators <- function(df, species_key) {
   else {
     df %>%
     ggplot(aes(x = year, y = value)) +
-    geom_line() +
+      geom_point() +
+      geom_line() +
     facet_wrap(~indicator, scales = "free_y", ncol = 1) +
     labs(
       title = paste("Species key:", species_key, ". n_occurrences (top), n_grid_cells (bottom)"),
@@ -183,49 +184,3 @@ purrr::iwalk(
     )
   }
 )
-
-# Create plotly objects from the plot_list
-plotly_list <- plot_list %>%
-  purrr::imap(
-    function(lme_plots, lme_name) {
-      message("Creating plotly objects for LME: ", lme_name, " (ID: ", lme_ids[names(lme_ids) == lme_name], ")")
-      species_plotly <- purrr::imap(
-        lme_plots,
-        function(p, s) {
-          if (!is.null(p)) {
-            ggplotly(p)
-          } else {
-            NULL
-          }
-        },
-        .progress = TRUE
-      )
-    },
-    .progress = TRUE
-  )
-
-# Save plotly objects as .html in output folder
-output_folder_html <- here::here("data/output/indicators_plots/indicators_plots_html")
-plotly_list %>%
-  purrr::iwalk(
-    function(lme_plots, lme_name) {
-      message("Saving html plots for LME: ", lme_name, " (ID: ", lme_ids[names(lme_ids) == lme_name], ")")
-      purrr::iwalk(
-        lme_plots,
-        function(p, s) {
-          if (!is.null(p)) {
-            htmlwidgets::saveWidget(
-              widget = p,
-              file = here::here(
-                output_folder_html, paste0("lme_", lme_name, "_species_", s, ".html")
-                ),
-              selfcontained = TRUE,
-              libdir = NULL,
-              title = paste("LME:", lme_name, "- Species key:", s)
-            )
-          }
-        },
-        .progress = TRUE
-      )
-    }
-  )
