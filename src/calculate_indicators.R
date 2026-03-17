@@ -2,7 +2,6 @@
 library(dplyr)
 library(ggplot2)
 library(here)
-library(plotly)
 library(purrr)
 library(readr)
 library(tidyr)
@@ -17,7 +16,7 @@ last_cube <- list_cubes %>%
 last_cube_key <- last_cube$gbif_download_key
 
 ## Download the cube from GBIF ####
-cube_path <- here::here("data")
+cube_path <- here::here("data", "input")
 cube_zip <- rgbif::occ_download_get(key = last_cube_key, path = cube_path, overwrite = TRUE)
 
 ## Unzip and load the cube ####
@@ -144,7 +143,18 @@ plot_indicators <- function(df, species_key) {
   }
 }
 
-# Generate and save plots for each species
+# Generate and save plots for each species ####
+
+# Delete existing plots in output folder to avoid confusion with old plots when saving new ones. It can be that we are creating indicators 
+# for a new cube, where the species list has changed, so we want to make sure that old plots are not mixed with new ones.
+output_folder <- here::here("data/output/indicators_plots/indicators_plots_png/")
+existing_plots <- list.files(output_folder, pattern = "\\.png$", full.names = TRUE)
+if (length(existing_plots) > 0) {
+  message("Deleting existing plots in output folder: ", output_folder)
+  file.remove(existing_plots)
+}
+
+# Generate plots for each species in each LME. The resulting list has the structure: list(LME_name = list(species_key = plot, ...), ...)
 plot_list <- purrr::imap(
   indicators_list,
   function(lme_id, lme_name) {
@@ -162,7 +172,6 @@ plot_list <- purrr::imap(
 )
 
 # Save plots as .png in output folder
-output_folder <- here::here("data/output/indicators_plots/indicators_plots_png/")
 purrr::iwalk(
   plot_list,
   function(lme_plots, lme_name) {
