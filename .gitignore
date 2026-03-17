@@ -47,3 +47,6 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+# GBIF Downloads zip files in data/input
+data/input/*.zip
