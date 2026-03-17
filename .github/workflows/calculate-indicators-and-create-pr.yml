@@ -1,0 +1,108 @@
+name: Run Query and Create PR
+
+on:
+  schedule:
+    - cron: '0 1 * * MON'  # Run at 1 AM (UTC) every Monday night
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  run-query:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          ref: main
+      
+      - name: Setup R
+        uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: 'release'
+          use-public-rspm: true
+      
+      - name: Get R library path
+        id: r-lib
+        run: |
+          echo "path=$(Rscript -e 'cat(.libPaths()[1])')" >> $GITHUB_OUTPUT
+      
+      - name: Setup R dependencies cache
+        uses: actions/cache@v5
+        with:
+          path: ${{ steps.r-lib.outputs.path }}
+          key: ${{ runner.os }}-r-${{ hashFiles('src/build_run_query.R', 'tests/test-list_downloads.R') }}
+          restore-keys: |
+            ${{ runner.os }}-r-
+      
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libcurl4-openssl-dev libssl-dev libxml2-dev libudunits2-dev libgdal-dev gdal-bin libpng-dev
+      
+      - name: Install R dependencies
+        env: 
+          GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          install.packages(c('dplyr', 'ggplot2', 'here', 'purrr', 'readr', 'tidyr', 'testthat'))
+          remotes::install_github('trias-project/trias')
+          remotes::install_github('guardias-eu/reasin')
+        shell: Rscript {0}
+ 
+      - name: Calculate indicators
+        run: Rscript src/calculate_indicators.R
+      
+      - name: Check for changes
+        id: check_changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          if [[ -n $(git status --porcelain) ]]; then
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+            echo "Changes detected"
+          else
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+            echo "No changes detected"
+          fi
+      
+      - name: Create branch and commit changes
+        if: steps.check_changes.outputs.has_changes == 'true'
+        id: create_branch
+        run: |
+          BRANCH_NAME="automated-query-update-$(date +%Y%m%d-%H%M%S)"
+          echo "branch_name=$BRANCH_NAME" >> $GITHUB_OUTPUT
+          
+          git checkout -b "$BRANCH_NAME"
+          git add -A
+          git commit -m "Automated update from build_run_query.R"
+          git push origin "$BRANCH_NAME"
+      
+      - name: Create Pull Request
+        id: create_pr
+        uses: actions/github-script@v8
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const { data: pr } = await github.rest.pulls.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: 'Automated query update',
+              head: '${{ steps.create_branch.outputs.branch_name }}',
+              base: 'main',
+              body: 'This PR was automatically created by a nightly (or event dispatch) run of `calculate-indicators-and-create-pr.yml`.
+            });
+            
+            // Add automated label
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: pr.number,
+              labels: ['automated']
+            });
+            
+            core.setOutput('pr_number', pr.number);
+            return pr.number;
