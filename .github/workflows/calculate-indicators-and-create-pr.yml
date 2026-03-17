@@ -47,9 +47,7 @@ jobs:
         env: 
           GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          install.packages(c('dplyr', 'ggplot2', 'here', 'purrr', 'readr', 'tidyr', 'testthat'))
-          remotes::install_github('trias-project/trias')
-          remotes::install_github('guardias-eu/reasin')
+          install.packages(c('dplyr', 'ggplot2', 'here', 'purrr', 'readr', 'remotes', 'tidyr', 'testthat'))
         shell: Rscript {0}
  
       - name: Calculate indicators

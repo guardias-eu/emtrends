@@ -18,6 +18,10 @@ lme_eu <- lme[lme$objectid %in% lme_ids_eu, ]
 # Validate polygons
 lme_eu <- sf::st_make_valid(lme_eu)
 
+# Save the LME layer as a GeoPackage file for future use
+lme_output_file <- "data/output/lme_europe.gpkg"
+lme_eu %>% sf::st_write(lme_output_file, delete_dsn = TRUE)
+
 # Transform the LMEs to the same CRS as the grid (ETRS89 / LAEA Europe, EPSG:3035)
 lme_eu <- sf::st_transform(lme_eu, crs = sf::st_crs(grid))
 
