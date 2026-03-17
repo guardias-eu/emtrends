@@ -1,4 +1,4 @@
-name: Run Query and Create PR
+name: Calculate Indicators and Create PR
 
 on:
   schedule:
