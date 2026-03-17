@@ -133,7 +133,16 @@ indicators_list <- purrr::imap(
   .progress = TRUE
 )
 
-# Plot occurrences and occupancy as subplots next to each other for each species ####
+# Generate and save plots for each species ####
+
+# Delete existing plots in output folder to avoid confusion with old plots when saving new ones. It can be that we are creating indicators 
+# for a new cube, where the species list has changed, so we want to make sure that old plots are not mixed with new ones.
+output_folder <- here::here("data/output/indicators_plots/indicators_plots_png/")
+existing_plots <- list.files(output_folder, pattern = "\\.png$", full.names = TRUE)
+if (length(existing_plots) > 0) {
+  message("Deleting existing plots in output folder: ", output_folder)
+  file.remove(existing_plots)
+}
 
 # Function for plots
 plot_indicators <- function(df, species_key) {
@@ -153,18 +162,8 @@ plot_indicators <- function(df, species_key) {
   }
 }
 
-# Generate and save plots for each species ####
-
-# Delete existing plots in output folder to avoid confusion with old plots when saving new ones. It can be that we are creating indicators 
-# for a new cube, where the species list has changed, so we want to make sure that old plots are not mixed with new ones.
-output_folder <- here::here("data/output/indicators_plots/indicators_plots_png/")
-existing_plots <- list.files(output_folder, pattern = "\\.png$", full.names = TRUE)
-if (length(existing_plots) > 0) {
-  message("Deleting existing plots in output folder: ", output_folder)
-  file.remove(existing_plots)
-}
-
 # Generate plots for each species in each LME. The resulting list has the structure: list(LME_name = list(species_key = plot, ...), ...)
+# Plot occurrences on top and occupancy below.
 plot_list <- purrr::imap(
   indicators_list,
   function(lme_id, lme_name) {
@@ -172,7 +171,6 @@ plot_list <- purrr::imap(
     species_plots <- purrr::imap(
       lme_id,
       function(species_indicators, species_key) {
-        if (is.null(species_indicators)) return(NULL)
         plot_indicators(species_indicators, species_key)
       },
       .progress = TRUE
@@ -202,4 +200,29 @@ purrr::iwalk(
       .progress = TRUE
     )
   }
+)
+
+# For the dashboard, it's handy to have a csv with species keys, species names, LME IDs en LME names. Only existing combinations, e.g. not NULL plots.
+species_lme_combinations <- purrr::imap_dfr(
+  plot_list,
+  function(plots, lme_name) {
+    purrr::imap_dfr(
+      plots,
+      function(species_indicator, species_key) {
+        if (!is.null(species_indicator)) {
+          tidyr::tibble(
+            species_key = as.integer(species_key),
+            species_name = species_names[[as.character(species_key)]],
+            lme_id = as.integer(lme_ids[names(lme_ids) == lme_name]),
+            lme_name = lme_name
+          )
+        }
+      }
+    )
+  }
+)
+readr::write_csv(
+  species_lme_combinations,
+  here::here("data/output/species_lme_combinations.csv"),
+  na = ""
 )
