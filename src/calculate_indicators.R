@@ -98,9 +98,17 @@ calc_em_indicator <- function(cube, key) {
 }
 
 # Apply function to all species in the species list and all LMEs ####
-
-species_keys <- species_list$usageKey[1:50]
+n_species <- 50
+species_keys <- unique(species_list$usageKey[1:n_species])
 names(species_keys) <- species_keys
+species_names <- unique(species_list$canonicalName[match(species_keys, species_list$usageKey)])
+names(species_names) <- species_keys
+if (length(species_names) < length(species_keys)) {
+  stop(paste(
+    "Species names are not unique, please check the species list.",
+    "Consider using the `scientificName` column instead of `canonicalName` if there are issues with non-unique names."
+  ))
+}
 # Calculate indicators for all species
 indicators_list <- purrr::imap(
   lme_ids,
