@@ -148,10 +148,9 @@ if (length(existing_plots) > 0) {
 plot_indicators <- function(df, species_key) {
   if (nrow(df) == 0) return(NULL)
   else {
-    df %>%
+    plot_output <- df %>%
     ggplot(aes(x = year, y = value)) +
       geom_point() +
-      geom_line() +
     facet_wrap(~indicator, scales = "free_y", ncol = 1) +
     labs(
       title = paste("Species key:", species_key, ". n_occurrences (top), n_grid_cells (bottom)"),
@@ -159,6 +158,12 @@ plot_indicators <- function(df, species_key) {
       y = "Value"
     ) +
     theme_minimal()
+    if (nrow(df) > 0) {
+      # Add lines to the plot only if there are more than 1 point. Otherwise, it will give a warning.
+      return(plot_output + geom_line())
+    } else {
+      return(plot_output)
+    }
   }
 }
 
