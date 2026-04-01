@@ -2,6 +2,7 @@
 library(dplyr)
 library(ggplot2)
 library(here)
+library(lubridate)
 library(purrr)
 library(readr)
 library(rgbif)
@@ -211,16 +212,23 @@ purrr::iwalk(
   }
 )
 
-# Save plots as ggplot2 obejcts in zip file in output folder. This allows us to test
+# Save plots as ggplot2 obejcts in zip files in output folder. This allows us to test
 # the reactivity of OJS to transformed ggplot2 objects into plotly objects, which is not possible with .png files.
-message("Save ggplot2 objects in zip file in `data/output/indicators_plots/`")
-plot_list_zip_file <- here::here("data/output/indicators_plots/indicators_plots_ggplot2.zip")
-plot_list_rdata_file <- here::here("data/output/indicators_plots/indicators_plots_ggplot2.RData")
-# Zip file does not support saving R objects directly, so we need to save the list as an .RData file first, then zip it.
-save(plot_list, file = plot_list_rdata_file)
-zip::zip(zipfile = plot_list_zip_file, files = plot_list_rdata_file, mode = "cherry-pick")
-file.remove(plot_list_rdata_file)
-
+# One zip file per each LME, containing the ggplot2 objects for all species in that LME.
+# The structure of the zip file is: list(species_key = plot, ...)
+message("Save ggplot2 objects as zip files")
+purrr::iwalk(
+  plot_list,
+  function(lme_plots, lme_name) {
+      plot_list_zip_file <- here::here("data", "output", "indicators_plots", paste0("indicators_plots_ggplot2_", lme_name, ".zip"))
+      # Zip file does not support saving R objects directly, so we need to save the list as an .RData file first, then zip it.
+      plot_list_rdata_file <- here::here("data", "output", "indicators_plots", paste0("indicators_plots_ggplot2_", lme_name, ".RData"))
+      save(lme_plots, file = plot_list_rdata_file)
+      zip::zip(zipfile = plot_list_zip_file, files = plot_list_rdata_file, mode = "cherry-pick")
+      file.remove(plot_list_rdata_file)
+  },
+.progress = TRUE
+)
 # For the dashboard, it's handy to have a csv with species keys, species names,
 # LME IDs en LME names. Only existing combinations, e.g. not NULL plots.
 species_lme_combinations <- purrr::imap_dfr(
