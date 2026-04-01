@@ -7,6 +7,7 @@ library(readr)
 library(rgbif)
 library(stringr)
 library(tidyr)
+library(zip)
 
 # Load the most recent species occurrence cube ####
 
@@ -133,16 +134,7 @@ indicators_list <- purrr::imap(
   .progress = TRUE
 )
 
-# Generate and save plots for each species ####
-
-# Delete existing plots in output folder to avoid confusion with old plots when saving new ones. It can be that we are creating indicators 
-# for a new cube, where the species list has changed, so we want to make sure that old plots are not mixed with new ones.
-output_folder <- here::here("data/output/indicators_plots/indicators_plots_png/")
-existing_plots <- list.files(output_folder, pattern = "\\.png$", full.names = TRUE)
-if (length(existing_plots) > 0) {
-  message("Deleting existing plots in output folder: ", output_folder)
-  file.remove(existing_plots)
-}
+# Generate plots for each species ####
 
 # Function for plots
 plot_indicators <- function(df, species_key) {
@@ -184,6 +176,18 @@ plot_list <- purrr::imap(
   .progress = TRUE
 )
 
+
+# Save plots for each species ####
+# Delete existing plots in output folder to avoid confusion with old plots when saving new ones. It can be that we are creating indicators 
+# for a new cube, where the species list has changed, so we want to make sure that old plots are not mixed with new ones.
+
+output_folder <- here::here("data/output/indicators_plots/indicators_plots_png/")
+existing_plots <- list.files(output_folder, pattern = "\\.png$", full.names = TRUE)
+if (length(existing_plots) > 0) {
+  message("Deleting existing plots in output folder: ", output_folder)
+  file.remove(existing_plots)
+}
+
 # Save plots as .png in output folder
 purrr::iwalk(
   plot_list,
@@ -206,6 +210,15 @@ purrr::iwalk(
     )
   }
 )
+
+# Save plots as ggplot2 obejcts in zip file in output folder. This allows us to test
+# the reactivity of OJS to transformed ggplot2 objects into plotly objects, which is not possible with .png files.
+plot_list_zip_file <- here::here("data/output/indicators_plots/indicators_plots_ggplot2.zip")
+plot_list_rdata_file <- here::here("data/output/indicators_plots/indicators_plots_ggplot2.RData")
+# Zip file does not support saving R objects directly, so we need to save the list as an .RData file first, then zip it.
+save(plot_list, file = plot_list_rdata_file)
+zip::zip(zipfile = plot_list_zip_file, files = plot_list_rdata_file, mode = "cherry-pick")
+file.remove(plot_list_rdata_file)
 
 # For the dashboard, it's handy to have a csv with species keys, species names,
 # LME IDs en LME names. Only existing combinations, e.g. not NULL plots.
