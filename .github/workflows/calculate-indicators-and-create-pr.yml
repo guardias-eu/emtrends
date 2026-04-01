@@ -47,7 +47,7 @@ jobs:
         env: 
           GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          install.packages(c('dplyr', 'ggplot2', 'here', 'purrr', 'readr', 'remotes', 'rgbif', 'stringr', 'tidyr', 'testthat'))
+          install.packages(c('dplyr', 'ggplot2', 'here', 'purrr', 'readr', 'remotes', 'rgbif', 'stringr', 'tidyr', 'testthat', 'zip'))
         shell: Rscript {0}
  
       - name: Calculate indicators
