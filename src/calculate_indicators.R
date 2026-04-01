@@ -213,6 +213,7 @@ purrr::iwalk(
 
 # Save plots as ggplot2 obejcts in zip file in output folder. This allows us to test
 # the reactivity of OJS to transformed ggplot2 objects into plotly objects, which is not possible with .png files.
+message("Save ggplot2 objects in zip file in `data/output/indicators_plots/`")
 plot_list_zip_file <- here::here("data/output/indicators_plots/indicators_plots_ggplot2.zip")
 plot_list_rdata_file <- here::here("data/output/indicators_plots/indicators_plots_ggplot2.RData")
 # Zip file does not support saving R objects directly, so we need to save the list as an .RData file first, then zip it.
