@@ -287,15 +287,24 @@ plot_list <- purrr::imap(
   .progress = TRUE
 )
 
+# Remove NULLs from each element in plot list, to avoid confusion when saving the plots. 
+# NULL means that there were no occurrences for that species in that LME, so no plot was generated.
+plot_list <- purrr::map(
+  plot_list,
+  function(lme_plots) {
+    purrr::compact(lme_plots)
+  }
+)
+
 
 # Save plots for each species ####
 # Delete existing plots in output folder to avoid confusion with old plots when saving new ones. It can be that we are creating indicators 
 # for a new cube, where the species list has changed, so we want to make sure that old plots are not mixed with new ones.
 
-output_folder <- here::here("data/output/indicators_plots/indicators_plots_png/")
-existing_plots <- list.files(output_folder, pattern = "\\.png$", full.names = TRUE)
+output_png_folder <- here::here("data/output/indicators_plots/indicators_plots_png/")
+existing_plots <- list.files(output_png_folder, pattern = "\\.png$", full.names = TRUE)
 if (length(existing_plots) > 0) {
-  message("Deleting existing plots in output folder: ", output_folder)
+  message("Deleting existing PNG plots in output folder: ", output_png_folder)
   file.remove(existing_plots)
 }
 
@@ -311,7 +320,7 @@ purrr::iwalk(
           ggsave(
             filename = paste0("lme_", lme_name, "_species_", s, ".png"),
             plot = p,
-            path = output_folder,
+            path = output_png_folder,
             width = 12,
             height = 6
           )
@@ -323,22 +332,30 @@ purrr::iwalk(
 )
 
 # Save plots as ggplot2 obejcts in zip files in output folder. This allows us to test
-# the reactivity of OJS to transformed ggplot2 objects into plotly objects, which is not possible with .png files.
-# One zip file per each LME, containing the ggplot2 objects for all species in that LME.
+# the reactivity of OJS to transform ggplot2 objects into plotly objects.
+# One zip file per each LME or maximum of 100 species, containing the ggplot2 objects for all species in that LME.
 # The structure of the zip file is: list(species_key = plot, ...)
 message("Save ggplot2 objects as zip files")
 purrr::iwalk(
   plot_list,
   function(lme_plots, lme_name) {
-      plot_list_zip_file <- here::here("data", "output", "indicators_plots", paste0("indicators_plots_ggplot2_", lme_name, ".zip"))
-      # Zip file does not support saving R objects directly, so we need to save the list as an .RData file first, then zip it.
-      plot_list_rdata_file <- here::here("data", "output", "indicators_plots", paste0("indicators_plots_ggplot2_", lme_name, ".RData"))
-      save(lme_plots, file = plot_list_rdata_file)
-      zip::zip(zipfile = plot_list_zip_file, files = plot_list_rdata_file, mode = "cherry-pick")
-      file.remove(plot_list_rdata_file)
+    if (length(lme_plots) == 0) return(NULL)
+    # Split plots into chunks of 100 species and save each chunk as a separate zip file
+    plot_list_chunks <- split(lme_plots, ceiling(seq_along(lme_plots) / 100))
+    purrr::imap(
+      plot_list_chunks,
+      function(chunk, i) {
+        plot_list_zip_file <- here::here("data", "output", "indicators_plots", paste0("indicators_plots_ggplot2_", lme_name, "_chunk_", i, ".zip"))
+        plot_list_rdata_file <- here::here("data", "output", "indicators_plots", paste0("indicators_plots_ggplot2_", lme_name, "_chunk_", i, ".RData"))
+        save(chunk, file = plot_list_rdata_file)
+        zip::zip(zipfile = plot_list_zip_file, files = plot_list_rdata_file, mode = "cherry-pick")
+        file.remove(plot_list_rdata_file)
+      }
+    )
   },
 .progress = TRUE
 )
+
 # For the dashboard, it's handy to have a csv with species keys, species names,
 # LME IDs en LME names. Only existing combinations, e.g. not NULL plots.
 species_lme_combinations <- purrr::imap_dfr(
