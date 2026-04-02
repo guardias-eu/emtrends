@@ -1,5 +1,8 @@
 # emtrends
-Workflows to generate emerging trends for Europe's Large Marine Ecosystems.
+
+Thie repo contains the workflows to generate emerging trends for Europe's Large Marine Ecosystems. Such workflows are based on [species occurrence cubes](https://www.gbif.org/occurrence-cubes), a concept developed during the [TrIAS](https://osf.io/7dpgr/) project and made operational by [GBIF](https://www.gbif.org/) and the [B-Cubed](https://b-cubed.eu/) project.
+
+The emerging trends indicators calculated in this repository have been conceived and applied at Belgian and regional level during the TrIAS project, see occurrence-based [indicators](https://trias-project.github.io/indicators/).
 
 ## Funding
 
