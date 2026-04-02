@@ -54,6 +54,116 @@ species_list_prefix <- "https://raw.githubusercontent.com/guardias-eu/build-eu-c
 species_list_url <- paste0(species_list_prefix, last_cube_species_list)
 species_list <- readr::read_csv(species_list_url, na = "")
 
+# Define evaluation years ####
+
+# For emerging trends, take two years before the current year as last year.
+# E.g. if 2026, take 2024 as last year for emerging scores, to avoid issues with incomplete data 
+# due to data publication delays.
+last_eval_year <- lubridate::year(Sys.Date()) - 2
+first_eval_year <- last_eval_year - 2
+eval_years <- first_eval_year:last_eval_year
+
+# Get appearing taxa ####
+
+# Appearing species are species that have their first occurrences in one of the years from first
+# evaluation year up to now. To be done for each LME, based on lme_ids and 
+# grid_cells_with_lme_info, to get the appearing taxa for each LME.
+appearing_species <- purrr::imap(
+  lme_ids,
+  function(lme_id, lme_name) {
+    message("Getting appearing species for LME: ", lme_name, " (ID: ", lme_id, ")")
+    # Get grid cells for this LME
+    grid_cells <- grid_cells_with_lme_info %>%
+      dplyr::filter(lme_id == !!lme_id) %>%
+      dplyr::pull(cellCode)
+    # Filter cube for these grid cells and evaluation years
+    cube_lme <- cube %>%
+      dplyr::filter(eeacellcode %in% grid_cells)
+    # Get appearing species for this LME
+    appearing_species_lme <- cube_lme %>%
+      dplyr::group_by(specieskey, species) %>%
+      dplyr::summarise(
+        first_year = min(year),
+        .groups = "drop"
+      ) %>%
+      dplyr::filter(first_year >= first_eval_year) %>%
+      dplyr::mutate(
+        lme_id = lme_id,
+        lme_name = lme_name
+      ) %>%
+      dplyr::relocate(lme_id, lme_name, specieskey, species, first_year)
+    return(appearing_species_lme)
+  },
+  .progress = TRUE) %>%
+  purrr:::list_rbind()
+
+## Save appearing species as csv in output folder ####
+readr::write_csv(
+  appearing_species,
+  here::here("data", "output", "appearing_species.csv"),
+  na = ""
+)
+
+# Get reappearing species ####
+
+# Reappearing species are species that have their first occurrences before the 
+# first evaluation year, but then have no occurrences for at least two years, 
+# and then reappear in one of the evaluation years. To be done for each LME, 
+# based on lme_ids and grid_cells_with_lme_info, to get the reappearing species 
+# for each LME.
+
+# Define lowest amount of years without occurrences to consider a species as reappearing.
+latency_threshold <- 5 
+reappearing_species <- purrr::imap(
+  lme_ids,
+  function(lme_id, lme_name) {
+    message("Getting reappearing species for LME: ", lme_name, " (ID: ", lme_id, ")")
+    # Get grid cells for this LME
+    grid_cells <- grid_cells_with_lme_info %>%
+      dplyr::filter(lme_id == !!lme_id) %>%
+      dplyr::pull(cellCode)
+    # Filter cube for these grid cells
+    cube_lme <- cube %>%
+      dplyr::filter(eeacellcode %in% grid_cells)
+    if (nrow(cube_lme) == 0) return(NULL)
+    # Get reappearing species for this LME
+    reappearing_species_lme <- cube_lme %>%
+      dplyr::group_by(specieskey, species) %>%
+      dplyr::summarise(
+        # set to max(year) if there are occurrences in the evaluation years, otherwise set to NA. This way we can filter for species that reappear in the evaluation years.
+        last_year = ifelse(
+          any(year >= first_eval_year),
+          min(year[year >= first_eval_year]),
+          NA_integer_
+        ),
+        gap_from_last_year = ifelse(
+          any(year >= first_eval_year) & any(year < first_eval_year),
+          min(year[year >= first_eval_year]) - max(year[year < first_eval_year]),
+          NA_integer_
+        ),
+        .groups = "drop") %>%
+      dplyr::filter(!is.na(last_year) & !is.na(gap_from_last_year) & gap_from_last_year >= latency_threshold) %>%
+      dplyr::mutate(
+        lme_id = lme_id,
+        lme_name = lme_name
+      ) %>%
+      dplyr::relocate(lme_id, lme_name, specieskey, species, last_year, gap_from_last_year) %>%
+      dplyr::rename(
+        reappearance_year = last_year,
+        years_without_occurrences = gap_from_last_year
+      )
+    return(reappearing_species_lme)
+  },
+  .progress = TRUE) %>%
+  purrr:::list_rbind()
+
+## Save reappearing species as csv in output folder ####
+readr::write_csv(
+  reappearing_species,
+  here::here("data", "output", "reappearing_species.csv"),
+  na = ""
+)
+
 # Calculate indicators #### 
 
 # Get number of occurrences and measured occupancy (n grid cells) for each species ####
