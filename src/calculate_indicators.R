@@ -325,7 +325,7 @@ if (length(existing_plots) > 0) {
 
 message("Save ggplot2 objects as zip files")
 purrr::iwalk(
-  indicators_list[1:2],
+  indicators_list,
   function(lme_indicators, lme_name) {
     message("Saving ggplot2 plots for LME: ", lme_name, " (ID: ", lme_ids[names(lme_ids) == lme_name], ")")
     if (length(lme_indicators) == 0) return(NULL)
