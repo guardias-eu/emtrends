@@ -298,7 +298,8 @@ purrr::iwalk(
               plot = p,
               path = output_png_folder,
               width = 12,
-              height = 6
+              height = 6,
+              create.dir = TRUE
             )
           }
         )
