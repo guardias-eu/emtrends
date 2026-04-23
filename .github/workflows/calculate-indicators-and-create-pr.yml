@@ -47,8 +47,8 @@ jobs:
         env: 
           GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          install.packages(c('dplyr', 'ggplot2', 'here', 'lubridate', 'purrr', 'readr', 'remotes', 'rgbif', 'stringr', 'tidyr', 'testthat', 'zip'), dependencies = TRUE)
-          install.packages("trias", repos = "https://inbo.r-universe.dev", dependencies = TRUE)
+          install.packages(c('dplyr', 'ggplot2', 'here', 'lubridate', 'purrr', 'readr', 'remotes', 'rgbif', 'stringr', 'tidyr', 'testthat', 'zip'))
+          install.packages("trias", repos = c(inbo = "https://inbo.r-universe.dev", CRAN = "https://cloud.r-project.org"))
         shell: Rscript {0}
  
       - name: Calculate indicators
