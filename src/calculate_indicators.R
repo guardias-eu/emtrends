@@ -8,7 +8,11 @@ library(readr)
 library(rgbif)
 library(stringr)
 library(tidyr)
+library(trias)
 library(zip)
+
+# Source utility functions
+source(here::here("src/utils.R"))
 
 # Load the most recent species occurrence cube ####
 
@@ -164,20 +168,13 @@ readr::write_csv(
   na = ""
 )
 
-# Calculate indicators #### 
-
-# Get number of occurrences and measured occupancy (n grid cells) for each species ####
+# Calculate emergence trends indicators based on GAM and decision rules #### 
 
 # Define function
 calc_em_indicator <- function(cube, key) {
-  # If key is not present in the cube, return empty data.frame
+  # If `key` is not present in the `cube`, return `NULL`
   if (!key %in% cube$specieskey) {
-    return(tidyr::tibble(
-      specieskey = integer(),
-      year = integer(),
-      n_occurrences = integer(),
-      n_grid_cells = integer()
-    ))
+    return(NULL)
   }
   species_cube <- cube %>%
     dplyr::filter(specieskey == key) %>%
@@ -187,10 +184,10 @@ calc_em_indicator <- function(cube, key) {
       n_grid_cells = dplyr::n(),
       .groups = "drop"
     )
-  # min, max year
+  # Get minimum and maximum year
   min_year <- min(species_cube$year, na.rm = TRUE)
   max_year <- max(species_cube$year, na.rm = TRUE)
-  # Add 0s for years with no occurrences
+  # Add 0s for years between `min_year` and `max_year` with no occurrences
   species_cube <- species_cube %>%
     tidyr::complete(
       year = min_year:max_year,
@@ -199,18 +196,30 @@ calc_em_indicator <- function(cube, key) {
         n_occurrences = 0,
         n_grid_cells = 0)
     )
-  # Transform to long version, with indicator as variable and value as value
-  species_cube <- species_cube %>%
-    tidyr::pivot_longer(
-      cols = c(n_occurrences, n_grid_cells),
-      names_to = "indicator",
-      values_to = "value"
-    )
-  return(species_cube)
+
+  # Apply GAM modelling or decision rules to calculate emerging trends indicators.
+  # Do it for both `n_occurrences` and `n_grid_cells`.
+  if (!all(eval_years %in% species_cube$year)) {
+    return(NULL)
+  }
+  variable <- list(
+    "number of occurrences" = "n_occurrences",
+    "number of grid cells (10x10km)" = "n_grid_cells"
+  )
+  purrr::imap(
+    variable,
+    calc_em_trend, # Defined in src/utils.R
+    species_cube = species_cube,
+    eval_years = eval_years,
+    min_year = min_year,
+    max_year = max_year,
+    key = key
+  )
 }
 
 # Apply function to all species in the species list and all LMEs ####
 n_species <- nrow(species_list)
+n_species <- 200
 species_keys <- unique(species_list$usageKey[1:n_species])
 names(species_keys) <- species_keys
 species_names <- unique(species_list$canonicalName[match(species_keys, species_list$usageKey)])
@@ -245,54 +254,13 @@ indicators_list <- purrr::imap(
   .progress = TRUE
 )
 
-# Generate plots for each species ####
-
-# Function for plots
-plot_indicators <- function(df, species_key) {
-  if (nrow(df) == 0) return(NULL)
-  else {
-    plot_output <- df %>%
-      ggplot(aes(x = year, y = value)) +
-        geom_point() +
-        facet_wrap(~indicator, scales = "free_y", ncol = 1) +
-        labs(
-          title = paste("Species key:", species_key, ". n_occurrences (top), n_grid_cells (bottom)"),
-          x = "Year",
-          y = "Value"
-        ) +
-        theme_minimal()
-    if (nrow(df) > 1) {
-      # Add lines to the plot only if there are more than 1 point. Otherwise, it will give a warning.
-      return(plot_output + geom_line())
-    } else {
-      return(plot_output)
-    }
-  }
-}
-
-# Generate plots for each species in each LME. The resulting list has the structure: list(LME_name = list(species_key = plot, ...), ...)
-# Plot occurrences on top and occupancy below.
-plot_list <- purrr::imap(
+# Remove NULLs from each element in indicators_list, to avoid confusion 
+# when saving the plots. NULL means that there were no occurrences for that 
+# species in that LME, so no indicators (and so plots) were generated.
+indicators_list <- purrr::map(
   indicators_list,
-  function(lme_id, lme_name) {
-    message("Plotting indicators for LME: ", lme_name, " (ID: ", lme_ids[names(lme_ids) == lme_name], ")")
-    species_plots <- purrr::imap(
-      lme_id,
-      function(species_indicators, species_key) {
-        plot_indicators(species_indicators, species_key)
-      },
-      .progress = TRUE
-    )
-  },
-  .progress = TRUE
-)
-
-# Remove NULLs from each element in plot list, to avoid confusion when saving the plots. 
-# NULL means that there were no occurrences for that species in that LME, so no plot was generated.
-plot_list <- purrr::map(
-  plot_list,
-  function(lme_plots) {
-    purrr::compact(lme_plots)
+  function(ind) {
+    purrr::compact(ind)
   }
 )
 
@@ -301,47 +269,86 @@ plot_list <- purrr::map(
 # Delete existing plots in output folder to avoid confusion with old plots when saving new ones. It can be that we are creating indicators 
 # for a new cube, where the species list has changed, so we want to make sure that old plots are not mixed with new ones.
 
-output_png_folder <- here::here("data/output/indicators_plots/indicators_plots_png/")
+output_png_folder <- here::here("data/output/indicators_plots/png/")
 existing_plots <- list.files(output_png_folder, pattern = "\\.png$", full.names = TRUE)
 if (length(existing_plots) > 0) {
-  message("Deleting existing PNG plots in output folder: ", output_png_folder)
+  message("Deleting ", length(existing_plots), " PNG plots in output folder: ", output_png_folder)
   file.remove(existing_plots)
 }
 
 # Save plots as .png in output folder
 purrr::iwalk(
-  plot_list,
-  function(lme_plots, lme_name) {
+  indicators_list,
+  function(lme_indicators, lme_name) {
     message("Saving png plots for LME: ", lme_name, " (ID: ", lme_ids[names(lme_ids) == lme_name], ")")
     purrr::iwalk(
-      lme_plots,
-      function(p, s) {
-        if (!is.null(p)) {
-          ggsave(
-            filename = paste0("lme_", lme_name, "_species_", s, ".png"),
-            plot = p,
-            path = output_png_folder,
-            width = 12,
-            height = 6
-          )
-        }
-      },
-      .progress = TRUE
+      lme_indicators,
+      function(ind, s) {
+        purrr::imap(
+          ind,
+          function(trend_output, v) {
+            p <- trend_output$plot
+            if (v == "number of occurrences") {
+              v <- "occs"
+            } else if (v == "number of grid cells (10x10km)") {
+              v <- "grid_cells"
+            }
+            # Save the plot as .png in output folder
+             ggsave(
+              filename = paste0("lme_", lme_name, "_species_", s, "_indicator_", v, ".png"),
+              plot = p,
+              path = output_png_folder,
+              width = 12,
+              height = 6
+            )
+          }
+        )
+      }
     )
-  }
+  }, .progress = TRUE
 )
 
 # Save plots as ggplot2 obejcts in zip files in output folder. This allows us to test
 # the reactivity of OJS to transform ggplot2 objects into plotly objects.
 # One zip file per each LME or maximum of 100 species, containing the ggplot2 objects for all species in that LME.
 # The structure of the zip file is: list(species_key = plot, ...)
+
+# Delete existing plots in output folder to avoid confusion with old plots when saving new ones. It can be that we are creating indicators 
+# for a new cube, where the species list has changed, so we want to make sure that old plots are not mixed with new ones.
+
+output_ggplot_folder <- here::here("data/output/indicators_plots/ggplot")
+existing_plots <- list.files(output_ggplot_folder, pattern = "\\.zip$", full.names = TRUE, recursive  = FALSE)
+if (length(existing_plots) > 0) {
+  message("Deleting ", length(existing_plots), " zip files plots in output folder: ", output_ggplot_folder)
+  file.remove(existing_plots)
+}
+
 message("Save ggplot2 objects as zip files")
 purrr::iwalk(
-  plot_list,
-  function(lme_plots, lme_name) {
-    if (length(lme_plots) == 0) return(NULL)
-    # Split plots into chunks of 100 species and save each chunk as a separate zip file
-    plot_list_chunks <- split(lme_plots, ceiling(seq_along(lme_plots) / 100))
+  indicators_list[1:2],
+  function(lme_indicators, lme_name) {
+    message("Saving ggplot2 plots for LME: ", lme_name, " (ID: ", lme_ids[names(lme_ids) == lme_name], ")")
+    if (length(lme_indicators) == 0) return(NULL)
+    # Split plots into chunks of 50 species and save each chunk as a separate zip file
+    # Extract the ggplot2 objects for each species in this LME
+    lme_plots <- purrr::imap(
+      lme_indicators,
+      function(ind, s) {
+        purrr::imap(
+          ind,
+          function(trend_output, v) {
+            p <- trend_output$plot
+            if (v == "number of occurrences") {
+              v <- "occs"
+            } else if (v == "number of grid cells (10x10km)") {
+              v <- "grid_cells"
+            }
+            return(p)
+          }
+        )
+      }
+    )
+    plot_list_chunks <- split(lme_plots, ceiling(seq_along(lme_plots) / 50))
     purrr::imap(
       plot_list_chunks,
       function(chunk, i) {
@@ -359,10 +366,10 @@ purrr::iwalk(
 # For the dashboard, it's handy to have a csv with species keys, species names,
 # LME IDs en LME names. Only existing combinations, e.g. not NULL plots.
 species_lme_combinations <- purrr::imap_dfr(
-  plot_list,
-  function(plots, lme_name) {
+  indicators_list,
+  function(lme_indicators, lme_name) {
     purrr::imap_dfr(
-      plots,
+      lme_indicators,
       function(species_indicator, species_key) {
         if (!is.null(species_indicator)) {
           tidyr::tibble(
