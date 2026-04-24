@@ -363,6 +363,81 @@ purrr::iwalk(
 .progress = TRUE
 )
 
+
+# Create a summary of all emerging indicators in a dataframe, to be able to 
+# create a ranking list of species based on their emerging status in each LME.
+# We have to extract the emerging status for each species, variable, yaer and LME, based on GAM or decision rules.
+# Take into accout only the years in the evaluation years.
+# This allow us to create a ranking list of species based on their emerging status in each LME.
+em_df <- purrr::imap_dfr(
+  indicators_list,
+  function(lme_indicators, lme_name) {
+    purrr::imap_dfr(
+      lme_indicators,
+      function(species_indicator, species_key) {
+        if (!is.null(species_indicator)) {
+          purrr::imap_dfr(
+            species_indicator,
+            function(trend_output, variable) {
+              trend_output$em_summary %>%
+                dplyr::mutate(
+                  species_name = species_names[as.character(species_key)],
+                  lme_id = as.integer(lme_ids[names(lme_ids) == lme_name]),
+                  lme_name = lme_name,
+                  variable = variable,
+                  # if growth exists, hold it, otherwise set it to NA. Growth is only available for GAM, not for decision rules, but we want to have the column in the dataframe for both models to be able to compare them.
+                  growth = ifelse("growth" %in% colnames(trend_output$em_summary), growth, NA_real_),
+                  em_status = as.integer(em_status)
+                ) %>%
+                dplyr::select(lme_id, lme_name, specieskey, species_name, year, variable, model, em_status, growth)
+            }
+          )
+        }
+      }
+    )
+  }
+) %>%
+  dplyr::filter(year %in% eval_years) %>%
+  dplyr::mutate(year = as.integer(year))
+View(em_df)
+
+# Save emerging trends summary dataframe as csv in output folder
+readr::write_csv(
+  em_df,
+  here::here("data/output/emerging_trends_summary.csv"),
+  na = ""
+)
+
+# Assign  a weigth for each year/variable combination, to be able to calculate a weighted emerging status for each species in each LME.
+# We give more weight to the most recent year and to the variable "number of grid cells" compared to "number of occurrences"
+# because it is a more robust indicator of emerging trends, less affected by sampling effort.
+weights <- dplyr::tibble(
+  year = rep(eval_years, each = 2),
+  variable = rep(c("number of occurrences", "number of grid cells (10x10km)"), times = length(eval_years)),
+  weights = c(1, 1.5, 1.5, 2, 2, 2.5)
+)
+
+# Apply weigths to the emerging status and calculate a weighted emerging status for each species in each LME.
+# Also, in case equal weighted emerging status, higher rank to species using GAM and use the growth column to give higher rank to species that have a  higher growth, as they are more likely to be emerging.
+em_rank <- em_df %>%
+  dplyr::left_join(weights, by = c("year", "variable")) %>%
+  dplyr::mutate(weighted_em_status = em_status * weights) %>%
+  dplyr::group_by(lme_id, lme_name, specieskey, species_name) %>%
+  dplyr::summarise(
+    weighted_em_status = sum(weighted_em_status, na.rm = TRUE),
+    model = ifelse(any(model == "GAM"), "GAM", "decision rules"),
+    growth = ifelse(any(model == "GAM"), growth[model == "GAM"][1], NA_real_),
+    .groups = "drop"
+  ) %>%
+  dplyr::arrange(lme_id, desc(weighted_em_status), model, desc(growth))
+
+# Save emerging trends ranking list as csv in output folder
+readr::write_csv(
+  em_rank,
+  here::here("data/output/emerging_trends_ranking_list.csv"),
+  na = ""
+)
+
 # For the dashboard, it's handy to have a csv with species keys, species names,
 # LME IDs en LME names. Only existing combinations, e.g. not NULL plots.
 species_lme_combinations <- purrr::imap_dfr(
