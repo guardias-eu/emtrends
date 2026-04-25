@@ -399,7 +399,6 @@ em_df <- purrr::imap_dfr(
 ) %>%
   dplyr::filter(year %in% eval_years) %>%
   dplyr::mutate(year = as.integer(year))
-View(em_df)
 
 # Save emerging trends summary dataframe as csv in output folder
 readr::write_csv(
