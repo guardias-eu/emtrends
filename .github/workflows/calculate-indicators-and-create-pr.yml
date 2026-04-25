@@ -34,7 +34,7 @@ jobs:
         id: r-version
         run: echo "version=$(Rscript -e 'cat(getRversion())')" >> $GITHUB_OUTPUT
       
-            - name: Setup R dependencies cache
+      - name: Setup R dependencies cache
         uses: actions/cache@v5
         with:
           path: ${{ steps.r-lib.outputs.path }}
