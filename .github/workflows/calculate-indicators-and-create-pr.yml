@@ -30,13 +30,17 @@ jobs:
         run: |
           echo "path=$(Rscript -e 'cat(.libPaths()[1])')" >> $GITHUB_OUTPUT
       
-      - name: Setup R dependencies cache
+      - name: Get R version
+        id: r-version
+        run: echo "version=$(Rscript -e 'cat(getRversion())')" >> $GITHUB_OUTPUT
+      
+            - name: Setup R dependencies cache
         uses: actions/cache@v5
         with:
           path: ${{ steps.r-lib.outputs.path }}
-          key: ${{ runner.os }}-r-${{ hashFiles('src/build_run_query.R', 'tests/test-list_downloads.R') }}
+          key: ${{ runner.os }}-r-${{ steps.r-version.outputs.version }}-${{ hashFiles('src/build_run_query.R', 'tests/test-list_downloads.R') }}
           restore-keys: |
-            ${{ runner.os }}-r-
+            ${{ runner.os }}-r-${{ steps.r-version.outputs.version }}-
       
       - name: Install system dependencies
         run: |
