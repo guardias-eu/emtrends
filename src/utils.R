@@ -6,7 +6,7 @@
 #' @param v The variable for which to calculate the emerging status trend.
 #' @param y_label The label for the y-axis in the resulting plot.
 calc_em_trend <- function(v, y_label, species_cube, eval_years, min_year, max_year, key) {
-    gam_output <- apply_gam(
+    gam_output <- trias::apply_gam(
       df = species_cube,
       y_var = v,
       eval_years = eval_years,
