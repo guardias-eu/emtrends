@@ -15,7 +15,7 @@
 summarise_species_timeseries <- function(cube, key) {
   # Filter the cube for the specified species key and summarize occurrences 
   # and grid cells per year
-  cube %>%
+  species_timeseries <- cube %>%
     dplyr::filter(specieskey == key) %>%
     dplyr::group_by(specieskey, year) %>%
     dplyr::summarise(
@@ -27,7 +27,7 @@ summarise_species_timeseries <- function(cube, key) {
   min_year <- min(species_cube$year, na.rm = TRUE)
   max_year <- max(species_cube$year, na.rm = TRUE)
   # Add 0s for years between `min_year` and `max_year` with no occurrences
-  species_cube %>%
+  species_timeseries %>%
     tidyr::complete(
       year = min_year:max_year,
       fill = list(
