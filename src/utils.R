@@ -1,5 +1,42 @@
 # Utility functions for the emerging status indicators
 
+#' Function to summarize the number of occurrences and grid cells per year for a given species key
+#' 
+#' This function filters the input cube for the specified species key and 
+#' summarizes the number of occurrences and grid cells per year. It then 
+#' ensures that the resulting data frame includes all years between the 
+#' minimum and maximum year, filling in 0s for any years with no occurrences.
+#'
+#' @param cube A data frame containing the species occurrence data with columns `specieskey`, `year`, and `occurrences`.
+#' @param key The species key for which to get the timeseries data.
+#' @return A data frame with columns `specieskey`, `year`, `n_occurrences`, 
+#' and `n_grid_cells`, including all years between the minimum and maximum 
+#' year for the specified species key.
+summarise_species_timeseries <- function(cube, key) {
+  # Filter the cube for the specified species key and summarize occurrences 
+  # and grid cells per year
+  cube %>%
+    dplyr::filter(specieskey == key) %>%
+    dplyr::group_by(specieskey, year) %>%
+    dplyr::summarise(
+      n_occurrences = sum(occurrences),
+      n_grid_cells = dplyr::n(),
+      .groups = "drop"
+    )
+  # Get minimum and maximum year
+  min_year <- min(species_cube$year, na.rm = TRUE)
+  max_year <- max(species_cube$year, na.rm = TRUE)
+  # Add 0s for years between `min_year` and `max_year` with no occurrences
+  species_cube %>%
+    tidyr::complete(
+      year = min_year:max_year,
+      fill = list(
+        specieskey = key,
+        n_occurrences = 0,
+        n_grid_cells = 0)
+    )
+}
+
 #' Function to calculate the emerging status trend for a given variable and label
 #' 
 #' This function applies the GAM model to calculate the emerging status trend for a specified variable and label. If the GAM model cannot assess the emergence status, it falls back to using decision rules to determine the emergence status for each evaluation year. The resulting plot is adapted to reflect the emergence status based on decision rules when necessary.

@@ -170,36 +170,36 @@ readr::write_csv(
 
 # Calculate emergence trends indicators based on GAM and decision rules #### 
 
-# Define function
+# Define general function to calculate emerging trends indicators for a given 
+# species key in a given cube. This function will be applied to all species in 
+# the species list and all LMEs. It will return a list with the emerging trends 
+# indicators for both `n_occurrences` and `n_grid_cells`, including the GAM 
+# output or the decision rules output, if applicable. If there are no occurrences 
+# in the evaluation years, or if the species is (re)appearing, it will return `NULL` 
+# to avoid creating plots for that species in that LME, as it does not make sense to 
+# calculate emerging trends indicators in those cases.
 calc_em_indicator <- function(cube, key) {
   # If `key` is not present in the `cube`, return `NULL`
   if (!key %in% cube$specieskey) {
     return(NULL)
   }
-  species_cube <- cube %>%
-    dplyr::filter(specieskey == key) %>%
-    dplyr::group_by(specieskey, year) %>%
-    dplyr::summarise(
-      n_occurrences = sum(occurrences),
-      n_grid_cells = dplyr::n(),
-      .groups = "drop"
-    )
-  # Get minimum and maximum year
-  min_year <- min(species_cube$year, na.rm = TRUE)
+  species_cube <- summarise_species_timeseries(cube, key)
+  min__year <- min(species_cube$year, na.rm = TRUE)
   max_year <- max(species_cube$year, na.rm = TRUE)
-  # Add 0s for years between `min_year` and `max_year` with no occurrences
-  species_cube <- species_cube %>%
-    tidyr::complete(
-      year = min_year:max_year,
-      fill = list(
-        specieskey = key,
-        n_occurrences = 0,
-        n_grid_cells = 0)
-    )
 
   # Apply GAM modelling or decision rules to calculate emerging trends indicators.
   # Do it for both `n_occurrences` and `n_grid_cells`.
+  # Do not apply the models if there are no occurrences in the evaluation years, 
+  # as it does not make sense to calculate emerging trends indicators in that case. 
+  # Instead, return `NULL` and do not create any plot for that species in that LME.
   if (!all(eval_years %in% species_cube$year)) {
+    return(NULL)
+  }
+
+  # Also do not calculate emerging trends indicators if the species is (re)appearing.
+  # Return NULL in that case, to avoid creating plots for (re)appearing species, as 
+  # it does not make sense to calculate emerging trends indicators in that case either.
+  if (key %in% appearing_species$specieskey | key %in% reappearing_species$specieskey) {
     return(NULL)
   }
   variable <- list(
@@ -219,6 +219,7 @@ calc_em_indicator <- function(cube, key) {
 
 # Apply function to all species in the species list and all LMEs ####
 n_species <- nrow(species_list)
+n_species <- 20
 species_keys <- unique(species_list$usageKey[1:n_species])
 names(species_keys) <- species_keys
 species_names <- unique(species_list$canonicalName[match(species_keys, species_list$usageKey)])
