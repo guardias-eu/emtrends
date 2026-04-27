@@ -37,6 +37,18 @@ summarise_species_timeseries <- function(cube, key) {
     )
 }
 
+plot_variable <- function(species_ts, v, y_label, key) {
+  species_ts %>%
+  ggplot2::ggplot(aes(x = year, y = .data[[v]])) +
+    ggplot2::geom_point(color = "black") +
+    ggplot2::labs(
+      title = paste0("Species key: ", key),
+      x = "Year",
+      y = y_label
+    ) +
+    ggplot2::theme_minimal()
+}
+
 #' Function to calculate the emerging status trend for a given variable and label
 #' 
 #' This function applies the GAM model to calculate the emerging status trend for a specified variable and label. If the GAM model cannot assess the emergence status, it falls back to using decision rules to determine the emergence status for each evaluation year. The resulting plot is adapted to reflect the emergence status based on decision rules when necessary.
@@ -57,7 +69,7 @@ calc_em_trend <- function(v, y_label, species_ts, eval_years, min_year, max_year
     )
     p <- gam_output$plot
     if (all(is.na(gam_output$em_summary$em_status))) {
-
+      # Apply decision rules for each evaluation year and combine the results into a single data frame
       dr_output <- purrr::map_dfr(
         min_year:max_year,
         function(year) {

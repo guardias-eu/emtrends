@@ -101,6 +101,77 @@ appearing_species <- purrr::imap(
   .progress = TRUE) %>%
   purrr:::list_rbind()
 
+## Create ggplot2 plots for appearing species ####
+# Use plot_variable function defined in src/utils.R to create the plots for the appearing species, for both 
+# `n_occurrences` and `n_grid_cells`. Save the plots as .png in output/png folder, with the name format:
+# "lme_{lme_name}_species_{species_key}_appearing_species_{variable}.png", where variable is either "occs" or "grid_cells".
+appearing_plots <- purrr::imap(
+  lme_ids,
+  function(lme_id, lme_name) {
+    message("Creating plots for appearing species for LME: ", lme_name, " (ID: ", lme_id, ")")
+    # Get grid cells for this LME
+    grid_cells <- grid_cells_with_lme_info %>%
+      dplyr::filter(lme_id == !!lme_id) %>%
+      dplyr::pull(cellCode)
+    # Filter cube for these grid cells
+    cube_lme <- cube %>%
+      dplyr::filter(eeacellcode %in% grid_cells)
+    # Get appearing species for this LME
+    appearing_species_lme <- appearing_species %>%
+      dplyr::filter(lme_id == !!lme_id)
+    plots_lme <- purrr::imap(
+      appearing_species_lme$specieskey,
+      function(species_key, i) {
+        species_name <- appearing_species_lme$species[i]
+        species_ts <- summarise_species_timeseries(cube_lme, species_key)
+        variable <- list(
+          "number of occurrences" = "n_occurrences",
+          "number of grid cells (10x10km)" = "n_grid_cells"
+        )
+        purrr::imap(
+          variable,
+          function(v, y_label) {
+            p <- plot_variable(species_ts, v, y_label, species_key)
+            if (v == "number of occurrences") {
+              v <- "occs"
+            } else if (v == "number of grid cells (10x10km)") {
+              v <- "grid_cells"
+            }
+            # Save the plot as .png in output folder
+            ggsave(
+              filename = paste0("lme_", lme_name, "_species_", species_key, "_appearing_species_", v, ".png"),
+              plot = p,
+              path = here::here("data", "output", "indicators_plots", "png"),
+              width = 12,
+              height = 6,
+              create.dir = TRUE
+            )
+            return(p)
+          }
+        )
+      },
+      .progress = TRUE
+    )
+    names(plots_lme) <- appearing_species_lme$specieskey
+    return(plots_lme)
+  }
+)
+
+## Save ggplot2 objects in appearing_plots as zip files in output folder, with the name format:
+# "lme_{lme_name}_appearing_species_plots.zip".
+purrr::iwalk(
+  appearing_plots,
+  function(plots_lme, lme_name) {
+    message("Saving ggplot2 plots for appearing species for LME: ", lme_name, " (ID: ", lme_ids[names(lme_ids) == lme_name], ")")
+    if (length(plots_lme) == 0) return(NULL)
+    plot_list_zip_file <- here::here("data", "output", "indicators_plots", paste0("appearing_species_plots_ggplot2_lme_", lme_name, ".zip"))
+    plot_list_rdata_file <- here::here("data", "output", "indicators_plots", paste0("appearing_species_plots_ggplot2_lme_", lme_name, ".RData"))
+    save(plots_lme, file = plot_list_rdata_file)
+    zip::zip(zipfile = plot_list_zip_file, files = plot_list_rdata_file, mode = "cherry-pick")
+    file.remove(plot_list_rdata_file)
+  }
+)
+
 ## Save appearing species as csv in output folder ####
 readr::write_csv(
   appearing_species,
@@ -160,6 +231,77 @@ reappearing_species <- purrr::imap(
   },
   .progress = TRUE) %>%
   purrr:::list_rbind()
+
+## Create ggplot2 plots for reappearing species ####
+# Use plot_variable function defined in src/utils.R to create the plots for the reappearing species, for both
+# `n_occurrences` and `n_grid_cells`. Save the plots as .png in output/png folder, with the name format:
+# "lme_{lme_name}_species_{species_key}_reappearing_species_{variable}.png", where variable is either "occs" or "grid_cells".
+reappearing_plots <- purrr::imap(
+  lme_ids,
+  function(lme_id, lme_name) {
+    message("Creating plots for reappearing species for LME: ", lme_name, " (ID: ", lme_id, ")")
+    # Get grid cells for this LME
+    grid_cells <- grid_cells_with_lme_info %>%
+      dplyr::filter(lme_id == !!lme_id) %>%
+      dplyr::pull(cellCode)
+    # Filter cube for these grid cells
+    cube_lme <- cube %>%
+      dplyr::filter(eeacellcode %in% grid_cells)
+    # Get reappearing species for this LME
+    reappearing_species_lme <- reappearing_species %>%
+      dplyr::filter(lme_id == !!lme_id)
+    plots_lme <- purrr::imap(
+      reappearing_species_lme$specieskey,
+      function(species_key, i) {
+        species_name <- reappearing_species_lme$species[i]
+        species_ts <- summarise_species_timeseries(cube_lme, species_key)
+        variable <- list(
+          "number of occurrences" = "n_occurrences",
+          "number of grid cells (10x10km)" = "n_grid_cells"
+        )
+        purrr::imap(
+          variable,
+          function(v, y_label) {
+            p <- plot_variable(species_ts, v, y_label, species_key)
+            if (v == "number of occurrences") {
+              v <- "occs"
+            } else if (v == "number of grid cells (10x10km)") {
+              v <- "grid_cells"
+            }
+            # Save the plot as .png in output folder
+            ggsave(
+              filename = paste0("lme_", lme_name, "_species_", species_key, "_reappearing_species_", v, ".png"),
+              plot = p,
+              path = here::here("data", "output", "indicators_plots", "png"),
+              width = 12,
+              height = 6,
+              create.dir = TRUE
+            )
+            return(p)
+          }
+        )
+      },
+      .progress = TRUE
+    )
+    names(plots_lme) <- reappearing_species_lme$specieskey
+    return(plots_lme)
+  }
+)
+
+# Save ggplot2 objects in reappearing_plots as zip files in output folder, with the name format:
+# "lme_{lme_name}_reappearing_species_plots.zip".
+purrr::iwalk(
+  reappearing_plots,
+  function(plots_lme, lme_name) {
+    message("Saving ggplot2 plots for reappearing species for LME: ", lme_name, " (ID: ", lme_ids[names(lme_ids) == lme_name], ")")
+    if (length(plots_lme) == 0) return(NULL)
+    plot_list_zip_file <- here::here("data", "output", "indicators_plots", paste0("reappearing_species_plots_ggplot2_lme_", lme_name, ".zip"))
+    plot_list_rdata_file <- here::here("data", "output", "indicators_plots", paste0("reappearing_species_plots_ggplot2_lme_", lme_name, ".RData"))
+    save(plots_lme, file = plot_list_rdata_file)
+    zip::zip(zipfile = plot_list_zip_file, files = plot_list_rdata_file, mode = "cherry-pick")
+    file.remove(plot_list_rdata_file)
+  }
+)
 
 ## Save reappearing species as csv in output folder ####
 readr::write_csv(
