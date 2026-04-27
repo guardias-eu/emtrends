@@ -5,7 +5,6 @@ lme_id,lme_name,specieskey,species,first_year
 14,Iberian Coastal,2237923,Paraleucilla magna,2022
 14,Iberian Coastal,2287072,Dreissena polymorpha,2026
 14,Iberian Coastal,2287076,Mytilopsis leucophaeata,2025
-14,Iberian Coastal,2288752,Martesia striata,2024
 14,Iberian Coastal,2291759,Polycera hedgpethi,2023
 14,Iberian Coastal,2315395,Alitta virens,2023
 14,Iberian Coastal,2320810,Boccardia proboscidea,2023
@@ -15,6 +14,7 @@ lme_id,lme_name,specieskey,species,first_year
 14,Iberian Coastal,2399874,Micropogonias undulatus,2023
 14,Iberian Coastal,2578507,Erysiphe corylacearum,2022
 14,Iberian Coastal,4363583,Rapana venosa,2025
+14,Iberian Coastal,5191262,Aplysia dactylomela,2023
 14,Iberian Coastal,5194683,Syllis pectinans,2023
 14,Iberian Coastal,5362054,Crassula helmsii,2022
 14,Iberian Coastal,8357929,Syllis variegata,2023
@@ -61,7 +61,6 @@ lme_id,lme_name,specieskey,species,first_year
 13,Mediterranean Sea,2665285,Galaxaura rugosa,2022
 13,Mediterranean Sea,2668224,Sarcodiotheca gaudichaudii,2025
 13,Mediterranean Sea,4360387,Crepipatella dilatata,2022
-13,Mediterranean Sea,4369982,Cellana rota,2023
 13,Mediterranean Sea,4374562,Isognomon legumen,2023
 13,Mediterranean Sea,4417705,Sarscypridopsis lanzarotensis,2024
 13,Mediterranean Sea,4595317,Saccostrea glomerata,2025
@@ -104,6 +103,7 @@ lme_id,lme_name,specieskey,species,first_year
 53,Norwegian Sea,3199341,Acrothrix gracilis,2023
 53,Norwegian Sea,3457717,Savoryella lignicola,2023
 53,Norwegian Sea,5192789,Crepidula fornicata,2024
+53,Norwegian Sea,5362054,Crassula helmsii,2025
 53,Norwegian Sea,5384113,Opuntia fragilis,2022
 53,Norwegian Sea,8208307,Dinophysis odiosa,2023
 53,Norwegian Sea,8485639,Ensis leei,2023
@@ -116,15 +116,16 @@ lme_id,lme_name,specieskey,species,first_year
 3,North Sea,2397682,Pampus argenteus,2022
 3,North Sea,3457717,Savoryella lignicola,2024
 3,North Sea,4315140,Pontogammarus robustoides,2025
+3,North Sea,4346647,Anisakis pegreffii,2022
 3,North Sea,4359698,Ercolania viridis,2022
-3,North Sea,4366020,Bolinus brandaris,2024
+3,North Sea,4366020,Bolinus brandaris,2023
 3,North Sea,4375643,Grateloupia minima,2023
 3,North Sea,4408321,Craspedacusta sowerbii,2023
+3,North Sea,4985433,Victorella pavida,2025
 3,North Sea,5177561,Ampithoe valida,2024
 3,North Sea,5178082,Caprella scaura,2022
 3,North Sea,5278375,Colaconema dasyae,2025
 3,North Sea,6460808,Aoroides longimerus,2023
-3,North Sea,6529629,Anadara kagoshimensis,2022
 3,North Sea,8140432,Corbicula largillierti,2024
 3,North Sea,8187685,Gobius cruentatus,2023
 3,North Sea,8439213,Chelicorophium sowinskyi,2023
@@ -137,12 +138,14 @@ lme_id,lme_name,specieskey,species,first_year
 54,Barents Sea,2331816,Pyura tessellata,2023
 54,Barents Sea,2376212,Crystallogobius linearis,2026
 54,Barents Sea,2383720,Centrolabrus exoletus,2025
+54,Barents Sea,2426760,Rana dalmatina,2024
 54,Barents Sea,2501248,Mnemiopsis leidyi,2022
 54,Barents Sea,2564481,Haligena elaterophora,2024
 54,Barents Sea,3192919,Bacteriastrum hyalinum,2023
 54,Barents Sea,3194102,Pseudosolenia calcar-avis,2022
 54,Barents Sea,3199244,Punctaria tenuissima,2024
 54,Barents Sea,3457717,Savoryella lignicola,2025
+54,Barents Sea,4286975,Cyprinus carpio,2025
 54,Barents Sea,5166357,Anomalocera patersonii,2022
 54,Barents Sea,5182309,Haliclona urceolus,2022
 54,Barents Sea,5192789,Crepidula fornicata,2022
