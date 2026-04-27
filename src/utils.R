@@ -24,8 +24,8 @@ summarise_species_timeseries <- function(cube, key) {
       .groups = "drop"
     )
   # Get minimum and maximum year
-  min_year <- min(species_cube$year, na.rm = TRUE)
-  max_year <- max(species_cube$year, na.rm = TRUE)
+  min_year <- min(species_timeseries$year, na.rm = TRUE)
+  max_year <- max(species_timeseries$year, na.rm = TRUE)
   # Add 0s for years between `min_year` and `max_year` with no occurrences
   species_timeseries %>%
     tidyr::complete(
@@ -42,9 +42,9 @@ summarise_species_timeseries <- function(cube, key) {
 #' This function applies the GAM model to calculate the emerging status trend for a specified variable and label. If the GAM model cannot assess the emergence status, it falls back to using decision rules to determine the emergence status for each evaluation year. The resulting plot is adapted to reflect the emergence status based on decision rules when necessary.
 #' @param v The variable for which to calculate the emerging status trend.
 #' @param y_label The label for the y-axis in the resulting plot.
-calc_em_trend <- function(v, y_label, species_cube, eval_years, min_year, max_year, key) {
+calc_em_trend <- function(v, y_label, species_ts, eval_years, min_year, max_year, key) {
     gam_output <- trias::apply_gam(
-      df = species_cube,
+      df = species_ts,
       y_var = v,
       eval_years = eval_years,
       year = "year",
@@ -62,7 +62,7 @@ calc_em_trend <- function(v, y_label, species_cube, eval_years, min_year, max_ye
         min_year:max_year,
         function(year) {
           trias::apply_decision_rules(
-            df = species_cube,
+            df = species_ts,
             y_var = v,
             eval_year = year,
             year = "year",
