@@ -219,7 +219,6 @@ calc_em_indicator <- function(cube, key) {
 
 # Apply function to all species in the species list and all LMEs ####
 n_species <- nrow(species_list)
-n_species <- 20
 species_keys <- unique(species_list$usageKey[1:n_species])
 names(species_keys) <- species_keys
 species_names <- unique(species_list$canonicalName[match(species_keys, species_list$usageKey)])
