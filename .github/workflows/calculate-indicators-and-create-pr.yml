@@ -1,8 +1,6 @@
 name: Calculate Indicators and Create PR
 
 on:
-  schedule:
-    - cron: '0 1 * * TUE'  # Run at 1 AM (UTC) every Tuesday night
   workflow_dispatch:  # Allow manual trigger
 
 jobs:
