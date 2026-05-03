@@ -205,7 +205,7 @@ reappearing_species <- purrr::imap(
     reappearing_species_lme <- cube_lme %>%
       dplyr::group_by(specieskey, species) %>%
       dplyr::summarise(
-        # set to max(year) if there are occurrences in the evaluation years, otherwise set to NA. This way we can filter for species that reappear in the evaluation years.
+        # set to min(year) if there are occurrences in the evaluation years, otherwise set to NA. This way we can filter for species that reappear in the evaluation years.
         last_year = ifelse(
           any(year >= first_eval_year),
           min(year[year >= first_eval_year]),
