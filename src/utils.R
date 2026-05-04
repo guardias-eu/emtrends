@@ -51,7 +51,7 @@ plot_variable <- function(species_ts, v, y_label, key) {
 
 #' Function to calculate the emerging status trend for a given variable and label
 #' 
-#' This function applies the GAM model to calculate the emerging status trend for a specified variable and label. If the GAM model cannot assess the emergence status, it falls back to using decision rules to determine the emergence status for each evaluation year. The resulting plot is adapted to reflect the emergence status based on decision rules when necessary.
+#' This function applies the GAM model to calculate the emerging status trend for a specified variable and label. If the GAM model cannot assess the emerging status, it falls back to using decision rules to determine the emerging status for each evaluation year. The resulting plot is adapted to reflect the emerging status based on decision rules when necessary.
 #' @param v The variable for which to calculate the emerging status trend.
 #' @param y_label The label for the y-axis in the resulting plot.
 calc_em_trend <- function(v, y_label, species_ts, eval_years, min_year, max_year, key) {
@@ -108,7 +108,7 @@ calc_em_trend <- function(v, y_label, species_ts, eval_years, min_year, max_year
     )
   }
 
-#'  Colors mapping for emergence status
+#'  Colors mapping for emerging status
 colors_mapping <- data.frame(
   em_status = c(c(3:0)),
   color = c("darkred", "orangered", "grey50", "darkgreen"),
@@ -123,8 +123,8 @@ colors_mapping <- data.frame(
 #'  Function to adapt the plot with the colors based on `em_status`
 #' 
 #' This function is especially useful to adapt the plot created by 
-#' `apply_gam()` where GAM modelling couldn't assess the emergence status.
-#' Such plot gets the emergence status colors for evaluation years based on decision rules.
+#' `apply_decision_rules()` because GAM modelling couldn't assess the emerging status.
+#' Such plot gets the emerging status colors for evaluation years based on decision rules.
 #' @param p A ggplot object, created by `apply_gam()`.
 #' @param df A data frame that contains the `year` and `em_status` columns based on decision rules.
 #' @param colors A data frame that contains the mapping of `em_status` to colors and labels.
