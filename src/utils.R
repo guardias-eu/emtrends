@@ -146,5 +146,7 @@ adapt_plot <- function(p, df, colors = colors_mapping) {
       labels = colors$labels,
       na.value = "black"  # Set color for NA values
     ) +
-    ggplot2::theme(legend.position = "right")
+    ggplot2::theme(legend.position = "right") +
+    # Set legend title as "emerging Status"
+    ggplot2::labs(color = "Emerging status")
 }
