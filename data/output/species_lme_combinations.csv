@@ -24,6 +24,7 @@ species_key,species_name,lme_id,lme_name
 5272096,Codium fragile,14,Iberian Coastal
 2395367,Coryphoblennius galerita,14,Iberian Coastal
 2399985,Cynoscion regalis,14,Iberian Coastal
+4286975,Cyprinus carpio,14,Iberian Coastal
 8018048,Dictyota cyanoloma,14,Iberian Coastal
 5210979,Diplodus vulgaris,14,Iberian Coastal
 4984866,Electra pilosa,14,Iberian Coastal
@@ -54,6 +55,7 @@ species_key,species_name,lme_id,lme_name
 5192470,Potamopyrgus antipodarum,14,Iberian Coastal
 2227300,Procambarus clarkii,14,Iberian Coastal
 8337656,Pseudo-nitzschia australis,14,Iberian Coastal
+2426760,Rana dalmatina,14,Iberian Coastal
 4372686,Ruditapes philippinarum,14,Iberian Coastal
 5824863,Rugulopteryx okamurae,14,Iberian Coastal
 2328603,Sabella spallanzanii,14,Iberian Coastal
@@ -108,8 +110,10 @@ species_key,species_name,lme_id,lme_name
 5272096,Codium fragile,6,Celtic-Biscay Shelf
 5185697,Coryne eximia,6,Celtic-Biscay Shelf
 2395367,Coryphoblennius galerita,6,Celtic-Biscay Shelf
+2264633,Craterolophus convolvulus,6,Celtic-Biscay Shelf
 7811641,Crisularia plumosa,6,Celtic-Biscay Shelf
 5962255,Cyclopterus lumpus,6,Celtic-Biscay Shelf
+4286975,Cyprinus carpio,6,Celtic-Biscay Shelf
 5210979,Diplodus vulgaris,6,Celtic-Biscay Shelf
 2321463,Dipolydora quadrilobata,6,Celtic-Biscay Shelf
 4984866,Electra pilosa,6,Celtic-Biscay Shelf
@@ -150,6 +154,7 @@ species_key,species_name,lme_id,lme_name
 5275705,Porphyra umbilicalis,6,Celtic-Biscay Shelf
 5192470,Potamopyrgus antipodarum,6,Celtic-Biscay Shelf
 2227300,Procambarus clarkii,6,Celtic-Biscay Shelf
+2426760,Rana dalmatina,6,Celtic-Biscay Shelf
 5188971,Rangia cuneata,6,Celtic-Biscay Shelf
 1009964,Reptadeonella violacea,6,Celtic-Biscay Shelf
 5421984,Rhizosolenia styliformis,6,Celtic-Biscay Shelf
@@ -200,7 +205,6 @@ species_key,species_name,lme_id,lme_name
 5853511,Apogonichthyoides pharaonis,13,Mediterranean Sea
 2272084,Aquilonastra burtoni,13,Mediterranean Sea
 6531311,Arcuatula senhousia,13,Mediterranean Sea
-4360202,Armina maculata,13,Mediterranean Sea
 5279840,Asparagopsis armata,13,Mediterranean Sea
 5279834,Asparagopsis taxiformis,13,Mediterranean Sea
 2227756,Atergatis roseus,13,Mediterranean Sea
@@ -244,6 +248,7 @@ species_key,species_name,lme_id,lme_name
 2395367,Coryphoblennius galerita,13,Mediterranean Sea
 2264581,Cotylorhiza erythraea,13,Mediterranean Sea
 7811641,Crisularia plumosa,13,Mediterranean Sea
+4286975,Cyprinus carpio,13,Mediterranean Sea
 5721108,Diadema setosum,13,Mediterranean Sea
 8018048,Dictyota cyanoloma,13,Mediterranean Sea
 4357847,Diodora ruppellii,13,Mediterranean Sea
@@ -261,6 +266,7 @@ species_key,species_name,lme_id,lme_name
 2377493,Gammogobius steinitzi,13,Mediterranean Sea
 5724049,Gibbula ardens,13,Mediterranean Sea
 2376555,Gobius xanthocephalus,13,Mediterranean Sea
+4360294,Godiva quadricolor,13,Mediterranean Sea
 6519803,Goniobranchus annulatus,13,Mediterranean Sea
 6519721,Goniobranchus obsoletus,13,Mediterranean Sea
 2643288,Halimeda incrassata,13,Mediterranean Sea
@@ -270,7 +276,6 @@ species_key,species_name,lme_id,lme_name
 2368968,Hemiramphus far,13,Mediterranean Sea
 5200658,Herdmania momus,13,Mediterranean Sea
 2413065,Herklotsichthys punctatus,13,Mediterranean Sea
-2665384,Hildenbrandia crouaniorum,13,Mediterranean Sea
 9775198,Himantura uarnak,13,Mediterranean Sea
 2250096,Hymeniacidon perlevis,13,Mediterranean Sea
 4360080,Hypselodoris infucata,13,Mediterranean Sea
@@ -288,7 +293,6 @@ species_key,species_name,lme_id,lme_name
 4374719,Malleus regula,13,Mediterranean Sea
 7495282,Marivagia stellata,13,Mediterranean Sea
 5799065,Matuta victor,13,Mediterranean Sea
-5166440,Mecynocera clausi,13,Mediterranean Sea
 4360148,Melibe viridis,13,Mediterranean Sea
 5854375,Mesochaetopterus rogeri,13,Mediterranean Sea
 8767949,Microeuraphia depressa,13,Mediterranean Sea
@@ -301,7 +305,6 @@ species_key,species_name,lme_id,lme_name
 5193449,Nucella lapillus,13,Mediterranean Sea
 5620016,Opuntia elatior,13,Mediterranean Sea
 5855429,Ostrea stentina,13,Mediterranean Sea
-7923023,Ova canalifera,13,Mediterranean Sea
 2224979,Palaemon elegans,13,Mediterranean Sea
 5823941,Palisada perforata,13,Mediterranean Sea
 2395735,Parablennius incognitus,13,Mediterranean Sea
@@ -334,6 +337,7 @@ species_key,species_name,lme_id,lme_name
 2315466,Pseudonereis anomala,13,Mediterranean Sea
 8363171,Pteragogus trispilus,13,Mediterranean Sea
 2334433,Pterois miles,13,Mediterranean Sea
+2426760,Rana dalmatina,13,Mediterranean Sea
 1009964,Reptadeonella violacea,13,Mediterranean Sea
 4362907,Rhinoclavis kochi,13,Mediterranean Sea
 2264597,Rhopilema nomadica,13,Mediterranean Sea
@@ -390,6 +394,7 @@ species_key,species_name,lme_id,lme_name
 4356092,Ciona robusta,13,Mediterranean Sea
 5181275,Crambe crambe,13,Mediterranean Sea
 2330725,Ecteinascidia turbinata,13,Mediterranean Sea
+2317552,Hermodice carunculata,13,Mediterranean Sea
 2219222,Jassa slatteryi,13,Mediterranean Sea
 9736038,Necora puber,13,Mediterranean Sea
 5184825,Oculina patagonica,13,Mediterranean Sea
@@ -436,7 +441,6 @@ species_key,species_name,lme_id,lme_name
 2224979,Palaemon elegans,53,Norwegian Sea
 2227605,Pilumnus hirtellus,53,Norwegian Sea
 5275705,Porphyra umbilicalis,53,Norwegian Sea
-5192470,Potamopyrgus antipodarum,53,Norwegian Sea
 7768737,Pronoctiluca pelagica,53,Norwegian Sea
 2329268,Pseudopotamilla reniformis,53,Norwegian Sea
 2688129,Pterosperma cristatum,53,Norwegian Sea
@@ -505,6 +509,7 @@ species_key,species_name,lme_id,lme_name
 5189032,Corbicula fluminalis,3,North Sea
 2351174,Coregonus maraena,3,North Sea
 5962255,Cyclopterus lumpus,3,North Sea
+4286975,Cyprinus carpio,3,North Sea
 2659108,Dasya baillouviana,3,North Sea
 4315705,Dikerogammarus villosus,3,North Sea
 3194973,Dinobryon faculiferum,3,North Sea
@@ -577,6 +582,7 @@ species_key,species_name,lme_id,lme_name
 2114769,Pseudodiaptomus marinus,3,North Sea
 2329268,Pseudopotamilla reniformis,3,North Sea
 2688129,Pterosperma cristatum,3,North Sea
+2426760,Rana dalmatina,3,North Sea
 5188971,Rangia cuneata,3,North Sea
 5421984,Rhizosolenia styliformis,3,North Sea
 4372686,Ruditapes philippinarum,3,North Sea
@@ -643,6 +649,7 @@ species_key,species_name,lme_id,lme_name
 3195749,Chorda filum,54,Barents Sea
 5272096,Codium fragile,54,Barents Sea
 5421557,Coscinodiscus wailesii,54,Barents Sea
+2264633,Craterolophus convolvulus,54,Barents Sea
 5962255,Cyclopterus lumpus,54,Barents Sea
 3194973,Dinobryon faculiferum,54,Barents Sea
 7708032,Dinophysis tripos,54,Barents Sea
@@ -697,6 +704,7 @@ species_key,species_name,lme_id,lme_name
 4314683,Chelicorophium curvispinum,1,Baltic Sea
 3195749,Chorda filum,1,Baltic Sea
 5962255,Cyclopterus lumpus,1,Baltic Sea
+4286975,Cyprinus carpio,1,Baltic Sea
 4315703,Dikerogammarus haemobaphes,1,Baltic Sea
 4315705,Dikerogammarus villosus,1,Baltic Sea
 2321463,Dipolydora quadrilobata,1,Baltic Sea
@@ -728,6 +736,7 @@ species_key,species_name,lme_id,lme_name
 5192470,Potamopyrgus antipodarum,1,Baltic Sea
 2308608,Potamothrix hammoniensis,1,Baltic Sea
 2114921,Pseudocalanus elongatus,1,Baltic Sea
+2426760,Rana dalmatina,1,Baltic Sea
 5188971,Rangia cuneata,1,Baltic Sea
 2321343,Streblospio benedicti,1,Baltic Sea
 2308987,Syllidia armata,1,Baltic Sea
@@ -747,6 +756,7 @@ species_key,species_name,lme_id,lme_name
 5233152,Beroe ovata,11,Black Sea
 2301629,Calyptraea chinensis,11,Black Sea
 2395367,Coryphoblennius galerita,11,Black Sea
+4286975,Cyprinus carpio,11,Black Sea
 2327735,Ficopomatus enigmaticus,11,Black Sea
 7791733,Mya arenaria,11,Black Sea
 2379089,Neogobius melanostomus,11,Black Sea
@@ -755,6 +765,7 @@ species_key,species_name,lme_id,lme_name
 2227605,Pilumnus hirtellus,11,Black Sea
 2379295,Pomatoschistus marmoratus,11,Black Sea
 5192470,Potamopyrgus antipodarum,11,Black Sea
+2426760,Rana dalmatina,11,Black Sea
 5199282,Sabellaria spinulosa,11,Black Sea
 8056718,Syngnathus abaster,11,Black Sea
 8608139,Tritia neritea,11,Black Sea
