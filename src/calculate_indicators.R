@@ -23,6 +23,16 @@ last_cube <- list_cubes %>%
   dplyr::filter(gbif_download_created == max(gbif_download_created, na.rm = TRUE))
 last_cube_key <- last_cube$gbif_download_key
 
+## Save the string download key to the last cube e.g. for reference in the dashboard
+last_cube_file <- here::here("data", "output", "last_cube_key.csv")
+readr::write_csv(
+  tibble::tibble(last_cube_key = last_cube_key),
+  last_cube_file,
+  na = "",
+  overwrite = TRUE
+)
+
+
 ## Download the cube from GBIF ####
 cube_path <- here::here("data", "input")
 cube_zip <- rgbif::occ_download_get(key = last_cube_key, path = cube_path, overwrite = TRUE)
