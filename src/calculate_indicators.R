@@ -29,7 +29,7 @@ readr::write_csv(
   tibble::tibble(last_cube_key = last_cube_key),
   last_cube_file,
   na = "",
-  overwrite = TRUE
+  append = FALSE
 )
 
 
