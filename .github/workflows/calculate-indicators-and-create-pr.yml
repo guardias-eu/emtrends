@@ -32,7 +32,8 @@ jobs:
       
       - name: Get R version
         id: r-version
-        run: echo "version=$(Rscript -e 'cat(getRversion())')" >> $GITHUB_OUTPUT
+        run: echo "version=$(Rscript -e 'cat(as.character(getRversion()))')" >> $GITHUB_OUTPUT
+
       
       - name: Setup R dependencies cache
         uses: actions/cache@v5
@@ -50,10 +51,20 @@ jobs:
       - name: Install R dependencies
         env: 
           GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          install.packages(c('dplyr', 'ggplot2', 'here', 'lubridate', 'purrr', 'readr', 'remotes', 'rgbif', 'stringr', 'tidyr', 'testthat', 'zip'))
-          install.packages("trias", repos = c(inbo = "https://inbo.r-universe.dev", CRAN = "https://cloud.r-project.org"))
         shell: Rscript {0}
+        run: |
+          options(repos = c(
+            inbo = "https://inbo.r-universe.dev",
+            CRAN = "https://cloud.r-project.org"
+          ))
+          install.packages(c(
+            'dplyr', 'ggplot2', 'here', 'lubridate', 'purrr',
+            'readr', 'remotes', 'rgbif', 'stringr', 'tidyr',
+            'testthat', 'zip', 'trias'
+          ))
+          if (!requireNamespace("trias", quietly = TRUE)) {
+            stop("Package 'trias' failed to install")
+          }
  
       - name: Calculate indicators
         run: Rscript src/calculate_indicators.R
