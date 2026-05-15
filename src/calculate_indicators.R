@@ -324,6 +324,13 @@ readr::write_csv(
 
 # Calculate emergence trends indicators based on GAM and decision rules #### 
 
+# First of all, remove the data of 2025 and 2026 as they are incomplete due to data publication delays, 
+# and it does not make sense to calculate emerging trends indicators for that year.
+# Also, a decrese of occurrences in the last year of the time series could have a 
+# negative impact in the calculation of the 1st and 2nd derivative of the GAM fit also for the previous years.
+cube <- cube %>%
+  dplyr::filter(year <= last_eval_year)
+
 # Define general function to calculate emerging trends indicators for a given 
 # species key in a given cube. This function will be applied to all species in 
 # the species list and all LMEs. It will return a list with the emerging trends 
