@@ -21,7 +21,9 @@ The emerging trends indicators calculated in this repository have been conceived
 │       ├── emerging_trends_ranking_list.csv         # Ranked list of emerging species per LME
 │       ├── appearing_species.csv                    # Species newly appearing in an LME
 │       ├── reappearing_species.csv                  # Species reappearing in an LME after absence
-│       └── indicators_plots/                        # Indicator plots per species and LME (zip archives)
+│       └── indicators_plots/                        # Indicator plots per species and LME
+│           ├── *.zip                                # Zip archives of plots per LME
+│           └── png/                                 # Individual PNG plots per species and LME
 ├── .github/
 │   └── workflows/
 │       └── calculate-indicators-and-create-pr.yml  # GitHub Actions workflow that runs the full pipeline and opens a PR with the results
