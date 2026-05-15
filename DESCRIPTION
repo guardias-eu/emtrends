@@ -1,6 +1,6 @@
 Package: emtrends
 Title: Generate emerging trends indicators for Europe's Large Marine Ecosystems
-Version: 0.0.0.9000
+Version: 1.0
 Authors@R: c(
     person("Damiano", "Oldoni", , "damiano.oldoni@inbo.be", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0003-3445-7562", affiliation = "Research Institute for Nature and Forest (INBO)")),
@@ -9,7 +9,7 @@ Authors@R: c(
     person("GuardIAS", role = "fnd",
            comment = "https://guardias.eu/")
   )
-Description: Create GAM (Generative Additive Models) based IAS emerging trends indicators for Europe's Large Marine Ecosystems (LME). These indicators analyze and visualize emerging trends in marine ecosystems, helping researchers and policymakers make informed decisions for conservation and management.
+Description: Calculate and visualize emerging trends indicators for Alien Species in Europe's Large Marine Ecosystems. These indicators will help researchers and policymakers making informed decisions for conservation and management.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

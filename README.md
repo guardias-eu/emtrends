@@ -1,6 +1,6 @@
 # emtrends
 
-Thie repo contains the workflows to generate emerging trends for Europe's Large Marine Ecosystems. Such workflows are based on [species occurrence cubes](https://www.gbif.org/occurrence-cubes), a concept developed during the [TrIAS](https://osf.io/7dpgr/) project and made operational by [GBIF](https://www.gbif.org/) and the [B-Cubed](https://b-cubed.eu/) project.
+This repo contains the workflows to generate emerging trends for Europe's Large Marine Ecosystems. Such workflows are based on [species occurrence cubes](https://www.gbif.org/occurrence-cubes), a concept developed during the [TrIAS](https://osf.io/7dpgr/) project and made operational by [GBIF](https://www.gbif.org/) and the [B-Cubed](https://b-cubed.eu/) project.
 
 The emerging trends indicators calculated in this repository have been conceived and applied at Belgian and regional level during the TrIAS project, see occurrence-based [indicators](https://trias-project.github.io/indicators/).
 
@@ -14,18 +14,24 @@ The emerging trends indicators calculated in this repository have been conceived
 ├── data/
 │   ├── input/                       # Species occurrence cubes downloaded from GBIF (CSV files)
 │   └── output/
-│       ├── grid_cells_with_lme_info.csv        # Mapping of EEA grid cell codes to LME identifiers
-│       ├── species_lme_combinations.csv        # All species × LME combinations present in the cube
-│       ├── emerging_trends_summary.csv         # Per-species/LME emerging-trend classification and statistics
-│       ├── emerging_trends_ranking_list.csv    # Ranked list of emerging species per LME
-│       ├── appearing_species.csv               # Species newly appearing in an LME
-│       ├── reappearing_species.csv             # Species reappearing in an LME after absence
-│       └── indicators_plots/                   # Indicator plots per species and LME (zip archives and PNG files)
-└── .github/
-    └── workflows/
-        └── calculate-indicators-and-create-pr.yml  # GitHub Actions workflow that runs the full pipeline and opens a PR with the results
+│       ├── grid_cells_with_lme_info.csv             # Mapping of EEA grid cell codes to LME identifiers
+│       ├── last_cube_key.csv                        # GBIF download key of the most recently processed occurrence cube
+│       ├── emerging_species_lme_combinations.csv    # Species × LME combinations with an emerging trend
+│       ├── emerging_trends_summary.csv              # Per-species/LME emerging-trend classification and statistics
+│       ├── emerging_trends_ranking_list.csv         # Ranked list of emerging species per LME
+│       ├── appearing_species.csv                    # Species newly appearing in an LME
+│       ├── reappearing_species.csv                  # Species reappearing in an LME after absence
+│       └── indicators_plots/                        # Indicator plots per species and LME
+│           ├── *.zip                                # Zip archives of plots per LME
+│           └── png/                                 # Individual PNG plots per species and LME
+├── .github/
+│   └── workflows/
+│       └── calculate-indicators-and-create-pr.yml  # GitHub Actions workflow that runs the full pipeline and opens a PR with the results
+├── DESCRIPTION                      # R package metadata (title, version, authors, dependencies)
+├── LICENSE
+└── LICENSE.md
 ```
 
 ## Funding
 
-This work is being developed in the framework of the [GuardIAS](https://guardias.eu/) prject. GuardIAS receives funding from the European Union’s Horizon Europe Research and Innovation Programme (ID No 101181413).
+This work is being developed in the framework of the [GuardIAS](https://guardias.eu/) project. GuardIAS receives funding from the European Union’s Horizon Europe Research and Innovation Programme (ID No 101181413).
