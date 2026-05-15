@@ -1,6 +1,6 @@
 Package: emtrends
 Title: Generate emerging trends indicators for Europe's Large Marine Ecosystems
-Version: 0.0.0.9000
+Version: 1.0
 Authors@R: c(
     person("Damiano", "Oldoni", , "damiano.oldoni@inbo.be", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0003-3445-7562", affiliation = "Research Institute for Nature and Forest (INBO)")),
