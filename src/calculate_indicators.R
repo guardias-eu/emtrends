@@ -274,22 +274,7 @@ reappearing_plots <- purrr::imap(
         purrr::imap(
           variable,
           function(v, y_label) {
-            p <- plot_variable(species_ts, v, y_label, species_key)
-            if (v == "number of occurrences") {
-              v <- "occs"
-            } else if (v == "number of grid cells (10x10km)") {
-              v <- "grid_cells"
-            }
-            # Save the plot as .png in output folder
-            ggsave(
-              filename = paste0("lme_", lme_name, "_species_", species_key, "_reappearing_species_", v, ".png"),
-              plot = p,
-              path = here::here("data", "output", "indicators_plots", "png"),
-              width = 12,
-              height = 6,
-              create.dir = TRUE
-            )
-            return(p)
+            plot_variable(species_ts, v, y_label, species_key)
           }
         )
       },
@@ -428,7 +413,6 @@ indicators_list <- purrr::map(
 # Save plots for each species ####
 # Delete existing plots in output folder to avoid confusion with old plots when saving new ones. It can be that we are creating indicators 
 # for a new cube, where the species list has changed, so we want to make sure that old plots are not mixed with new ones.
-
 output_png_folder <- here::here("data/output/indicators_plots/png/")
 existing_plots <- list.files(output_png_folder, pattern = "\\.png$", full.names = TRUE)
 if (length(existing_plots) > 0) {
@@ -436,7 +420,7 @@ if (length(existing_plots) > 0) {
   file.remove(existing_plots)
 }
 
-# Save plots as .png in output folder
+# Save indicator plots as .png in output folder
 purrr::iwalk(
   indicators_list,
   function(lme_indicators, lme_name) {
@@ -467,6 +451,70 @@ purrr::iwalk(
       }
     )
   }, .progress = TRUE
+)
+# Save appearing species plots and reappearing species plots as .png in output folder, with the name format:
+# "lme_{lme_name}_species_{species_key}_appearing_species_{variable}.png" and
+# "lme_{lme_name}_species_{species_key}_reappearing_species_{variable}.png", where variable is either "occs" or "grid_cells".
+purrr::iwalk(
+  appearing_plots,
+  function(plots_lme, lme_name) {
+    message("Saving png plots for appearing species for LME: ", lme_name, " (ID: ", lme_ids[names(lme_ids) == lme_name], ")")
+    if (length(plots_lme) == 0) return(NULL)
+    purrr::imap(
+      plots_lme,
+      function(plot_species, species_key) {
+        purrr::imap(
+          plot_species,
+          function(p, variable) {
+            if (variable == "number of occurrences") {
+              variable <- "occs"
+            } else if (variable == "number of grid cells (10x10km)") {
+              variable <- "grid_cells"
+            }
+            ggsave(
+              filename = paste0("lme_", lme_name, "_species_", species_key, "_appearing_species_", variable, ".png"),
+              plot = p,
+              path = output_png_folder,
+              width = 12,
+              height = 6,
+              create.dir = TRUE
+            )
+          }
+        )
+      }
+    )
+  }
+)
+
+purrr::iwalk(
+  reappearing_plots,
+  function(plots_lme, lme_name) {
+    message("Saving png plots for reappearing species for LME: ", lme_name, " (ID: ", lme_ids[names(lme_ids) == lme_name], ")")
+    if (length(plots_lme) == 0) return(NULL)
+    purrr::imap(
+      plots_lme,
+      function(plot_species, species_key) {
+        purrr::imap(
+          plot_species,
+          function(p, variable) {
+            if (variable == "number of occurrences") {
+              variable <- "occs"
+            } else if (variable == "number of grid cells (10x10km)") {
+              variable <- "grid_cells"
+            }
+            ggsave(
+              filename = paste0("lme_", lme_name, "_species_", species_key, "_reappearing_species_", variable, ".png"),
+              plot = p,
+              path = output_png_folder,
+              width = 12,
+              height = 6,
+              create.dir = TRUE
+            )
+          }
+        )
+      }
+    )
+  }
 )
 
 # Save plots as ggplot2 obejcts in zip files in output folder. This allows us to test
