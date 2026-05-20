@@ -5,7 +5,6 @@ lme_id,lme_name,specieskey,species,first_year
 14,Iberian Coastal,2237923,Paraleucilla magna,2022
 14,Iberian Coastal,2287072,Dreissena polymorpha,2026
 14,Iberian Coastal,2287076,Mytilopsis leucophaeata,2025
-14,Iberian Coastal,2288752,Martesia striata,2024
 14,Iberian Coastal,2291759,Polycera hedgpethi,2023
 14,Iberian Coastal,2315395,Alitta virens,2023
 14,Iberian Coastal,2320810,Boccardia proboscidea,2023
@@ -15,6 +14,7 @@ lme_id,lme_name,specieskey,species,first_year
 14,Iberian Coastal,2399874,Micropogonias undulatus,2023
 14,Iberian Coastal,2578507,Erysiphe corylacearum,2022
 14,Iberian Coastal,4363583,Rapana venosa,2025
+14,Iberian Coastal,5191262,Aplysia dactylomela,2023
 14,Iberian Coastal,5194683,Syllis pectinans,2023
 14,Iberian Coastal,5362054,Crassula helmsii,2022
 14,Iberian Coastal,8357929,Syllis variegata,2023
@@ -42,10 +42,11 @@ lme_id,lme_name,specieskey,species,first_year
 6,Celtic-Biscay Shelf,12191284,Eutintinnus,2025
 13,Mediterranean Sea,2257924,Diadumene cincta,2024
 13,Mediterranean Sea,2292317,Cuthona perca,2025
+13,Mediterranean Sea,2306710,Chaetopleura angulata,2023
+13,Mediterranean Sea,2309500,Myrianida pachycera,2023
 13,Mediterranean Sea,2320817,Boccardia semibranchiata,2023
 13,Mediterranean Sea,2323543,Diopatra marocensis,2022
 13,Mediterranean Sea,2323776,Fauveliopsis glabra,2022
-13,Mediterranean Sea,2331256,Distaplia bermudensis,2022
 13,Mediterranean Sea,2332248,Symplegma rubra,2022
 13,Mediterranean Sea,2372396,Oreochromis mossambicus,2026
 13,Mediterranean Sea,2501237,Bolinopsis vitrea,2024
@@ -53,7 +54,6 @@ lme_id,lme_name,specieskey,species,first_year
 13,Mediterranean Sea,2665285,Galaxaura rugosa,2022
 13,Mediterranean Sea,2668224,Sarcodiotheca gaudichaudii,2025
 13,Mediterranean Sea,4360387,Crepipatella dilatata,2022
-13,Mediterranean Sea,4369982,Cellana rota,2023
 13,Mediterranean Sea,4374562,Isognomon legumen,2023
 13,Mediterranean Sea,4417705,Sarscypridopsis lanzarotensis,2024
 13,Mediterranean Sea,4595317,Saccostrea glomerata,2025
@@ -95,6 +95,7 @@ lme_id,lme_name,specieskey,species,first_year
 53,Norwegian Sea,3198548,Cladosiphon zosterae,2022
 53,Norwegian Sea,3199341,Acrothrix gracilis,2023
 53,Norwegian Sea,3457717,Savoryella lignicola,2023
+53,Norwegian Sea,4286975,Cyprinus carpio,2022
 53,Norwegian Sea,5192789,Crepidula fornicata,2024
 53,Norwegian Sea,5384113,Opuntia fragilis,2022
 53,Norwegian Sea,8208307,Dinophysis odiosa,2023
@@ -111,13 +112,11 @@ lme_id,lme_name,specieskey,species,first_year
 3,North Sea,4359698,Ercolania viridis,2022
 3,North Sea,4366020,Bolinus brandaris,2024
 3,North Sea,4375643,Grateloupia minima,2023
-3,North Sea,4985433,Victorella pavida,2025
+3,North Sea,4408321,Craspedacusta sowerbii,2023
 3,North Sea,5177561,Ampithoe valida,2024
 3,North Sea,5178082,Caprella scaura,2022
 3,North Sea,5278375,Colaconema dasyae,2025
 3,North Sea,6460808,Aoroides longimerus,2023
-3,North Sea,6529629,Anadara kagoshimensis,2022
-3,North Sea,6531311,Arcuatula senhousia,2022
 3,North Sea,8140432,Corbicula largillierti,2024
 3,North Sea,8187685,Gobius cruentatus,2023
 3,North Sea,8439213,Chelicorophium sowinskyi,2023
@@ -152,7 +151,7 @@ lme_id,lme_name,specieskey,species,first_year
 54,Barents Sea,12238937,Neopyropia,2024
 1,Baltic Sea,2110813,Mytilicola orientalis,2024
 1,Baltic Sea,2115556,Tortanus discaudatus,2023
-1,Baltic Sea,2225646,Callinectes sapidus,2022
+1,Baltic Sea,2225646,Callinectes sapidus,2023
 1,Baltic Sea,2285980,Pecten maximus,2024
 1,Baltic Sea,2288926,Potamocorbula amurensis,2025
 1,Baltic Sea,2291865,Corambe obscura,2025
@@ -160,10 +159,8 @@ lme_id,lme_name,specieskey,species,first_year
 1,Baltic Sea,2379243,Proterorhinus nasalis,2023
 1,Baltic Sea,2578507,Erysiphe corylacearum,2024
 1,Baltic Sea,3193658,Biddulphia sinensis,2023
-1,Baltic Sea,3197314,Sargassum muticum,2022
 1,Baltic Sea,8190231,Corbicula fluminea,2025
 1,Baltic Sea,10933479,Haliclona xena,2023
-11,Black Sea,2293076,Haliotis tuberculata,2023
 11,Black Sea,2328293,Hydroides dianthus,2022
 11,Black Sea,2578507,Erysiphe corylacearum,2024
 11,Black Sea,3197970,Colpomenia peregrina,2025
