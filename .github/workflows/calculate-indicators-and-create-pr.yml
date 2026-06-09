@@ -116,6 +116,7 @@ jobs:
               title: 'Automated query update',
               head: '${{ steps.create_branch.outputs.branch_name }}',
               base: 'main',
+              reviewer: damianooldoni
               body: 'This PR was automatically created by a nightly (or event dispatch) run of `calculate-indicators-and-create-pr.yml`.'
             });
             
