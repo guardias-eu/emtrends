@@ -104,8 +104,8 @@ jobs:
           git push origin "$BRANCH_NAME"
       
       - name: Create Pull Request
-        id: create_pr
         if: steps.check_changes.outputs.has_changes == 'true'
+        id: create_pr
         uses: actions/github-script@v9
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -116,10 +116,17 @@ jobs:
               title: 'Automated query update',
               head: '${{ steps.create_branch.outputs.branch_name }}',
               base: 'main',
-              reviewer: damianooldoni
               body: 'This PR was automatically created by a nightly (or event dispatch) run of `calculate-indicators-and-create-pr.yml`.'
             });
-            
+      
+            // Request reviewer
+            await github.rest.pulls.requestReviewers({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: pr.number,
+              reviewers: ['damianooldoni']
+            });
+      
             // Add automated label
             await github.rest.issues.addLabels({
               owner: context.repo.owner,
@@ -127,6 +134,7 @@ jobs:
               issue_number: pr.number,
               labels: ['automated']
             });
-            
+      
             core.setOutput('pr_number', pr.number);
             return pr.number;
+      
