@@ -16,6 +16,7 @@ lme_id,lme_name,specieskey,species,first_year
 14,Iberian Coastal,2399874,Micropogonias undulatus,2023
 14,Iberian Coastal,2578507,Erysiphe corylacearum,2022
 14,Iberian Coastal,4363583,Rapana venosa,2025
+14,Iberian Coastal,5191262,Aplysia dactylomela,2023
 14,Iberian Coastal,5194683,Syllis pectinans,2023
 14,Iberian Coastal,5362054,Crassula helmsii,2022
 14,Iberian Coastal,7888344,Tintinnopsis mortensenii,2023
@@ -33,7 +34,6 @@ lme_id,lme_name,specieskey,species,first_year
 6,Celtic-Biscay Shelf,2325276,Thelepus japonicus,2023
 6,Celtic-Biscay Shelf,2578507,Erysiphe corylacearum,2025
 6,Celtic-Biscay Shelf,2657472,Antithamnion hubbsii,2024
-6,Celtic-Biscay Shelf,4366460,Hexaplex trunculus,2022
 6,Celtic-Biscay Shelf,5185846,Tiaropsis multicirrata,2026
 6,Celtic-Biscay Shelf,5185859,Lovenella assimilis,2022
 6,Celtic-Biscay Shelf,5389058,Solidago altissima,2023
@@ -48,9 +48,11 @@ lme_id,lme_name,specieskey,species,first_year
 6,Celtic-Biscay Shelf,12191284,Eutintinnus,2025
 13,Mediterranean Sea,2257924,Diadumene cincta,2024
 13,Mediterranean Sea,2292317,Cuthona perca,2025
+13,Mediterranean Sea,2306710,Chaetopleura angulata,2023
 13,Mediterranean Sea,2309500,Myrianida pachycera,2023
 13,Mediterranean Sea,2316240,Leonnates persicus,2024
 13,Mediterranean Sea,2320817,Boccardia semibranchiata,2023
+13,Mediterranean Sea,2323543,Diopatra marocensis,2022
 13,Mediterranean Sea,2323776,Fauveliopsis glabra,2022
 13,Mediterranean Sea,2332248,Symplegma rubra,2022
 13,Mediterranean Sea,2372396,Oreochromis mossambicus,2026
@@ -81,11 +83,10 @@ lme_id,lme_name,specieskey,species,first_year
 13,Mediterranean Sea,10822612,Oscilla virginiae,2022
 13,Mediterranean Sea,10933479,Haliclona xena,2023
 50,Faroe Plateau,1450317,Telmatogeton japonicus,2023
-50,Faroe Plateau,2227300,Procambarus clarkii,2022
+50,Faroe Plateau,2224979,Palaemon elegans,2026
 50,Faroe Plateau,2301117,Littorina littorea,2025
 50,Faroe Plateau,2315395,Alitta virens,2024
 50,Faroe Plateau,2329622,Ciona intestinalis,2023
-50,Faroe Plateau,5175631,Ligia oceanica,2023
 50,Faroe Plateau,5212973,Anguilla anguilla,2022
 50,Faroe Plateau,8485639,Ensis leei,2023
 53,Norwegian Sea,1007512,Pacificincola perforata,2024
@@ -96,14 +97,15 @@ lme_id,lme_name,specieskey,species,first_year
 53,Norwegian Sea,2264670,Haliclystus salpinx,2022
 53,Norwegian Sea,2265079,Rathkea octopunctata,2022
 53,Norwegian Sea,2309924,Proceraea cornuta,2025
+53,Norwegian Sea,2379243,Proterorhinus nasalis,2023
 53,Norwegian Sea,2501248,Mnemiopsis leidyi,2022
 53,Norwegian Sea,2565841,Lulwoana uniseptata,2023
+53,Norwegian Sea,2658889,Grateloupia turuturu,2026
 53,Norwegian Sea,3193507,Thalassiosira minima,2024
 53,Norwegian Sea,3198548,Cladosiphon zosterae,2022
 53,Norwegian Sea,3199341,Acrothrix gracilis,2023
 53,Norwegian Sea,3457717,Savoryella lignicola,2023
 53,Norwegian Sea,5192789,Crepidula fornicata,2024
-53,Norwegian Sea,5362054,Crassula helmsii,2025
 53,Norwegian Sea,5384113,Opuntia fragilis,2022
 53,Norwegian Sea,7665662,Bugulina fulva,2024
 53,Norwegian Sea,7668385,Bugulina simplex,2024
@@ -122,13 +124,15 @@ lme_id,lme_name,specieskey,species,first_year
 3,North Sea,4315140,Pontogammarus robustoides,2025
 3,North Sea,4346647,Anisakis pegreffii,2022
 3,North Sea,4359698,Ercolania viridis,2022
-3,North Sea,4366020,Bolinus brandaris,2024
+3,North Sea,4366020,Bolinus brandaris,2023
 3,North Sea,4375643,Grateloupia minima,2023
 3,North Sea,4408321,Craspedacusta sowerbii,2023
+3,North Sea,4985433,Victorella pavida,2025
 3,North Sea,5177561,Ampithoe valida,2024
 3,North Sea,5178082,Caprella scaura,2022
 3,North Sea,5278375,Colaconema dasyae,2025
 3,North Sea,6460808,Aoroides longimerus,2023
+3,North Sea,6529629,Anadara kagoshimensis,2022
 3,North Sea,8140432,Corbicula largillierti,2024
 3,North Sea,8187685,Gobius cruentatus,2023
 3,North Sea,8439213,Chelicorophium sowinskyi,2023
