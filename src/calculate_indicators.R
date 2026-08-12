@@ -23,7 +23,8 @@ last_cube <- list_cubes %>%
   dplyr::filter(gbif_download_created == max(gbif_download_created, na.rm = TRUE))
 last_cube_key <- last_cube$gbif_download_key
 
-## Save the string download key to the last cube e.g. for reference in the dashboard
+
+## Save the string download key to the last cube e.g. for reference in the dashboard ####
 last_cube_file <- here::here("data", "output", "last_cube_key.csv")
 readr::write_csv(
   tibble::tibble(last_cube_key = last_cube_key),
@@ -66,7 +67,11 @@ last_cube_species_list <- stringr::str_extract(
 ## Define prefix and URL to load the species list, then load it ####
 species_list_prefix <- "https://raw.githubusercontent.com/guardias-eu/build-eu-cube/refs/heads/main/"
 species_list_url <- paste0(species_list_prefix, last_cube_species_list)
-species_list <- readr::read_csv(species_list_url, na = "")
+species_list <- readr::read_csv(
+  species_list_url,
+  na = "",
+  guess_max = 10000
+)
 
 # Define evaluation years ####
 
