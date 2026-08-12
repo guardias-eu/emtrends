@@ -42,7 +42,7 @@ unzip(zipfile = cube_zip, exdir = cube_path)
 cube <- readr::read_tsv(
   here::here(cube_path, paste(last_cube_key, "csv", sep = ".")),
   col_types = readr::cols(
-    specieskey = readr::col_integer(),
+    specieskey = readr::col_character(),
     year = readr::col_integer(),
     occurrences = readr::col_integer()
   ),
@@ -424,7 +424,7 @@ if (length(existing_plots) > 0) {
 purrr::iwalk(
   indicators_list,
   function(lme_indicators, lme_name) {
-    message("Saving png plots for LME: ", lme_name, " (ID: ", lme_ids[names(lme_ids) == lme_name], ")")
+    message("Saving png plots for emerging species for LME: ", lme_name, " (ID: ", lme_ids[names(lme_ids) == lme_name], ")")
     purrr::iwalk(
       lme_indicators,
       function(ind, s) {
