@@ -82,11 +82,11 @@ last_eval_year <- lubridate::year(Sys.Date()) - 2
 first_eval_year <- last_eval_year - 2
 eval_years <- first_eval_year:last_eval_year
 
-# Get appearing taxa ####
+# Get appearing species ####
 
 # Appearing species are species that have their first occurrences in one of the years from first
 # evaluation year up to now. To be done for each LME, based on lme_ids and 
-# grid_cells_with_lme_info, to get the appearing taxa for each LME.
+# grid_cells_with_lme_info, to get the appearing species for each LME.
 appearing_species <- purrr::imap(
   lme_ids,
   function(lme_id, lme_name) {
@@ -314,21 +314,22 @@ readr::write_csv(
 
 # Calculate emergence trends indicators based on GAM and decision rules #### 
 
-# First of all, remove the data of 2025 and 2026 as they are incomplete due to data publication delays, 
-# and it does not make sense to calculate emerging trends indicators for that year.
-# Also, a decrese of occurrences in the last year of the time series could have a 
-# negative impact in the calculation of the 1st and 2nd derivative of the GAM fit also for the previous years.
+# First of all, remove the data of 2025 and 2026 as they are incomplete due to
+# data publication delays, and it does not make sense to calculate emerging
+# trends indicators for that year. Also, a decrese of occurrences in the last
+# year of the time series could have a negative impact in the calculation of the
+# 1st and 2nd derivative of the GAM fit also for the previous years.
 cube <- cube %>%
   dplyr::filter(year <= last_eval_year)
 
-# Define general function to calculate emerging trends indicators for a given 
-# species key in a given cube. This function will be applied to all species in 
-# the species list and all LMEs. It will return a list with the emerging trends 
-# indicators for both `n_occurrences` and `n_grid_cells`, including the GAM 
-# output or the decision rules output, if applicable. If there are no occurrences 
-# in the evaluation years, or if the species is (re)appearing, it will return `NULL` 
-# to avoid creating plots for that species in that LME, as it does not make sense to 
-# calculate emerging trends indicators in those cases.
+# Define general function to calculate emerging trends indicators for a given
+# species key in a given cube. This function will be applied to all species in
+# the species list and all LMEs. It will return a list with the emerging trends
+# indicators for both `n_occurrences` and `n_grid_cells`, including the GAM
+# output or the decision rules output, if applicable. If there are no
+# occurrences in the evaluation years, or if the species is (re)appearing, it
+# will return `NULL` to avoid creating plots for that species in that LME, as it
+# does not make sense to calculate emerging trends indicators in those cases.
 calc_em_indicator <- function(cube, key) {
   # If `key` is not present in the `cube`, return `NULL`
   if (!key %in% cube$specieskey) {
@@ -372,12 +373,15 @@ calc_em_indicator <- function(cube, key) {
 n_species <- nrow(species_list)
 species_keys <- unique(species_list$usageKey[1:n_species])
 names(species_keys) <- species_keys
-species_names <- unique(species_list$canonicalName[match(species_keys, species_list$usageKey)])
+species_names <- unique(
+  species_list$canonicalName[match(species_keys, species_list$usageKey)]
+)
 names(species_names) <- species_keys
 if (length(species_names) < length(species_keys)) {
   stop(paste(
     "Species names are not unique, please check the species list.",
-    "Consider using the `scientificName` column instead of `canonicalName` if there are issues with non-unique names."
+    "Consider using the `scientificName` column instead of `canonicalName` if ",
+    "there are issues with non-unique names."
   ))
 }
 # Calculate indicators for all species
@@ -416,8 +420,10 @@ indicators_list <- purrr::map(
 
 
 # Save plots for each species ####
-# Delete existing plots in output folder to avoid confusion with old plots when saving new ones. It can be that we are creating indicators 
-# for a new cube, where the species list has changed, so we want to make sure that old plots are not mixed with new ones.
+# Delete existing plots in output folder to avoid confusion with old plots when
+# saving new ones. It can be that we are creating indicators for a new cube,
+# where the species list has changed, so we want to make sure that old plots are
+# not mixed with new ones.
 output_png_folder <- here::here("data/output/indicators_plots/png/")
 existing_plots <- list.files(output_png_folder, pattern = "\\.png$", full.names = TRUE)
 if (length(existing_plots) > 0) {
