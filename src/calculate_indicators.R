@@ -140,7 +140,10 @@ appearing_species <- purrr::imap(
 appearing_plots <- purrr::imap(
   lme_ids,
   function(lme_id, lme_name) {
-    message("Creating plots for appearing species for LME: ", lme_name, " (ID: ", lme_id, ")")
+    message(
+      "Creating plots for appearing species for LME: ", lme_name,
+      " (ID: ", lme_id, ")"
+    )
     # Get grid cells for this LME
     grid_cells <- grid_cells_with_lme_info %>%
       dplyr::filter(lme_id == !!lme_id) %>%
@@ -171,7 +174,10 @@ appearing_plots <- purrr::imap(
             }
             # Save the plot as .png in output folder
             ggsave(
-              filename = paste0("lme_", lme_name, "_species_", species_key, "_appearing_species_", v, ".png"),
+              filename = paste0(
+                "lme_", lme_name, "_species_", species_key,
+                "_appearing_species_", v, ".png"
+              ),
               plot = p,
               path = here::here("data", "output", "indicators_plots", "png"),
               width = 12,
