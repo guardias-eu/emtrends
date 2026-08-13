@@ -168,25 +168,7 @@ appearing_plots <- purrr::imap(
         purrr::imap(
           variable,
           function(v, y_label) {
-            p <- plot_variable(species_ts, v, y_label, species_key)
-            if (v == "number of occurrences") {
-              v <- "occs"
-            } else if (v == "number of grid cells (10x10km)") {
-              v <- "grid_cells"
-            }
-            # Save the plot as .png in output folder
-            ggsave(
-              filename = paste0(
-                "lme_", lme_name, "_species_", species_key,
-                "_appearing_species_", v, ".png"
-              ),
-              plot = p,
-              path = here::here("data", "output", "indicators_plots", "png"),
-              width = 12,
-              height = 6,
-              create.dir = TRUE
-            )
-            return(p)
+            plot_variable(species_ts, v, y_label, species_key)
           }
         )
       },
