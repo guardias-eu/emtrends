@@ -134,9 +134,11 @@ appearing_species <- purrr::imap(
   purrr:::list_rbind()
 
 ## Create ggplot2 plots for appearing species ####
-# Use plot_variable function defined in src/utils.R to create the plots for the appearing species, for both 
-# `n_occurrences` and `n_grid_cells`. Save the plots as .png in output/png folder, with the name format:
-# "lme_{lme_name}_species_{species_key}_appearing_species_{variable}.png", where variable is either "occs" or "grid_cells".
+# Use plot_variable function defined in src/utils.R to create the plots for the
+# appearing species, for both `n_occurrences` and `n_grid_cells`. Save the plots
+# as .png in png subfolder, with the name format:
+# "lme_{lme_name}_species_{species_key}_appearing_species_{variable}.png", where
+# variable is either "occs" or "grid_cells".
 appearing_plots <- purrr::imap(
   lme_ids,
   function(lme_id, lme_name) {
@@ -192,34 +194,6 @@ appearing_plots <- purrr::imap(
     )
     names(plots_lme) <- appearing_species_lme$specieskey
     return(plots_lme)
-  }
-)
-
-## Save ggplot2 objects in appearing_plots as zip files in output folder, with the name format:
-# "lme_{lme_name}_appearing_species_plots.zip".
-purrr::iwalk(
-  appearing_plots,
-  function(plots_lme, lme_name) {
-    message(
-      "Saving ggplot2 plots for appearing species for LME: ", lme_name,
-      "(ID: ", lme_ids[names(lme_ids) == lme_name], ")"
-    )
-    if (length(plots_lme) == 0) return(NULL)
-    plot_list_zip_file <- here::here(
-      "data", "output", "indicators_plots", "ggplot",
-      paste0("appearing_species_plots_ggplot2_lme_", lme_name, ".zip")
-    )
-    plot_list_rdata_file <- here::here(
-      "data", "output", "indicators_plots", "ggplot",
-      paste0("appearing_species_plots_ggplot2_lme_", lme_name, ".RData")
-    )
-    save(plots_lme, file = plot_list_rdata_file)
-    zip::zip(
-      zipfile = plot_list_zip_file,
-      files = plot_list_rdata_file,
-      mode = "cherry-pick"
-    )
-    file.remove(plot_list_rdata_file)
   }
 )
 
@@ -297,9 +271,11 @@ reappearing_species <- purrr::imap(
   purrr:::list_rbind()
 
 ## Create ggplot2 plots for reappearing species ####
-# Use plot_variable function defined in src/utils.R to create the plots for the reappearing species, for both
-# `n_occurrences` and `n_grid_cells`. Save the plots as .png in output/png folder, with the name format:
-# "lme_{lme_name}_species_{species_key}_reappearing_species_{variable}.png", where variable is either "occs" or "grid_cells".
+# Use plot_variable function defined in src/utils.R to create the plots for the
+# reappearing species, for both `n_occurrences` and `n_grid_cells`. Save the
+# plots as .png in output/png folder, with the name format:
+# "lme_{lme_name}_species_{species_key}_reappearing_species_{variable}.png",
+# where variable is either "occs" or "grid_cells".
 reappearing_plots <- purrr::imap(
   lme_ids,
   function(lme_id, lme_name) {
@@ -337,34 +313,6 @@ reappearing_plots <- purrr::imap(
     )
     names(plots_lme) <- reappearing_species_lme$specieskey
     return(plots_lme)
-  }
-)
-
-# Save ggplot2 objects in reappearing_plots as zip files in output folder, with
-# the name format: "lme_{lme_name}_reappearing_species_plots.zip".
-purrr::iwalk(
-  reappearing_plots,
-  function(plots_lme, lme_name) {
-    message(
-      "Saving ggplot2 plots for reappearing species for LME: ", lme_name,
-      " (ID: ", lme_ids[names(lme_ids) == lme_name], ")"
-    )
-    if (length(plots_lme) == 0) return(NULL)
-    plot_list_zip_file <- here::here(
-      "data", "output", "indicators_plots",
-      paste0("reappearing_species_plots_ggplot2_lme_", lme_name, ".zip")
-    )
-    plot_list_rdata_file <- here::here(
-      "data", "output", "indicators_plots",
-      paste0("reappearing_species_plots_ggplot2_lme_", lme_name, ".RData")
-    )
-    save(plots_lme, file = plot_list_rdata_file)
-    zip::zip(
-      zipfile = plot_list_zip_file,
-      files = plot_list_rdata_file,
-      mode = "cherry-pick"
-    )
-    file.remove(plot_list_rdata_file)
   }
 )
 
@@ -411,9 +359,10 @@ calc_em_indicator <- function(cube, key) {
     return(NULL)
   }
 
-  # Also do not calculate emerging trends indicators if the species is (re)appearing.
-  # Return NULL in that case, to avoid creating plots for (re)appearing species, as 
-  # it does not make sense to calculate emerging trends indicators in that case either.
+  # Also do not calculate emerging trends indicators if the species is
+  # (re)appearing. Return NULL in that case, to avoid creating plots for
+  # (re)appearing species, as it does not make sense to calculate emerging
+  # trends indicators in that case either.
   if (key %in% appearing_species$specieskey | key %in% reappearing_species$specieskey) {
     return(NULL)
   }
@@ -483,7 +432,7 @@ indicators_list <- purrr::map(
 
 
 # Save plots for each species ####
-# Delete existing plots in output folder to avoid confusion with old plots when
+# Delete existing plots in png folder to avoid confusion with old plots when
 # saving new ones. It can be that we are creating indicators for a new cube,
 # where the species list has changed, so we want to make sure that old plots are
 # not mixed with new ones.
@@ -502,6 +451,7 @@ if (length(existing_plots) > 0) {
 }
 
 # Save indicator plots as .png in output folder
+message("Save ggplot2 objects of emerging trends as png files")
 purrr::iwalk(
   indicators_list,
   function(lme_indicators, lme_name) {
@@ -582,7 +532,7 @@ purrr::iwalk(
   }
 )
 
-message("Save ggplot2 objects of reappearing species as zip files")
+message("Save ggplot2 objects of reappearing species as png files")
 purrr::iwalk(
   reappearing_plots,
   function(plots_lme, lme_name) {
@@ -620,15 +570,15 @@ purrr::iwalk(
   }
 )
 
-# Save plots as ggplot2 objects in zip files in output folder. This allows us to
-# test the reactivity of OJS to transform ggplot2 objects into plotly objects.
-# One zip file per each LME or maximum of 100 species, containing the ggplot2
-# objects for all species in that LME. The structure of the zip file is:
+# Save plots as ggplot2 objects in zip files in ggplot subfolder. This allows us
+# to test the reactivity of OJS to transform ggplot2 objects into plotly
+# objects. One zip file per each LME or maximum of 100 species, containing the
+# ggplot2 objects for all species in that LME. The structure of the zip file is:
 # list(species_key = plot, ...)
 
-# Delete first existing plots in output folder to avoid confusion with old plots
-# when saving new ones. It can be that we are creating indicators for a new
-# cube, where the species list has changed, so we want to make sure that old
+# Delete first existing plots in ggplot subfolder to avoid confusion with old
+# plots when saving new ones. It can be that we are creating indicators for a
+# new cube, where the species list has changed, so we want to make sure that old
 # plots are not mixed with new ones.
 
 output_ggplot_folder <- here::here("data/output/indicators_plots/ggplot")
@@ -698,10 +648,67 @@ purrr::iwalk(
         file.remove(plot_list_rdata_file)
       }
     )
-  },
-.progress = TRUE
+  }
 )
 
+
+# Save ggplot2 objects in appearing_plots as zip files in ggplot subfolder, with
+# the name format: "lme_{lme_name}_appearing_species_plots.zip".
+message("Zip ggplot2 objects of appearing species")
+purrr::iwalk(
+  appearing_plots,
+  function(plots_lme, lme_name) {
+    message(
+      "Saving ggplot2 plots for appearing species for LME: ", lme_name,
+      "(ID: ", lme_ids[names(lme_ids) == lme_name], ")"
+    )
+    if (length(plots_lme) == 0) return(NULL)
+    plot_list_zip_file <- here::here(
+      "data", "output", "indicators_plots", "ggplot",
+      paste0("appearing_species_plots_ggplot2_lme_", lme_name, ".zip")
+    )
+    plot_list_rdata_file <- here::here(
+      "data", "output", "indicators_plots", "ggplot",
+      paste0("appearing_species_plots_ggplot2_lme_", lme_name, ".RData")
+    )
+    save(plots_lme, file = plot_list_rdata_file)
+    zip::zip(
+      zipfile = plot_list_zip_file,
+      files = plot_list_rdata_file,
+      mode = "cherry-pick"
+    )
+    file.remove(plot_list_rdata_file)
+  }
+)
+
+# Save ggplot2 objects in reappearing_plots as zip files in ggplot subfolder,
+# with the name format: "lme_{lme_name}_reappearing_species_plots.zip".
+message("Zip ggplot2 objects of reappearing species")
+purrr::iwalk(
+  reappearing_plots,
+  function(plots_lme, lme_name) {
+    message(
+      "Saving ggplot2 plots for reappearing species for LME: ", lme_name,
+      " (ID: ", lme_ids[names(lme_ids) == lme_name], ")"
+    )
+    if (length(plots_lme) == 0) return(NULL)
+    plot_list_zip_file <- here::here(
+      "data", "output", "indicators_plots", "ggplot",
+      paste0("reappearing_species_plots_ggplot2_lme_", lme_name, ".zip")
+    )
+    plot_list_rdata_file <- here::here(
+      "data", "output", "indicators_plots", "ggplot",
+      paste0("reappearing_species_plots_ggplot2_lme_", lme_name, ".RData")
+    )
+    save(plots_lme, file = plot_list_rdata_file)
+    zip::zip(
+      zipfile = plot_list_zip_file,
+      files = plot_list_rdata_file,
+      mode = "cherry-pick"
+    )
+    file.remove(plot_list_rdata_file)
+  }
+)
 
 # Create a summary of all emerging indicators in a dataframe, to be able to
 # create a ranking list of species based on their emerging status in each LME.
