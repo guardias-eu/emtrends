@@ -17,10 +17,16 @@ source(here::here("src/utils.R"))
 # Load the most recent species occurrence cube ####
 
 ## Load the list of cubes and filter for the most recent cube ####
-list_cubes_path <- "https://raw.githubusercontent.com/guardias-eu/build-eu-cube/refs/heads/main/data/output/list_downloads.tsv"
+base_main_path <- "https://raw.githubusercontent.com/guardias-eu/build-eu-cube/refs/heads/main"
+list_cubes_path <- file.path(
+  base_main_path,
+  "data/output/list_downloads.tsv"
+)
 list_cubes <- readr::read_tsv(list_cubes_path, na = "")
 last_cube <- list_cubes %>%
-  dplyr::filter(gbif_download_created == max(gbif_download_created, na.rm = TRUE))
+  dplyr::filter(
+    gbif_download_created == max(gbif_download_created, na.rm = TRUE)
+  )
 last_cube_key <- last_cube$gbif_download_key
 
 
@@ -36,7 +42,11 @@ readr::write_csv(
 
 ## Download the cube from GBIF ####
 cube_path <- here::here("data", "input")
-cube_zip <- rgbif::occ_download_get(key = last_cube_key, path = cube_path, overwrite = TRUE)
+cube_zip <- rgbif::occ_download_get(
+  key = last_cube_key,
+  path = cube_path,
+  overwrite = TRUE
+)
 
 ## Unzip and load the cube ####
 unzip(zipfile = cube_zip, exdir = cube_path)
@@ -52,7 +62,10 @@ cube <- readr::read_tsv(
 
 # Get the mapping of the grid cells to LMEs ####
 grid_cells_with_lme_info_file <- "data/output/grid_cells_with_lme_info.csv"
-grid_cells_with_lme_info <- readr::read_csv(grid_cells_with_lme_info_file, na = "")
+grid_cells_with_lme_info <- readr::read_csv(
+  grid_cells_with_lme_info_file,
+  na = ""
+)
 lme_ids <- unique(grid_cells_with_lme_info$lme_id)
 names(lme_ids) <- unique(grid_cells_with_lme_info$lme_name)
 
@@ -75,22 +88,26 @@ species_list <- readr::read_csv(
 
 # Define evaluation years ####
 
-# For emerging trends, take two years before the current year as last year.
-# E.g. if 2026, take 2024 as last year for emerging scores, to avoid issues with incomplete data 
-# due to data publication delays.
+# For emerging trends, take two years before the current year as last year. E.g.
+# if 2026, take 2024 as last year for emerging scores, to avoid issues with
+# incomplete data due to data publication delays.
 last_eval_year <- lubridate::year(Sys.Date()) - 2
 first_eval_year <- last_eval_year - 2
 eval_years <- first_eval_year:last_eval_year
 
 # Get appearing species ####
 
-# Appearing species are species that have their first occurrences in one of the years from first
-# evaluation year up to now. To be done for each LME, based on lme_ids and 
-# grid_cells_with_lme_info, to get the appearing species for each LME.
+# Appearing species are species that have their first occurrences in one of the
+# years from first evaluation year up to now. To be done for each LME, based on
+# lme_ids and grid_cells_with_lme_info, to get the appearing species for each
+# LME.
 appearing_species <- purrr::imap(
   lme_ids,
   function(lme_id, lme_name) {
-    message("Getting appearing species for LME: ", lme_name, " (ID: ", lme_id, ")")
+    message(
+      "Getting appearing species for LME: ", lme_name,
+      " (ID: ", lme_id, ")"
+    )
     # Get grid cells for this LME
     grid_cells <- grid_cells_with_lme_info %>%
       dplyr::filter(lme_id == !!lme_id) %>%
@@ -202,12 +219,16 @@ readr::write_csv(
 # based on lme_ids and grid_cells_with_lme_info, to get the reappearing species 
 # for each LME.
 
-# Define lowest amount of years without occurrences to consider a species as reappearing.
+# Define lowest number of years without occurrences to consider a species as
+# reappearing.
 latency_threshold <- 5 
 reappearing_species <- purrr::imap(
   lme_ids,
   function(lme_id, lme_name) {
-    message("Getting reappearing species for LME: ", lme_name, " (ID: ", lme_id, ")")
+    message(
+      "Getting reappearing species for LME: ", lme_name,
+      " (ID: ", lme_id, ")"
+    )
     # Get grid cells for this LME
     grid_cells <- grid_cells_with_lme_info %>%
       dplyr::filter(lme_id == !!lme_id) %>%
@@ -234,12 +255,19 @@ reappearing_species <- purrr::imap(
           NA_integer_
         ),
         .groups = "drop") %>%
-      dplyr::filter(!is.na(last_year) & !is.na(gap_from_last_year) & gap_from_last_year >= latency_threshold) %>%
+      dplyr::filter(
+        !is.na(last_year) &
+          !is.na(gap_from_last_year) &
+          gap_from_last_year >=
+          latency_threshold
+      ) %>%
       dplyr::mutate(
         lme_id = lme_id,
         lme_name = lme_name
       ) %>%
-      dplyr::relocate(lme_id, lme_name, specieskey, species, last_year, gap_from_last_year) %>%
+      dplyr::relocate(
+        lme_id, lme_name, specieskey, species, last_year, gap_from_last_year
+      ) %>%
       dplyr::rename(
         reappearance_year = last_year,
         years_without_occurrences = gap_from_last_year
@@ -256,7 +284,10 @@ reappearing_species <- purrr::imap(
 reappearing_plots <- purrr::imap(
   lme_ids,
   function(lme_id, lme_name) {
-    message("Creating plots for reappearing species for LME: ", lme_name, " (ID: ", lme_id, ")")
+    message(
+      "Creating plots for reappearing species for LME: ", lme_name,
+      " (ID: ", lme_id, ")"
+    )
     # Get grid cells for this LME
     grid_cells <- grid_cells_with_lme_info %>%
       dplyr::filter(lme_id == !!lme_id) %>%
@@ -290,17 +321,30 @@ reappearing_plots <- purrr::imap(
   }
 )
 
-# Save ggplot2 objects in reappearing_plots as zip files in output folder, with the name format:
-# "lme_{lme_name}_reappearing_species_plots.zip".
+# Save ggplot2 objects in reappearing_plots as zip files in output folder, with
+# the name format: "lme_{lme_name}_reappearing_species_plots.zip".
 purrr::iwalk(
   reappearing_plots,
   function(plots_lme, lme_name) {
-    message("Saving ggplot2 plots for reappearing species for LME: ", lme_name, " (ID: ", lme_ids[names(lme_ids) == lme_name], ")")
+    message(
+      "Saving ggplot2 plots for reappearing species for LME: ", lme_name,
+      " (ID: ", lme_ids[names(lme_ids) == lme_name], ")"
+    )
     if (length(plots_lme) == 0) return(NULL)
-    plot_list_zip_file <- here::here("data", "output", "indicators_plots", paste0("reappearing_species_plots_ggplot2_lme_", lme_name, ".zip"))
-    plot_list_rdata_file <- here::here("data", "output", "indicators_plots", paste0("reappearing_species_plots_ggplot2_lme_", lme_name, ".RData"))
+    plot_list_zip_file <- here::here(
+      "data", "output", "indicators_plots",
+      paste0("reappearing_species_plots_ggplot2_lme_", lme_name, ".zip")
+    )
+    plot_list_rdata_file <- here::here(
+      "data", "output", "indicators_plots",
+      paste0("reappearing_species_plots_ggplot2_lme_", lme_name, ".RData")
+    )
     save(plots_lme, file = plot_list_rdata_file)
-    zip::zip(zipfile = plot_list_zip_file, files = plot_list_rdata_file, mode = "cherry-pick")
+    zip::zip(
+      zipfile = plot_list_zip_file,
+      files = plot_list_rdata_file,
+      mode = "cherry-pick"
+    )
     file.remove(plot_list_rdata_file)
   }
 )
@@ -425,9 +469,16 @@ indicators_list <- purrr::map(
 # where the species list has changed, so we want to make sure that old plots are
 # not mixed with new ones.
 output_png_folder <- here::here("data/output/indicators_plots/png/")
-existing_plots <- list.files(output_png_folder, pattern = "\\.png$", full.names = TRUE)
+existing_plots <- list.files(
+  output_png_folder,
+  pattern = "\\.png$",
+  full.names = TRUE
+)
 if (length(existing_plots) > 0) {
-  message("Deleting ", length(existing_plots), " PNG plots in output folder: ", output_png_folder)
+  message(
+    "Deleting ", length(existing_plots), " PNG plots in output folder: ",
+    output_png_folder
+  )
   file.remove(existing_plots)
 }
 
@@ -435,7 +486,10 @@ if (length(existing_plots) > 0) {
 purrr::iwalk(
   indicators_list,
   function(lme_indicators, lme_name) {
-    message("Saving png plots for emerging species for LME: ", lme_name, " (ID: ", lme_ids[names(lme_ids) == lme_name], ")")
+    message(
+      "Saving png plots for emerging species for LME: ", lme_name,
+      " (ID: ", lme_ids[names(lme_ids) == lme_name], ")"
+    )
     purrr::iwalk(
       lme_indicators,
       function(ind, s) {
@@ -450,7 +504,9 @@ purrr::iwalk(
             }
             # Save the plot as .png in output folder
              ggsave(
-              filename = paste0("lme_", lme_name, "_species_", s, "_indicator_", v, ".png"),
+              filename = paste0(
+                "lme_", lme_name, "_species_", s, "_indicator_", v, ".png"
+              ),
               plot = p,
               path = output_png_folder,
               width = 12,
@@ -473,7 +529,10 @@ message("Save ggplot2 objects of appearing species as zip files")
 purrr::iwalk(
   appearing_plots,
   function(plots_lme, lme_name) {
-    message("Saving png plots for appearing species for LME: ", lme_name, " (ID: ", lme_ids[names(lme_ids) == lme_name], ")")
+    message(
+      "Saving png plots for appearing species for LME: ", lme_name,
+      " (ID: ", lme_ids[names(lme_ids) == lme_name], ")"
+    )
     if (length(plots_lme) == 0) return(NULL)
     purrr::imap(
       plots_lme,
@@ -487,7 +546,10 @@ purrr::iwalk(
               variable <- "grid_cells"
             }
             ggsave(
-              filename = paste0("lme_", lme_name, "_species_", species_key, "_appearing_species_", variable, ".png"),
+              filename = paste0(
+                "lme_", lme_name, "_species_", species_key,
+                "_appearing_species_", variable, ".png"
+              ),
               plot = p,
               path = output_png_folder,
               width = 12,
@@ -505,7 +567,10 @@ message("Save ggplot2 objects of reappearing species as zip files")
 purrr::iwalk(
   reappearing_plots,
   function(plots_lme, lme_name) {
-    message("Saving png plots for reappearing species for LME: ", lme_name, " (ID: ", lme_ids[names(lme_ids) == lme_name], ")")
+    message(
+      "Saving png plots for reappearing species for LME: ",
+      lme_name, " (ID: ", lme_ids[names(lme_ids) == lme_name], ")"
+    )
     if (length(plots_lme) == 0) return(NULL)
     purrr::imap(
       plots_lme,
@@ -519,7 +584,10 @@ purrr::iwalk(
               variable <- "grid_cells"
             }
             ggsave(
-              filename = paste0("lme_", lme_name, "_species_", species_key, "_reappearing_species_", variable, ".png"),
+              filename = paste0(
+                "lme_", lme_name, "_species_", species_key, 
+                "_reappearing_species_", variable, ".png"
+              ),
               plot = p,
               path = output_png_folder,
               width = 12,
@@ -533,18 +601,29 @@ purrr::iwalk(
   }
 )
 
-# Save plots as ggplot2 obejcts in zip files in output folder. This allows us to test
-# the reactivity of OJS to transform ggplot2 objects into plotly objects.
-# One zip file per each LME or maximum of 100 species, containing the ggplot2 objects for all species in that LME.
-# The structure of the zip file is: list(species_key = plot, ...)
+# Save plots as ggplot2 objects in zip files in output folder. This allows us to
+# test the reactivity of OJS to transform ggplot2 objects into plotly objects.
+# One zip file per each LME or maximum of 100 species, containing the ggplot2
+# objects for all species in that LME. The structure of the zip file is:
+# list(species_key = plot, ...)
 
-# Delete existing plots in output folder to avoid confusion with old plots when saving new ones. It can be that we are creating indicators 
-# for a new cube, where the species list has changed, so we want to make sure that old plots are not mixed with new ones.
+# Delete first existing plots in output folder to avoid confusion with old plots
+# when saving new ones. It can be that we are creating indicators for a new
+# cube, where the species list has changed, so we want to make sure that old
+# plots are not mixed with new ones.
 
 output_ggplot_folder <- here::here("data/output/indicators_plots/ggplot")
-existing_plots <- list.files(output_ggplot_folder, pattern = "\\.zip$", full.names = TRUE, recursive  = FALSE)
+existing_plots <- list.files(
+  output_ggplot_folder,
+  pattern = "\\.zip$",
+  full.names = TRUE,
+  recursive  = FALSE
+)
 if (length(existing_plots) > 0) {
-  message("Deleting ", length(existing_plots), " zip files plots in output folder: ", output_ggplot_folder)
+  message(
+    "Deleting ", length(existing_plots), " zip files plots in output folder: ",
+    output_ggplot_folder
+  )
   file.remove(existing_plots)
 }
 
@@ -583,10 +662,20 @@ purrr::iwalk(
     purrr::imap(
       plot_list_chunks,
       function(chunk, i) {
-        plot_list_zip_file <- here::here("data", "output", "indicators_plots", paste0("indicators_plots_ggplot2_", lme_name, "_chunk_", i, ".zip"))
-        plot_list_rdata_file <- here::here("data", "output", "indicators_plots", paste0("indicators_plots_ggplot2_", lme_name, "_chunk_", i, ".RData"))
+        plot_list_zip_file <- here::here(
+          "data", "output", "indicators_plots",
+          paste0("indicators_plots_ggplot2_", lme_name, "_chunk_", i, ".zip")
+        )
+        plot_list_rdata_file <- here::here(
+          "data", "output", "indicators_plots",
+          paste0("indicators_plots_ggplot2_", lme_name, "_chunk_", i, ".RData")
+        )
         save(chunk, file = plot_list_rdata_file)
-        zip::zip(zipfile = plot_list_zip_file, files = plot_list_rdata_file, mode = "cherry-pick")
+        zip::zip(
+          zipfile = plot_list_zip_file,
+          files = plot_list_rdata_file,
+          mode = "cherry-pick"
+        )
         file.remove(plot_list_rdata_file)
       }
     )
@@ -595,11 +684,12 @@ purrr::iwalk(
 )
 
 
-# Create a summary of all emerging indicators in a dataframe, to be able to 
+# Create a summary of all emerging indicators in a dataframe, to be able to
 # create a ranking list of species based on their emerging status in each LME.
-# We have to extract the emerging status for each species, variable, yaer and LME, based on GAM or decision rules.
-# Take into accout only the years in the evaluation years.
-# This allow us to create a ranking list of species based on their emerging status in each LME.
+# We have to extract the emerging status for each species, variable, yaer and
+# LME, based on GAM or decision rules. Take into accout only the years in the
+# evaluation years. This allow us to create a ranking list of species based on
+# their emerging status in each LME.
 em_df <- purrr::imap_dfr(
   indicators_list,
   function(lme_indicators, lme_name) {
@@ -616,11 +706,28 @@ em_df <- purrr::imap_dfr(
                   lme_id = as.integer(lme_ids[names(lme_ids) == lme_name]),
                   lme_name = lme_name,
                   variable = variable,
-                  # if growth exists, hold it, otherwise set it to NA. Growth is only available for GAM, not for decision rules, but we want to have the column in the dataframe for both models to be able to compare them.
-                  growth = ifelse("growth" %in% colnames(trend_output$em_summary), growth, NA_real_),
+                  # if growth exists, hold it, otherwise set it to NA. Growth is
+                  # only available for GAM, not for decision rules, but we want
+                  # to have the column in the dataframe for both models to be
+                  # able to compare them.
+                  growth = ifelse(
+                    "growth" %in% colnames(trend_output$em_summary),
+                    growth,
+                    NA_real_
+                  ),
                   em_status = as.integer(em_status)
                 ) %>%
-                dplyr::select(lme_id, lme_name, specieskey, species_name, year, variable, model, em_status, growth)
+                dplyr::select(
+                  lme_id,
+                  lme_name,
+                  specieskey,
+                  species_name,
+                  year,
+                  variable,
+                  model,
+                  em_status,
+                  growth
+                )
             }
           )
         }
@@ -638,17 +745,24 @@ readr::write_csv(
   na = ""
 )
 
-# Assign  a weigth for each year/variable combination, to be able to calculate a weighted emerging status for each species in each LME.
-# We give more weight to the most recent year and to the variable "number of grid cells" compared to "number of occurrences"
-# because it is a more robust indicator of emerging trends, less affected by sampling effort.
+# Assign  a weight for each year/variable combination, to be able to calculate a
+# weighted emerging status for each species in each LME. We give more weight to
+# the most recent year and to the variable "number of grid cells" compared to
+# "number of occurrences" because it is a more robust indicator of emerging
+# trends, less affected by sampling effort.
 weights <- dplyr::tibble(
   year = rep(eval_years, each = 2),
-  variable = rep(c("number of occurrences", "number of grid cells (10x10km)"), times = length(eval_years)),
+  variable = rep(
+    c("number of occurrences", "number of grid cells (10x10km)"),
+    times = length(eval_years)
+  ),
   weights = c(1, 1.5, 1.5, 2, 2, 2.5)
 )
 
-# Apply weigths to the emerging status and calculate a weighted emerging status for each species in each LME.
-# Also, in case equal weighted emerging status, higher rank to species using GAM and use the growth column to give higher rank to species that have a  higher growth, as they are more likely to be emerging.
+# Apply weights to the emerging status and calculate a weighted emerging status
+# for each species in each LME. Also, in case equal weighted emerging status,
+# higher rank to species using GAM and use the growth column to give higher rank
+# to species that have a  higher growth, as they are more likely to be emerging.
 em_rank <- em_df %>%
   dplyr::left_join(weights, by = c("year", "variable")) %>%
   dplyr::mutate(weighted_em_status = em_status * weights) %>%
