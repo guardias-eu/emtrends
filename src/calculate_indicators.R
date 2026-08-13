@@ -200,12 +200,25 @@ appearing_plots <- purrr::imap(
 purrr::iwalk(
   appearing_plots,
   function(plots_lme, lme_name) {
-    message("Saving ggplot2 plots for appearing species for LME: ", lme_name, " (ID: ", lme_ids[names(lme_ids) == lme_name], ")")
+    message(
+      "Saving ggplot2 plots for appearing species for LME: ", lme_name,
+      "(ID: ", lme_ids[names(lme_ids) == lme_name], ")"
+    )
     if (length(plots_lme) == 0) return(NULL)
-    plot_list_zip_file <- here::here("data", "output", "indicators_plots", paste0("appearing_species_plots_ggplot2_lme_", lme_name, ".zip"))
-    plot_list_rdata_file <- here::here("data", "output", "indicators_plots", paste0("appearing_species_plots_ggplot2_lme_", lme_name, ".RData"))
+    plot_list_zip_file <- here::here(
+      "data", "output", "indicators_plots", "ggplot",
+      paste0("appearing_species_plots_ggplot2_lme_", lme_name, ".zip")
+    )
+    plot_list_rdata_file <- here::here(
+      "data", "output", "indicators_plots", "ggplot",
+      paste0("appearing_species_plots_ggplot2_lme_", lme_name, ".RData")
+    )
     save(plots_lme, file = plot_list_rdata_file)
-    zip::zip(zipfile = plot_list_zip_file, files = plot_list_rdata_file, mode = "cherry-pick")
+    zip::zip(
+      zipfile = plot_list_zip_file,
+      files = plot_list_rdata_file,
+      mode = "cherry-pick"
+    )
     file.remove(plot_list_rdata_file)
   }
 )
@@ -531,7 +544,7 @@ purrr::iwalk(
 # "lme_{lme_name}_species_{species_key}_appearing_species_{variable}.png" and
 # "lme_{lme_name}_species_{species_key}_reappearing_species_{variable}.png",
 # where variable is either "occs" or "grid_cells".
-message("Save ggplot2 objects of appearing species as zip files")
+message("Save ggplot2 objects of appearing species as png files")
 purrr::iwalk(
   appearing_plots,
   function(plots_lme, lme_name) {
@@ -633,7 +646,7 @@ if (length(existing_plots) > 0) {
   file.remove(existing_plots)
 }
 
-message("Save ggplot2 objects of emerging trends as zip files")
+message("Zip ggplot2 objects of emerging trends")
 purrr::iwalk(
   indicators_list,
   function(lme_indicators, lme_name) {
@@ -669,11 +682,11 @@ purrr::iwalk(
       plot_list_chunks,
       function(chunk, i) {
         plot_list_zip_file <- here::here(
-          "data", "output", "indicators_plots",
+          "data", "output", "indicators_plots", "ggplot",
           paste0("indicators_plots_ggplot2_", lme_name, "_chunk_", i, ".zip")
         )
         plot_list_rdata_file <- here::here(
-          "data", "output", "indicators_plots",
+          "data", "output", "indicators_plots", "ggplot",
           paste0("indicators_plots_ggplot2_", lme_name, "_chunk_", i, ".RData")
         )
         save(chunk, file = plot_list_rdata_file)
