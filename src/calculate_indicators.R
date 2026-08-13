@@ -332,11 +332,12 @@ calc_em_indicator <- function(cube, key) {
   min_year <- min(species_ts$year, na.rm = TRUE)
   max_year <- max(species_ts$year, na.rm = TRUE)
 
-  # Apply GAM modelling or decision rules to calculate emerging trends indicators.
-  # Do it for both `n_occurrences` and `n_grid_cells`.
-  # Do not apply the models if there are no occurrences in the evaluation years, 
-  # as it does not make sense to calculate emerging trends indicators in that case. 
-  # Instead, return `NULL` and do not create any plot for that species in that LME.
+  # Apply GAM modelling or decision rules to calculate emerging trends
+  # indicators. Do it for both `n_occurrences` and `n_grid_cells`. Do not apply
+  # the models if there are no occurrences in the evaluation years, as it does
+  # not make sense to calculate emerging trends indicators in that case.
+  # Instead, return `NULL` and do not create any plot for that species in that
+  # LME.
   if (!all(eval_years %in% species_ts$year)) {
     return(NULL)
   }
