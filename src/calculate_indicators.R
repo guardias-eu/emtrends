@@ -457,9 +457,13 @@ purrr::iwalk(
     )
   }, .progress = TRUE
 )
-# Save appearing species plots and reappearing species plots as .png in output folder, with the name format:
+
+# Save appearing species plots and reappearing species plots as .png in output
+# folder, with the name format:
 # "lme_{lme_name}_species_{species_key}_appearing_species_{variable}.png" and
-# "lme_{lme_name}_species_{species_key}_reappearing_species_{variable}.png", where variable is either "occs" or "grid_cells".
+# "lme_{lme_name}_species_{species_key}_reappearing_species_{variable}.png",
+# where variable is either "occs" or "grid_cells".
+message("Save ggplot2 objects of appearing species as zip files")
 purrr::iwalk(
   appearing_plots,
   function(plots_lme, lme_name) {
@@ -491,6 +495,7 @@ purrr::iwalk(
   }
 )
 
+message("Save ggplot2 objects of reappearing species as zip files")
 purrr::iwalk(
   reappearing_plots,
   function(plots_lme, lme_name) {
@@ -537,14 +542,20 @@ if (length(existing_plots) > 0) {
   file.remove(existing_plots)
 }
 
-message("Save ggplot2 objects as zip files")
+message("Save ggplot2 objects of emerging trends as zip files")
 purrr::iwalk(
   indicators_list,
   function(lme_indicators, lme_name) {
-    message("Saving ggplot2 plots for LME: ", lme_name, " (ID: ", lme_ids[names(lme_ids) == lme_name], ")")
+    message(
+      "Saving ggplot2 plots for emerging trends for LME: ",
+      lme_name,
+      " (ID: ",
+      lme_ids[names(lme_ids) == lme_name],
+      ")"
+    )
     if (length(lme_indicators) == 0) return(NULL)
-    # Split plots into chunks of 50 species and save each chunk as a separate zip file
-    # Extract the ggplot2 objects for each species in this LME
+    # Split plots into chunks of 50 species and save each chunk as a separate
+    # zip file Extract the ggplot2 objects for each species in this LME
     lme_plots <- purrr::imap(
       lme_indicators,
       function(ind, s) {
