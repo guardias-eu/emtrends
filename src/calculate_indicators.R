@@ -702,7 +702,7 @@ em_df <- purrr::imap_dfr(
             function(trend_output, variable) {
               trend_output$em_summary %>%
                 dplyr::mutate(
-                  species_name = species_names[[species_key)]],
+                  species_name = species_names[[species_key]],
                   lme_id = as.integer(lme_ids[names(lme_ids) == lme_name]),
                   lme_name = lme_name,
                   variable = variable,
