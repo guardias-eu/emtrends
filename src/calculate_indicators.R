@@ -595,7 +595,7 @@ em_df <- purrr::imap_dfr(
             function(trend_output, variable) {
               trend_output$em_summary %>%
                 dplyr::mutate(
-                  species_name = species_names[as.character(species_key)],
+                  species_name = species_names[[species_key)]],
                   lme_id = as.integer(lme_ids[names(lme_ids) == lme_name]),
                   lme_name = lme_name,
                   variable = variable,
@@ -662,7 +662,7 @@ species_lme_combinations <- purrr::imap_dfr(
         if (!is.null(species_indicator)) {
           tidyr::tibble(
             species_key = as.integer(species_key),
-            species_name = species_names[[as.character(species_key)]],
+            species_name = species_names[[species_key]],
             lme_id = as.integer(lme_ids[names(lme_ids) == lme_name]),
             lme_name = lme_name
           )
