@@ -26,16 +26,15 @@ N7ZH7,Dictyota cyanoloma,14,Iberian Coastal
 6HVS2,Ficopomatus enigmaticus,14,Iberian Coastal
 PGMCT,Fucus serratus,14,Iberian Coastal
 3GQ9Z,Gobius xanthocephalus,14,Iberian Coastal
-6KZCH,Haliotis tuberculata,14,Iberian Coastal
 3KP8C,Hemigrapsus takanoi,14,Iberian Coastal
 3T7JW,Lepadogaster candolii,14,Iberian Coastal
 3VNQM,Littorina obtusata,14,Iberian Coastal
 44RHY,Mya arenaria,14,Iberian Coastal
-482KT,Nucella lapillus,14,Iberian Coastal
 6T3K7,Opuntia elatior,14,Iberian Coastal
 9GQWD,Palaemon elegans,14,Iberian Coastal
 4CMHV,Parablennius incognitus,14,Iberian Coastal
 9XW6F,Penaeus kerathurus,14,Iberian Coastal
+RCDCN,Perforatus perforatus,14,Iberian Coastal
 4FS5C,Phallusia mammillata,14,Iberian Coastal
 4GRD8,Phorcus sauciatus,14,Iberian Coastal
 4GRZN,Phoronis hippocrepia,14,Iberian Coastal
@@ -97,7 +96,6 @@ ZJCF,Crisularia plumosa,6,Celtic-Biscay Shelf
 6HVS2,Ficopomatus enigmaticus,6,Celtic-Biscay Shelf
 PGHVY,Fucus distichus,6,Celtic-Biscay Shelf
 PGMCT,Fucus serratus,6,Celtic-Biscay Shelf
-6KZCH,Haliotis tuberculata,6,Celtic-Biscay Shelf
 7VBK3,Halisarca dujardinii,6,Celtic-Biscay Shelf
 L26KD,Hemigrapsus sanguineus,6,Celtic-Biscay Shelf
 3NHYZ,Hymeniacidon perlevis,6,Celtic-Biscay Shelf
@@ -107,9 +105,9 @@ VL8MP,Melanothamnus harveyi,6,Celtic-Biscay Shelf
 3ZTFD,Mercenaria mercenaria,6,Celtic-Biscay Shelf
 42Z4T,Micromesistius poutassou,6,Celtic-Biscay Shelf
 44RHY,Mya arenaria,6,Celtic-Biscay Shelf
-482KT,Nucella lapillus,6,Celtic-Biscay Shelf
 48GMW,Ocinebrellus inornatus,6,Celtic-Biscay Shelf
 9GQWD,Palaemon elegans,6,Celtic-Biscay Shelf
+RCDCN,Perforatus perforatus,6,Celtic-Biscay Shelf
 4FDSH,Petricolaria pholadiformis,6,Celtic-Biscay Shelf
 4FS5C,Phallusia mammillata,6,Celtic-Biscay Shelf
 4GRZN,Phoronis hippocrepia,6,Celtic-Biscay Shelf
@@ -211,7 +209,6 @@ YSGX,Coryphoblennius galerita,13,Mediterranean Sea
 YZCQ,Cotylorhiza erythraea,13,Mediterranean Sea
 ZJCF,Crisularia plumosa,13,Mediterranean Sea
 3256V,Ctenocalanus vanus,13,Mediterranean Sea
-6BMJM,Ctenogobius boleosoma,13,Mediterranean Sea
 33HRJ,Cyprinus carpio,13,Mediterranean Sea
 34D2F,Decapterus russelli,13,Mediterranean Sea
 35864,Diadema setosum,13,Mediterranean Sea
@@ -238,11 +235,10 @@ N7ZH7,Dictyota cyanoloma,13,Mediterranean Sea
 3GW52,Goniobranchus annulatus,13,Mediterranean Sea
 3GW5Z,Goniobranchus obsoletus,13,Mediterranean Sea
 6L2HF,Gonioinfradens giardi,13,Mediterranean Sea
-6KZCH,Haliotis tuberculata,13,Mediterranean Sea
 3JFLP,Halophila stipulacea,13,Mediterranean Sea
-3KV39,Heniochus intermedius,13,Mediterranean Sea
 3KYK3,Herdmania momus,13,Mediterranean Sea
 3KZ74,Herklotsichthys punctatus,13,Mediterranean Sea
+PQ2RQ,Hildenbrandia crouaniorum,13,Mediterranean Sea
 3LY4N,Himantura uarnak,13,Mediterranean Sea
 3NHYZ,Hymeniacidon perlevis,13,Mediterranean Sea
 3P33V,Hypselodoris infucata,13,Mediterranean Sea
@@ -268,7 +264,6 @@ QJZ24,Microeuraphia depressa,13,Mediterranean Sea
 44RHY,Mya arenaria,13,Mediterranean Sea
 456PK,Myra subgranulata,13,Mediterranean Sea
 46829,Nemipterus randalli,13,Mediterranean Sea
-482KT,Nucella lapillus,13,Mediterranean Sea
 4925M,Oithona plumifera,13,Mediterranean Sea
 49FLG,Oncaea mediterranea,13,Mediterranean Sea
 6T3K7,Opuntia elatior,13,Mediterranean Sea
@@ -286,6 +281,7 @@ QJZ24,Microeuraphia depressa,13,Mediterranean Sea
 9XW6F,Penaeus kerathurus,13,Mediterranean Sea
 76JN9,Pennaria disticha,13,Mediterranean Sea
 773T8,Percnon gibbesi,13,Mediterranean Sea
+RCDCN,Perforatus perforatus,13,Mediterranean Sea
 4FS5C,Phallusia mammillata,13,Mediterranean Sea
 4FS5J,Phallusia nigra,13,Mediterranean Sea
 4GRZN,Phoronis hippocrepia,13,Mediterranean Sea
@@ -362,7 +358,6 @@ VFD7,Ciona robusta,13,Mediterranean Sea
 Z4FP,Crambe crambe,13,Mediterranean Sea
 38PCQ,Ecteinascidia turbinata,13,Mediterranean Sea
 3HRQS,Gymnodinium catenatum,13,Mediterranean Sea
-3L2BQ,Hermodice carunculata,13,Mediterranean Sea
 6MJMF,Hydroides dirampha,13,Mediterranean Sea
 3QN26,Jassa slatteryi,13,Mediterranean Sea
 6RVDM,Necora puber,13,Mediterranean Sea
@@ -378,7 +373,6 @@ BSQH5,Watersipora subatra,13,Mediterranean Sea
 R48N,Carcinus maenas,50,Faroe Plateau
 32WFN,Cyclopterus lumpus,50,Faroe Plateau
 42Z4T,Micromesistius poutassou,50,Faroe Plateau
-482KT,Nucella lapillus,50,Faroe Plateau
 3JBV8,Halichoerus grypus,50,Faroe Plateau
 65BGC,Aetea truncata,53,Norwegian Sea
 B29V,Agonus cataphractus,53,Norwegian Sea
@@ -400,7 +394,6 @@ PHYYY,Halosiphon tomentosus,53,Norwegian Sea
 42Z4T,Micromesistius poutassou,53,Norwegian Sea
 44RHY,Mya arenaria,53,Norwegian Sea
 472YS,Nephtys ciliata,53,Norwegian Sea
-482KT,Nucella lapillus,53,Norwegian Sea
 9GQWD,Palaemon elegans,53,Norwegian Sea
 RZPNM,Porphyra umbilicalis,53,Norwegian Sea
 RVKDP,Pronoctiluca pelagica,53,Norwegian Sea
@@ -424,6 +417,7 @@ S7PNN,Pylaiella littoralis,53,Norwegian Sea
 SHPCB,Rhizosolenia setigera,53,Norwegian Sea
 52F56,Sternaspis scutata,53,Norwegian Sea
 3JBV8,Halichoerus grypus,53,Norwegian Sea
+9C4T,Acipenser baerii,3,North Sea
 65BGC,Aetea truncata,3,North Sea
 L97ZS,Agardhiella subulata,3,North Sea
 B29V,Agonus cataphractus,3,North Sea
@@ -497,7 +491,6 @@ VL8MP,Melanothamnus harveyi,3,North Sea
 46FZP,Neodexiospira brasiliensis,3,North Sea
 6RW9X,Neogobius melanostomus,3,North Sea
 472YS,Nephtys ciliata,3,North Sea
-482KT,Nucella lapillus,3,North Sea
 48GMW,Ocinebrellus inornatus,3,North Sea
 B3YKX,Pagurus longicarpus,3,North Sea
 9GQWD,Palaemon elegans,3,North Sea
@@ -524,12 +517,14 @@ SHPG2,Rhizosolenia styliformis,3,North Sea
 4VZML,Scruparia ambigua,3,North Sea
 4YF8Y,Sparus aurata,3,North Sea
 TB3ZV,Stephanopyxis turris,3,North Sea
+52X2B,Streblospio benedicti,3,North Sea
 5387D,Styela clava,3,North Sea
 53D7D,Suberites massa,3,North Sea
 53ML9,Syllidia armata,3,North Sea
 7B8KV,Synidotea laticauda,3,North Sea
 T8WJW,Thalassiosira nordenskioeldii,3,North Sea
 564M4,Tharyx killariensis,3,North Sea
+56CH3,Theora lubrica,3,North Sea
 7CXK2,Tubificoides benedii,3,North Sea
 59K2N,Tubularia indivisa,3,North Sea
 TRJJ4,Undaria pinnatifida,3,North Sea
@@ -552,6 +547,7 @@ VJY5B,Lessardia elongata,3,North Sea
 RWNKZ,Prorocentrum cordatum,3,North Sea
 S7PNN,Pylaiella littoralis,3,North Sea
 SHPCB,Rhizosolenia setigera,3,North Sea
+7C6PW,Thecacera pennigera,3,North Sea
 BSQH5,Watersipora subatra,3,North Sea
 3JBV8,Halichoerus grypus,3,North Sea
 4L669,Polydora websteri,3,North Sea
@@ -579,7 +575,6 @@ PHYYY,Halosiphon tomentosus,54,Barents Sea
 42Z4T,Micromesistius poutassou,54,Barents Sea
 44RHY,Mya arenaria,54,Barents Sea
 472YS,Nephtys ciliata,54,Barents Sea
-482KT,Nucella lapillus,54,Barents Sea
 B3JCD,Paralithodes camtschaticus,54,Barents Sea
 RZPNM,Porphyra umbilicalis,54,Barents Sea
 RVKDP,Pronoctiluca pelagica,54,Barents Sea
@@ -612,7 +607,6 @@ SSYB,Cercopagis pengoi,1,Baltic Sea
 TB5V,Chaetoceros lorenzianus,1,Baltic Sea
 5XQWG,Chelicorophium curvispinum,1,Baltic Sea
 MM697,Chorda filum,1,Baltic Sea
-6B28S,Coregonus maraena,1,Baltic Sea
 32WFN,Cyclopterus lumpus,1,Baltic Sea
 33HRJ,Cyprinus carpio,1,Baltic Sea
 364SQ,Dikerogammarus villosus,1,Baltic Sea
@@ -636,10 +630,10 @@ L26KD,Hemigrapsus sanguineus,1,Baltic Sea
 9GQWD,Palaemon elegans,1,Baltic Sea
 RWQ5H,Plagioselmis prolonga,1,Baltic Sea
 4L63D,Polydora cornuta,1,Baltic Sea
-78832,Pontogammarus robustoides,1,Baltic Sea
 4NQJ3,Pseudocalanus elongatus,1,Baltic Sea
 7935Q,Rana dalmatina,1,Baltic Sea
 4RF6D,Rangia cuneata,1,Baltic Sea
+52X2B,Streblospio benedicti,1,Baltic Sea
 53ML9,Syllidia armata,1,Baltic Sea
 T8WJW,Thalassiosira nordenskioeldii,1,Baltic Sea
 7CXK2,Tubificoides benedii,1,Baltic Sea
