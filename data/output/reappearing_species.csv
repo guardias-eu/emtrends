@@ -41,7 +41,6 @@ lme_id,lme_name,specieskey,species,reappearance_year,years_without_occurrences
 6,Celtic-Biscay Shelf,4Q2NB,Pteroplatytrygon violacea,2024,22
 6,Celtic-Biscay Shelf,4RLZ3,Rathkea octopunctata,2023,38
 6,Celtic-Biscay Shelf,4SBRY,Rhithropanopeus harrisii,2025,5
-6,Celtic-Biscay Shelf,52X2B,Streblospio benedicti,2025,5
 6,Celtic-Biscay Shelf,5942D,Tritia corniculum,2025,6
 6,Celtic-Biscay Shelf,64FSN,Acartia tonsa,2022,20
 6,Celtic-Biscay Shelf,676T9,Anomalocera patersonii,2023,5
@@ -76,8 +75,8 @@ lme_id,lme_name,specieskey,species,reappearance_year,years_without_occurrences
 13,Mediterranean Sea,3RX8S,Lagocephalus lagocephalus,2023,7
 13,Mediterranean Sea,3VNPR,Littorina littorea,2024,5
 13,Mediterranean Sea,3VNRQ,Littorina saxatilis,2023,5
-13,Mediterranean Sea,3WDNK,Luidia atlantidea,2025,6
 13,Mediterranean Sea,3ZXTD,Mesanthura romulea,2022,9
+13,Mediterranean Sea,482KT,Nucella lapillus,2022,10
 13,Mediterranean Sea,4B8RR,Oulastrea crispata,2022,5
 13,Mediterranean Sea,4C6BZ,Palola valida,2023,5
 13,Mediterranean Sea,4CNKK,Paracanthurus hepatus,2024,9
@@ -85,7 +84,7 @@ lme_id,lme_name,specieskey,species,reappearance_year,years_without_occurrences
 13,Mediterranean Sea,4DBMR,Parascorpaena mcadamsi,2023,12
 13,Mediterranean Sea,4GRD2,Phorcus lineatus,2023,5
 13,Mediterranean Sea,4JNKC,Platorchestia platensis,2022,6
-13,Mediterranean Sea,4L4J4,Polyclinum constellatum,2023,11
+13,Mediterranean Sea,4L4J4,Polyclinum constellatum,2023,5
 13,Mediterranean Sea,4LTZJ,Pontella mediterranea,2024,5
 13,Mediterranean Sea,4MBWN,Priacanthus hamrur,2022,5
 13,Mediterranean Sea,4NGC3,Psenes pellucidus,2022,5
@@ -151,12 +150,12 @@ lme_id,lme_name,specieskey,species,reappearance_year,years_without_occurrences
 13,Mediterranean Sea,Q34N,Caloria indica,2025,9
 13,Mediterranean Sea,Q5RWR,Lophocladia trichoclados,2025,8
 13,Mediterranean Sea,S2HLK,Phenacoccus peruvianus,2023,6
-13,Mediterranean Sea,S3PG,Cellana rota,2023,34
-13,Mediterranean Sea,T33WY,Stator limbatus,2022,6
+13,Mediterranean Sea,T33WY,Stator limbatus,2022,5
 13,Mediterranean Sea,TCCG7,Steromphala adriatica,2024,6
-13,Mediterranean Sea,TDQL,Chaetopleura angulata,2023,48
+13,Mediterranean Sea,TDQL,Chaetopleura angulata,2023,54
+13,Mediterranean Sea,V6VBQ,Scrippsiella trochoidea,2022,6
 13,Mediterranean Sea,ZVR6,Cryptocentrus caeruleopunctatus,2024,9
-13,Mediterranean Sea,ZZGC,Cryptorchestia cavimana,2023,6
+13,Mediterranean Sea,ZZGC,Cryptorchestia cavimana,2023,27
 50,Faroe Plateau,52G35,Steromphala cineraria,2024,24
 50,Faroe Plateau,6PXBK,Ligia oceanica,2023,19
 50,Faroe Plateau,73T5L,Mytilus edulis,2025,21
@@ -170,7 +169,6 @@ lme_id,lme_name,specieskey,species,reappearance_year,years_without_occurrences
 53,Norwegian Sea,3XGCW,Magallana gigas,2022,6
 53,Norwegian Sea,4BQFN,Pachycerianthus multiplicatus,2022,9
 53,Norwegian Sea,4L4HT,Polyclinum aurantium,2025,5
-53,Norwegian Sea,4RLZ3,Rathkea octopunctata,2022,51
 53,Norwegian Sea,4TMNH,Ruditapes decussatus,2023,49
 53,Norwegian Sea,53WPL,Syngnathus rostellatus,2024,5
 53,Norwegian Sea,586SF,Tricellaria inopinata,2024,10
@@ -203,12 +201,11 @@ lme_id,lme_name,specieskey,species,reappearance_year,years_without_occurrences
 3,North Sea,4RJGP,Rapana venosa,2025,5
 3,North Sea,538B5,Styela plicata,2022,6
 3,North Sea,57GVZ,Tortanus discaudatus,2022,5
+3,North Sea,6BBR8,Craspedacusta sowerbii,2023,10
 3,North Sea,6KXKC,Haliclystus salpinx,2024,9
 3,North Sea,6MJMD,Hydroides elegans,2023,6
 3,North Sea,6MJNS,Hydroides ezoensis,2023,5
 3,North Sea,732CQ,Lulwoana uniseptata,2023,7
-3,North Sea,79PJZ,Sarpa salpa,2023,49
-3,North Sea,9C4T,Acipenser baerii,2024,10
 3,North Sea,BJ2FD,Acanthosepion pharaonis,2022,40
 3,North Sea,D2DQ2,Porphyra yezoensis,2022,17
 3,North Sea,F6BW,Aoroides semicurvatus,2024,6
@@ -216,8 +213,8 @@ lme_id,lme_name,specieskey,species,reappearance_year,years_without_occurrences
 3,North Sea,KZNMP,Anisakis simplex,2022,25
 3,North Sea,L4ZLV,Acrothrix gracilis,2022,6
 3,North Sea,LR6LG,Antithamnion densum,2023,6
+3,North Sea,MDDG,Bolinus brandaris,2024,5
 3,North Sea,MLBPV,Cladosiphon zosterae,2022,17
-3,North Sea,PQ2RQ,Hildenbrandia crouaniorum,2024,27
 3,North Sea,QMLCK,Mantoniella squamata,2022,5
 3,North Sea,QPCCY,Microspongium globosum,2025,8
 3,North Sea,R6TVR,Myriactula rivulariae,2023,22
@@ -249,9 +246,9 @@ lme_id,lme_name,specieskey,species,reappearance_year,years_without_occurrences
 54,Barents Sea,SVYBR,Spaulodinium pseudonoctiluca,2025,6
 1,Baltic Sea,3D736,Eurytemora carolleeae,2024,5
 1,Baltic Sea,3HP6K,Gymnammodytes semisquamatus,2023,43
-1,Baltic Sea,3XFPD,Maeotias marginata,2022,10
 1,Baltic Sea,558DV,Telmatogeton japonicus,2025,5
 1,Baltic Sea,59JTZ,Tubificoides heterochaetus,2024,6
+1,Baltic Sea,6BBR8,Craspedacusta sowerbii,2023,54
 1,Baltic Sea,73MKC,Moerisia inkermanica,2024,5
 1,Baltic Sea,9GR49,Palaemon macrodactylus,2024,6
 1,Baltic Sea,FCS5,Aphelochaeta marioni,2023,19
