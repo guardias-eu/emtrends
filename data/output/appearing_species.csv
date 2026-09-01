@@ -5,7 +5,6 @@ lme_id,lme_name,specieskey,species,first_year
 14,Iberian Coastal,37M79,Dreissena polymorpha,2026
 14,Iberian Coastal,3BBYV,Erysiphe corylacearum,2022
 14,Iberian Coastal,3RHCG,Kyphosus vaigiensis,2025
-14,Iberian Coastal,3Y9WY,Martesia striata,2024
 14,Iberian Coastal,4343K,Micropogonias undulatus,2023
 14,Iberian Coastal,4CYRR,Paraleucilla magna,2022
 14,Iberian Coastal,4JNKC,Platorchestia platensis,2023
@@ -22,6 +21,7 @@ lme_id,lme_name,specieskey,species,first_year
 14,Iberian Coastal,7CD62,Tintinnopsis mortensenii,2023
 14,Iberian Coastal,BSN7,Alitta virens,2023
 14,Iberian Coastal,BT776,Novafabricia infratorquata,2023
+14,Iberian Coastal,FQ39,Aplysia dactylomela,2023
 14,Iberian Coastal,JTCR,Aurelia coerulea,2026
 14,Iberian Coastal,M8HK,Boccardia proboscidea,2023
 14,Iberian Coastal,N6NM,Branchiomma bombyx,2023
@@ -29,7 +29,6 @@ lme_id,lme_name,specieskey,species,first_year
 6,Celtic-Biscay Shelf,3BBYV,Erysiphe corylacearum,2025
 6,Celtic-Biscay Shelf,3CW7J,Euplokamis dunlapae,2026
 6,Celtic-Biscay Shelf,3GWWV,Gonionemus vertens,2022
-6,Celtic-Biscay Shelf,3LGQ4,Hexaplex trunculus,2022
 6,Celtic-Biscay Shelf,3W8FJ,Lovenella assimilis,2022
 6,Celtic-Biscay Shelf,436DK,Microsetella rosea,2022
 6,Celtic-Biscay Shelf,44JYJ,Mulinia lateralis,2024
@@ -58,6 +57,7 @@ lme_id,lme_name,specieskey,species,first_year
 6,Celtic-Biscay Shelf,TY3MX,Zygoceros rhombus,2023
 13,Mediterranean Sea,32MSC,Cuthona perca,2025
 13,Mediterranean Sea,358BW,Diadumene cincta,2024
+13,Mediterranean Sea,36BFM,Diopatra marocensis,2022
 13,Mediterranean Sea,3LY3S,Himantura leoparda,2025
 13,Mediterranean Sea,3Q94P,Isognomon legumen,2023
 13,Mediterranean Sea,48SD8,Odonus niger,2024
@@ -95,6 +95,7 @@ lme_id,lme_name,specieskey,species,first_year
 13,Mediterranean Sea,NTFJP,Galaxaura rugosa,2022
 13,Mediterranean Sea,PKBBZ,Grateloupia turuturu,2022
 13,Mediterranean Sea,Q3HV6,Lomentaria hakodatensis,2024
+13,Mediterranean Sea,S3PG,Cellana rota,2023
 13,Mediterranean Sea,TRSJ,Cheilinus lunulatus,2022
 13,Mediterranean Sea,YDCZ,Corella eumyota,2023
 50,Faroe Plateau,39X2R,Ensis leei,2023
@@ -103,6 +104,8 @@ lme_id,lme_name,specieskey,species,first_year
 50,Faroe Plateau,BSN7,Alitta virens,2024
 50,Faroe Plateau,DZZN,Anguilla anguilla,2022
 50,Faroe Plateau,VFCZ,Ciona intestinalis,2023
+53,Norwegian Sea,33HRJ,Cyprinus carpio,2022
+53,Norwegian Sea,35WW8,Didemnum vexillum,2026
 53,Norwegian Sea,39X2R,Ensis leei,2023
 53,Norwegian Sea,3F8M6,Gammarus tigrinus,2022
 53,Norwegian Sea,3HP6K,Gymnammodytes semisquamatus,2023
@@ -110,8 +113,11 @@ lme_id,lme_name,specieskey,species,first_year
 53,Norwegian Sea,45GSC,Mytilus trossulus,2026
 53,Norwegian Sea,4BW4L,Pacificincola perforata,2024
 53,Norwegian Sea,4MMRP,Proceraea cornuta,2025
+53,Norwegian Sea,4RLZ3,Rathkea octopunctata,2022
+53,Norwegian Sea,64FSN,Acartia tonsa,2022
 53,Norwegian Sea,694CM,Bugulina stolonifera,2025
-53,Norwegian Sea,6BG8L,Crepidula fornicata,2022
+53,Norwegian Sea,6BBL4,Crassula helmsii,2025
+53,Norwegian Sea,6BG8L,Crepidula fornicata,2024
 53,Norwegian Sea,6HQV3,Fenestrulina delicia,2022
 53,Norwegian Sea,6KXKC,Haliclystus salpinx,2022
 53,Norwegian Sea,6RMT2,Mnemiopsis leidyi,2022
@@ -124,15 +130,15 @@ lme_id,lme_name,specieskey,species,first_year
 53,Norwegian Sea,NPT7,Bugulina fulva,2024
 53,Norwegian Sea,NPTC,Bugulina simplex,2024
 53,Norwegian Sea,PKBBZ,Grateloupia turuturu,2026
-53,Norwegian Sea,RCDCN,Perforatus perforatus,2023
 53,Norwegian Sea,SDFHZ,Proboscia indica,2022
 53,Norwegian Sea,T8WHD,Thalassiosira minima,2024
 53,Norwegian Sea,TPL45,Tripos candelabrus,2025
+3,North Sea,359LF,Diamysis lagunaris,2026
 3,North Sea,3GPR2,Gobius cruentatus,2023
 3,North Sea,3NP5M,Hypereteone heteropoda,2022
-3,North Sea,3YSD7,Megachile sculpturalis,2025
 3,North Sea,47GW7,Nippoleucon hinumensis,2024
 3,North Sea,4C8ZS,Pampus argenteus,2022
+3,North Sea,5BD3Z,Victorella pavida,2025
 3,North Sea,5XR8H,Chelicorophium sowinskyi,2023
 3,North Sea,5ZYZG,Corbicula largillierti,2024
 3,North Sea,6BBR8,Craspedacusta sowerbii,2023
@@ -140,6 +146,7 @@ lme_id,lme_name,specieskey,species,first_year
 3,North Sea,6NDZQ,Jellyella tuberculata,2022
 3,North Sea,6Y2ZQ,Savoryella lignicola,2024
 3,North Sea,75NVF,Paracalanus indicus,2022
+3,North Sea,78832,Pontogammarus robustoides,2025
 3,North Sea,7CSB6,Tridentiger trigonocephalus,2024
 3,North Sea,8FTNM,Euryte minor,2022
 3,North Sea,8G3C2,Anisakis pegreffii,2022
@@ -155,6 +162,7 @@ lme_id,lme_name,specieskey,species,first_year
 54,Barents Sea,3JDKR,Haligena elaterophora,2024
 54,Barents Sea,3XGCW,Magallana gigas,2023
 54,Barents Sea,4BQFN,Pachycerianthus multiplicatus,2025
+54,Barents Sea,4N3MD,Proterorhinus nasalis,2023
 54,Barents Sea,4QYBQ,Pyura tessellata,2023
 54,Barents Sea,53WPL,Syngnathus rostellatus,2022
 54,Barents Sea,55F29,Teredo navalis,2022
@@ -181,6 +189,8 @@ lme_id,lme_name,specieskey,species,first_year
 54,Barents Sea,TB6S,Chaetoceros peruvianus,2025
 54,Barents Sea,VV7W,Clavelina lepadiformis,2022
 1,Baltic Sea,3BBYV,Erysiphe corylacearum,2024
+1,Baltic Sea,3GPR2,Gobius cruentatus,2023
+1,Baltic Sea,3L2BQ,Hermodice carunculata,2024
 1,Baltic Sea,45GDJ,Mytilicola orientalis,2024
 1,Baltic Sea,4M3GY,Potamocorbula amurensis,2025
 1,Baltic Sea,4N3MD,Proterorhinus nasalis,2023
