@@ -57,7 +57,6 @@ lme_id,lme_name,specieskey,species,first_year
 6,Celtic-Biscay Shelf,TY3MX,Zygoceros rhombus,2023
 13,Mediterranean Sea,32MSC,Cuthona perca,2025
 13,Mediterranean Sea,358BW,Diadumene cincta,2024
-13,Mediterranean Sea,36BFM,Diopatra marocensis,2022
 13,Mediterranean Sea,3LY3S,Himantura leoparda,2025
 13,Mediterranean Sea,3Q94P,Isognomon legumen,2023
 13,Mediterranean Sea,48SD8,Odonus niger,2024
@@ -104,7 +103,6 @@ lme_id,lme_name,specieskey,species,first_year
 50,Faroe Plateau,BSN7,Alitta virens,2024
 50,Faroe Plateau,DZZN,Anguilla anguilla,2022
 50,Faroe Plateau,VFCZ,Ciona intestinalis,2023
-53,Norwegian Sea,33HRJ,Cyprinus carpio,2022
 53,Norwegian Sea,35WW8,Didemnum vexillum,2026
 53,Norwegian Sea,39X2R,Ensis leei,2023
 53,Norwegian Sea,3F8M6,Gammarus tigrinus,2022
@@ -125,6 +123,7 @@ lme_id,lme_name,specieskey,species,first_year
 53,Norwegian Sea,6Y2ZQ,Savoryella lignicola,2023
 53,Norwegian Sea,732CQ,Lulwoana uniseptata,2023
 53,Norwegian Sea,CJ8B,Amathia imbricata,2024
+53,Norwegian Sea,L26KD,Hemigrapsus sanguineus,2022
 53,Norwegian Sea,L4ZLV,Acrothrix gracilis,2023
 53,Norwegian Sea,MLBPV,Cladosiphon zosterae,2022
 53,Norwegian Sea,NPT7,Bugulina fulva,2024
@@ -136,21 +135,23 @@ lme_id,lme_name,specieskey,species,first_year
 3,North Sea,359LF,Diamysis lagunaris,2026
 3,North Sea,3GPR2,Gobius cruentatus,2023
 3,North Sea,3NP5M,Hypereteone heteropoda,2022
+3,North Sea,3YSD7,Megachile sculpturalis,2025
+3,North Sea,45KRR,Naineris quadraticeps,2025
 3,North Sea,47GW7,Nippoleucon hinumensis,2024
 3,North Sea,4C8ZS,Pampus argenteus,2022
 3,North Sea,5BD3Z,Victorella pavida,2025
 3,North Sea,5XR8H,Chelicorophium sowinskyi,2023
 3,North Sea,5ZYZG,Corbicula largillierti,2024
-3,North Sea,6BBR8,Craspedacusta sowerbii,2023
+3,North Sea,66R7C,Anguilla japonica,2026
 3,North Sea,6GBJQ,Ercolania viridis,2022
 3,North Sea,6NDZQ,Jellyella tuberculata,2022
 3,North Sea,6Y2ZQ,Savoryella lignicola,2024
 3,North Sea,75NVF,Paracalanus indicus,2022
-3,North Sea,78832,Pontogammarus robustoides,2025
 3,North Sea,7CSB6,Tridentiger trigonocephalus,2024
 3,North Sea,8FTNM,Euryte minor,2022
 3,North Sea,8G3C2,Anisakis pegreffii,2022
 3,North Sea,D7HS,Ampithoe valida,2024
+3,North Sea,DCGG,Anadara kagoshimensis,2022
 3,North Sea,F6BN,Aoroides longimerus,2023
 3,North Sea,MDDG,Bolinus brandaris,2024
 3,North Sea,PK9Z9,Grateloupia minima,2023
@@ -190,7 +191,6 @@ lme_id,lme_name,specieskey,species,first_year
 54,Barents Sea,VV7W,Clavelina lepadiformis,2022
 1,Baltic Sea,3BBYV,Erysiphe corylacearum,2024
 1,Baltic Sea,3GPR2,Gobius cruentatus,2023
-1,Baltic Sea,3L2BQ,Hermodice carunculata,2024
 1,Baltic Sea,45GDJ,Mytilicola orientalis,2024
 1,Baltic Sea,4M3GY,Potamocorbula amurensis,2025
 1,Baltic Sea,4N3MD,Proterorhinus nasalis,2023
