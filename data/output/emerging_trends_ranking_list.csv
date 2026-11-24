@@ -1,638 +1,634 @@
 lme_id,lme_name,specieskey,species_name,weighted_em_status,model,growth
-1,Baltic Sea,59JTZ,Tubificoides heterochaetus,31.5,GAM,1.2848670465252974
-1,Baltic Sea,3VNQM,Littorina obtusata,31.5,GAM,1.259704896668872
-1,Baltic Sea,3KP8C,Hemigrapsus takanoi,31.5,GAM,1.2520923073655021
-1,Baltic Sea,LBG2M,Apedinella radians,31.5,GAM,1.1158732525265163
-1,Baltic Sea,RWNKZ,Prorocentrum cordatum,31.5,GAM,1.0915694444819388
-1,Baltic Sea,B29V,Agonus cataphractus,31.5,GAM,1.0815551375791064
-1,Baltic Sea,BSN6,Alitta succinea,31.5,GAM,1.0327679311071474
-1,Baltic Sea,L26KD,Hemigrapsus sanguineus,24.5,decision rules,
+1,Baltic Sea,59JTZ,Tubificoides heterochaetus,31.5,GAM,1.288525154697454
+1,Baltic Sea,3VNQM,Littorina obtusata,31.5,GAM,1.259704896537364
+1,Baltic Sea,LBG2M,Apedinella radians,31.5,GAM,1.1147473930399325
+1,Baltic Sea,RWNKZ,Prorocentrum cordatum,31.5,GAM,1.0915367809738272
+1,Baltic Sea,B29V,Agonus cataphractus,31.5,GAM,1.0827365998641534
+1,Baltic Sea,BSN6,Alitta succinea,31.5,GAM,1.0325171375033029
+1,Baltic Sea,3KP8C,Hemigrapsus takanoi,28.5,GAM,
 1,Baltic Sea,7369N,Marenzelleria arctia,23,decision rules,
-1,Baltic Sea,R48N,Carcinus maenas,22.5,GAM,0.947239647456167
-1,Baltic Sea,4RF6D,Rangia cuneata,22.5,GAM,0.9232996617899538
-1,Baltic Sea,4L63D,Polydora cornuta,22.5,GAM,0.8840070796488367
+1,Baltic Sea,52X2B,Streblospio benedicti,22.5,GAM,1.0606445891629281
+1,Baltic Sea,4RF6D,Rangia cuneata,22.5,GAM,0.9332853310549736
 1,Baltic Sea,3H7P6,Grandidierella japonica,22,decision rules,
+1,Baltic Sea,3KQ9P,Hemimysis anomala,21,decision rules,
 1,Baltic Sea,53ML9,Syllidia armata,20,decision rules,
-1,Baltic Sea,78832,Pontogammarus robustoides,19.5,GAM,1.2448116492890844
-1,Baltic Sea,52X2B,Streblospio benedicti,19.5,GAM,1.0606445891571732
-1,Baltic Sea,4D4F3,Paranais frici,18.5,GAM,0.9955242970639053
-1,Baltic Sea,6YRDJ,Sinelobus vanhaareni,18,GAM,0.975505633786423
-1,Baltic Sea,PGMCT,Fucus serratus,18,GAM,0.7330467364524046
-1,Baltic Sea,364SQ,Dikerogammarus villosus,15,decision rules,
-1,Baltic Sea,44RHY,Mya arenaria,10.5,GAM,0.9162941390624004
-1,Baltic Sea,32WFN,Cyclopterus lumpus,10.5,GAM,0.9072629793396841
-1,Baltic Sea,7CXK2,Tubificoides benedii,10.5,GAM,0.9033840156221906
-1,Baltic Sea,472YS,Nephtys ciliata,10.5,GAM,0.8800031866684326
-1,Baltic Sea,7935Q,Rana dalmatina,10.5,GAM,0.8113547630433828
-1,Baltic Sea,446DR,Monocorophium insidiosum,10.5,GAM,0.8050784389508854
-1,Baltic Sea,7RH6D,Haminella solitaria,9.5,GAM,1.6857839421117076
-1,Baltic Sea,36PZC,Dipolydora quadrilobata,6,GAM,0.8135263446150849
-1,Baltic Sea,6RW9X,Neogobius melanostomus,6,GAM,0.7931083287211262
-1,Baltic Sea,M8HY,Boccardiella ligerica,4.5,GAM,0.8774895671139814
-1,Baltic Sea,3JBV8,Halichoerus grypus,0,GAM,0.8837064175186977
-1,Baltic Sea,NFDLC,Dinobryon faculiferum,0,GAM,0.8334859781604171
-1,Baltic Sea,9GQWD,Palaemon elegans,0,GAM,0.8157026404197382
-1,Baltic Sea,TPF2X,Vertebrata fucoides,0,GAM,0.7553107866998408
-1,Baltic Sea,TB5V,Chaetoceros lorenzianus,0,GAM,0.6939834777945469
-1,Baltic Sea,MPMVS,Ceramium tenuicorne,0,GAM,0.690395487657078
-1,Baltic Sea,6B288,Cordylophora caspia,0,GAM,0.6848931104780372
-1,Baltic Sea,NFCHP,Ectocarpus siliculosus,0,GAM,0.6811041918448828
-1,Baltic Sea,6R5XM,Marenzelleria neglecta,0,GAM,0.6471367563963075
-1,Baltic Sea,SSYB,Cercopagis pengoi,0,GAM,0.62595389019393
-1,Baltic Sea,3DGBC,Evadne anonyx,0,GAM,0.5780583948372598
-1,Baltic Sea,T8WJW,Thalassiosira nordenskioeldii,0,GAM,0.5436514957268905
-1,Baltic Sea,4NQJ3,Pseudocalanus elongatus,0,GAM,0.4943018972222595
-1,Baltic Sea,5XQWG,Chelicorophium curvispinum,0,GAM,0.4175713502057864
-1,Baltic Sea,6B28S,Coregonus maraena,0,GAM,0.22947146084824027
-3,North Sea,P6PPT,Gelidium vagum,31.5,GAM,1.410817797940397
-3,North Sea,L26KD,Hemigrapsus sanguineus,31.5,GAM,1.2443083123405632
-3,North Sea,4RF6D,Rangia cuneata,31.5,GAM,1.2025468971049689
-3,North Sea,358C6,Diadumene lineata,31.5,GAM,1.1843566719642904
-3,North Sea,7C6PW,Thecacera pennigera,31.5,GAM,1.1727890349285346
-3,North Sea,N4VRP,Codium fragile,31.5,GAM,1.1481914169767038
-3,North Sea,3KP8C,Hemigrapsus takanoi,31.5,GAM,1.1439645267881582
-3,North Sea,MPNZ,Botrylloides violaceus,31.5,GAM,1.1346989721884888
-3,North Sea,4FDSH,Petricolaria pholadiformis,31.5,GAM,1.1303178690507574
-3,North Sea,7WLRT,Procambarus clarkii,31.5,GAM,1.119586747886197
-3,North Sea,M9Y66,Caulacanthus okamurae,31.5,GAM,1.106657196465865
-3,North Sea,PGHVY,Fucus distichus,31.5,GAM,1.0897515644716442
-3,North Sea,9GQWD,Palaemon elegans,31.5,GAM,1.0773562392982783
-3,North Sea,6RVDM,Necora puber,31.5,GAM,1.0770051550769335
-3,North Sea,QJMH2,Megabalanus tintinnabulum,31.5,GAM,1.0749117760704376
-3,North Sea,3ZTFD,Mercenaria mercenaria,31.5,GAM,1.0629360193719861
-3,North Sea,MPMVS,Ceramium tenuicorne,31.5,GAM,1.0623013732052595
-3,North Sea,PGJ56,Fucus evanescens,31.5,GAM,1.035351158798793
-3,North Sea,44RHY,Mya arenaria,31.5,GAM,1.028767564718977
-3,North Sea,3VNQM,Littorina obtusata,31.5,GAM,1.0190835053960274
+1,Baltic Sea,6YRDJ,Sinelobus vanhaareni,18,GAM,0.9758634462855491
+1,Baltic Sea,PGMCT,Fucus serratus,18,GAM,0.7334315399597492
+1,Baltic Sea,364SQ,Dikerogammarus villosus,17.5,decision rules,
+1,Baltic Sea,4D4F3,Paranais frici,11,GAM,0.9836955981952072
+1,Baltic Sea,44RHY,Mya arenaria,10.5,GAM,0.923325938510227
+1,Baltic Sea,33HRJ,Cyprinus carpio,10.5,GAM,0.9203473552208967
+1,Baltic Sea,7CXK2,Tubificoides benedii,10.5,GAM,0.9033942708591407
+1,Baltic Sea,32WFN,Cyclopterus lumpus,10.5,GAM,0.8996122542734536
+1,Baltic Sea,472YS,Nephtys ciliata,10.5,GAM,0.879926617941082
+1,Baltic Sea,7935Q,Rana dalmatina,10.5,GAM,0.8118852188538933
+1,Baltic Sea,446DR,Monocorophium insidiosum,10.5,GAM,0.8060462136023108
+1,Baltic Sea,4L63D,Polydora cornuta,10.5,GAM,0.8026809265153925
+1,Baltic Sea,7RH6D,Haminella solitaria,9.5,GAM,1.6857839421438996
+1,Baltic Sea,36PZC,Dipolydora quadrilobata,6,GAM,0.8129016152493186
+1,Baltic Sea,M8HY,Boccardiella ligerica,4.5,GAM,0.873200378851952
+1,Baltic Sea,5XQWG,Chelicorophium curvispinum,1.5,GAM,0.46047729281601885
+1,Baltic Sea,3JBV8,Halichoerus grypus,0,GAM,0.882373076592195
+1,Baltic Sea,NFDLC,Dinobryon faculiferum,0,GAM,0.8336630018981792
+1,Baltic Sea,9GQWD,Palaemon elegans,0,GAM,0.8204081114218936
+1,Baltic Sea,6RW9X,Neogobius melanostomus,0,GAM,0.8088155871779131
+1,Baltic Sea,TPF2X,Vertebrata fucoides,0,GAM,0.7857066679864358
+1,Baltic Sea,MPMVS,Ceramium tenuicorne,0,GAM,0.7047987051080394
+1,Baltic Sea,TB5V,Chaetoceros lorenzianus,0,GAM,0.6939834778398777
+1,Baltic Sea,NFCHP,Ectocarpus siliculosus,0,GAM,0.6795971967890818
+1,Baltic Sea,6B288,Cordylophora caspia,0,GAM,0.6778923163956875
+1,Baltic Sea,6R5XM,Marenzelleria neglecta,0,GAM,0.6481816085416064
+1,Baltic Sea,SSYB,Cercopagis pengoi,0,GAM,0.6247708504499212
+1,Baltic Sea,3DGBC,Evadne anonyx,0,GAM,0.5789970914092943
+1,Baltic Sea,T8WJW,Thalassiosira nordenskioeldii,0,GAM,0.5436514958130031
+1,Baltic Sea,4NQJ3,Pseudocalanus elongatus,0,GAM,0.49443703557785934
+1,Baltic Sea,6B28S,Coregonus maraena,0,GAM,0.2529867570798075
+3,North Sea,4RF6D,Rangia cuneata,31.5,GAM,1.2524055190307293
+3,North Sea,L97ZS,Agardhiella subulata,31.5,GAM,1.197914375243814
+3,North Sea,ML9NC,Chondria coerulescens,31.5,GAM,1.1864166813212524
+3,North Sea,7C6PW,Thecacera pennigera,31.5,GAM,1.183944015429067
+3,North Sea,358C6,Diadumene lineata,31.5,GAM,1.1788224010630697
+3,North Sea,3KP8C,Hemigrapsus takanoi,31.5,GAM,1.1543390943249614
+3,North Sea,MPNZ,Botrylloides violaceus,31.5,GAM,1.1513848513015983
+3,North Sea,N4VRP,Codium fragile,31.5,GAM,1.1480511927693666
+3,North Sea,4FDSH,Petricolaria pholadiformis,31.5,GAM,1.1311352224375544
+3,North Sea,M9Y66,Caulacanthus okamurae,31.5,GAM,1.1032614776787275
+3,North Sea,PGHVY,Fucus distichus,31.5,GAM,1.0856846860218305
+3,North Sea,6RVDM,Necora puber,31.5,GAM,1.0771283041488104
+3,North Sea,9GQWD,Palaemon elegans,31.5,GAM,1.0770608969116273
+3,North Sea,QJMH2,Megabalanus tintinnabulum,31.5,GAM,1.0749117760705709
+3,North Sea,3ZTFD,Mercenaria mercenaria,31.5,GAM,1.0675737284357918
+3,North Sea,MPMVS,Ceramium tenuicorne,31.5,GAM,1.062301373205138
+3,North Sea,PGJ56,Fucus evanescens,31.5,GAM,1.0353511587988193
+3,North Sea,RRT64,Polysiphonia senticulosa,31.5,GAM,1.0353338958795058
+3,North Sea,44RHY,Mya arenaria,31.5,GAM,1.0288556559439996
+3,North Sea,3VNQM,Littorina obtusata,31.5,GAM,1.019064242287857
 3,North Sea,M8HX,Boccardiella hamata,31.5,decision rules,
-3,North Sea,R48N,Carcinus maenas,29.5,GAM,1.0075384246121744
-3,North Sea,B3YKX,Pagurus longicarpus,28.5,decision rules,
-3,North Sea,L97ZS,Agardhiella subulata,26.5,GAM,1.1702571344935455
-3,North Sea,RRT64,Polysiphonia senticulosa,26.5,GAM,1.0452038280072904
+3,North Sea,NFCHP,Ectocarpus siliculosus,26.5,GAM,1.2225417454095298
 3,North Sea,4L669,Polydora websteri,26,GAM,
-3,North Sea,ML9NC,Chondria coerulescens,25.5,decision rules,
 3,North Sea,46FZP,Neodexiospira brasiliensis,24.5,decision rules,
+3,North Sea,B3YKX,Pagurus longicarpus,24.5,decision rules,
 3,North Sea,MMQ75,Balanus glandula,23.5,decision rules,
-3,North Sea,NFCHP,Ectocarpus siliculosus,22.5,GAM,1.219837576238681
-3,North Sea,RZPNM,Porphyra umbilicalis,22.5,GAM,0.9635757673023956
-3,North Sea,6HVS2,Ficopomatus enigmaticus,22.5,GAM,0.9192887058550145
-3,North Sea,PGMCT,Fucus serratus,22.5,GAM,0.8873998066841656
-3,North Sea,TVBX,Chelon labrosus,22.5,GAM,0.8513915605883645
-3,North Sea,6RW9X,Neogobius melanostomus,22.5,GAM,0.7625481885038664
-3,North Sea,3HRQS,Gymnodinium catenatum,22.5,GAM,0.45433280950900234
+3,North Sea,5387D,Styela clava,22.5,GAM,0.9895171832879343
+3,North Sea,RZPNM,Porphyra umbilicalis,22.5,GAM,0.9634651942027664
+3,North Sea,6HVS2,Ficopomatus enigmaticus,22.5,GAM,0.931474814375607
+3,North Sea,PGMCT,Fucus serratus,22.5,GAM,0.8878124746478498
+3,North Sea,VJY5B,Lessardia elongata,22.5,GAM,0.8789196558610488
+3,North Sea,6RW9X,Neogobius melanostomus,22.5,GAM,0.7763226474572612
 3,North Sea,3BT78,Euchone incolor,22.5,decision rules,
 3,North Sea,6GNYR,Ericthonius didymus,22.5,decision rules,
-3,North Sea,4924M,Oithona davisae,22,GAM,1.0230565615793459
-3,North Sea,66DTZ,Ammothea hilgendorfi,19.5,GAM,1.150594049124519
-3,North Sea,Q76B,Calyptraea chinensis,19.5,GAM,1.08536684020974
+3,North Sea,4924M,Oithona davisae,22,GAM,1.023056561579583
+3,North Sea,Q76B,Calyptraea chinensis,19.5,GAM,1.051261956024057
 3,North Sea,MPMSH,Ceramium sungminbooi,19.5,decision rules,
-3,North Sea,BSQH5,Watersipora subatra,18.5,decision rules,
-3,North Sea,446DR,Monocorophium insidiosum,18,GAM,0.9309352916388586
-3,North Sea,564M4,Tharyx killariensis,18,GAM,0.788600645227352
+3,North Sea,446DR,Monocorophium insidiosum,18,GAM,0.9306185237255032
+3,North Sea,564M4,Tharyx killariensis,18,GAM,0.7886126544103206
 3,North Sea,4YF8Y,Sparus aurata,17.5,decision rules,
+3,North Sea,GWSX,Artemisia princeps,17,decision rules,
+3,North Sea,LWYX,Bispira polyomma,15.5,GAM,0.804519233714042
+3,North Sea,79WZK,Schizoporella japonica,15.5,decision rules,
 3,North Sea,TC9N,Chaetogammarus ischnus,15.5,decision rules,
-3,North Sea,7RH6D,Haminella solitaria,15,GAM,3.9861553791337494
-3,North Sea,6MSH5,Ianiropsis serricaudis,15,decision rules,
+3,North Sea,7RH6D,Haminella solitaria,15,GAM,3.986155382269055
 3,North Sea,6YRDJ,Sinelobus vanhaareni,15,decision rules,
+3,North Sea,66DTZ,Ammothea hilgendorfi,13.5,GAM,1.1641373763598903
+3,North Sea,TVBX,Chelon labrosus,13.5,GAM,0.8540910251651321
 3,North Sea,L9NRY,Alexandrium minutum,13.5,GAM,
-3,North Sea,LWYX,Bispira polyomma,13,GAM,0.8256693892286657
-3,North Sea,79WZK,Schizoporella japonica,13,decision rules,
-3,North Sea,MR4G,Bougainvillia muscus,12.5,GAM,1.0127379922023254
-3,North Sea,PTTWN,Hobaniella longicruris,11,GAM,0.5759590314876747
-3,North Sea,6B288,Cordylophora caspia,10.5,GAM,0.9995754451045746
-3,North Sea,3NHYZ,Hymeniacidon perlevis,10.5,GAM,0.994102717638181
-3,North Sea,5387D,Styela clava,10.5,GAM,0.9930948694682471
-3,North Sea,3JBV8,Halichoerus grypus,10.5,GAM,0.9696993955434823
-3,North Sea,42Z4T,Micromesistius poutassou,10.5,GAM,0.9695513768137908
-3,North Sea,LSKVH,Austrominius modestus,10.5,GAM,0.964506768024809
-3,North Sea,B29V,Agonus cataphractus,10.5,GAM,0.9472263533062121
-3,North Sea,PHYYY,Halosiphon tomentosus,10.5,GAM,0.9348725867982098
-3,North Sea,MPMK,Botrylloides diegensis,10.5,GAM,0.9288008399424101
-3,North Sea,688WN,Atherina boyeri,10.5,GAM,0.9285965840488251
-3,North Sea,LQ348,Asparagopsis armata,10.5,GAM,0.9275058041982879
-3,North Sea,TRJJ4,Undaria pinnatifida,10.5,GAM,0.918925542725755
-3,North Sea,T8WJW,Thalassiosira nordenskioeldii,10.5,GAM,0.9188995584695777
-3,North Sea,RVKDP,Pronoctiluca pelagica,10.5,GAM,0.9047285184662344
-3,North Sea,PS2Z,Calliostoma zizyphinum,10.5,GAM,0.8996747894288298
-3,North Sea,65BGC,Aetea truncata,10.5,GAM,0.894256300860426
-3,North Sea,364SQ,Dikerogammarus villosus,10.5,GAM,0.8824237887987442
-3,North Sea,VJY5B,Lessardia elongata,10.5,GAM,0.8787466237200147
-3,North Sea,4HVTW,Pilumnus hirtellus,10.5,GAM,0.8673769026260232
-3,North Sea,NPRJ,Bugula neritina,10.5,GAM,0.8667967607998485
-3,North Sea,43VGP,Molgula manhattensis,10.5,GAM,0.843014478915362
-3,North Sea,472YS,Nephtys ciliata,10.5,GAM,0.8297373042480666
-3,North Sea,M8HY,Boccardiella ligerica,10.5,GAM,0.822480355192297
-3,North Sea,6R5XM,Marenzelleria neglecta,10.5,GAM,0.7774024944930191
-3,North Sea,6WGQH,Pseudopotamilla reniformis,10.5,GAM,0.6846548535684402
-3,North Sea,5XNK6,Chaetoceros concavicornis,10.5,GAM,0.6769386423412641
-3,North Sea,7935Q,Rana dalmatina,10.5,GAM,0.6187579329623494
-3,North Sea,5CS3F,Yoldia limatula,9.5,GAM,1.383503452713716
-3,North Sea,53D7D,Suberites massa,9,GAM,0.6693094528940813
-3,North Sea,3K4QF,Heleobia charruana,8,GAM,1.1036328025783406
-3,North Sea,5XQWG,Chelicorophium curvispinum,8,GAM,0.721860619080378
-3,North Sea,6MW6C,Incisocalliope aestuarius,8,GAM,0.615374832412019
-3,North Sea,48GMW,Ocinebrellus inornatus,6,GAM,0.9387226636295962
-3,North Sea,BSN6,Alitta succinea,6,GAM,0.9179775944312973
-3,North Sea,7CXK2,Tubificoides benedii,6,GAM,0.8882365542449577
-3,North Sea,5ZYZX,Corbicula fluminalis,6,GAM,0.8662557534674518
-3,North Sea,QSCF,Caprella mutica,6,GAM,0.8517604628379533
-3,North Sea,TPF2X,Vertebrata fucoides,6,GAM,0.8399699647510461
-3,North Sea,4VRP9,Scolelepis korsuni,6,GAM,0.8142777123878461
-3,North Sea,53ML9,Syllidia armata,6,GAM,0.8099345754010879
-3,North Sea,TB5V,Chaetoceros lorenzianus,6,GAM,0.7792197751112421
-3,North Sea,GWSX,Artemisia princeps,6,GAM,0.7280111987584003
-3,North Sea,4NQJ3,Pseudocalanus elongatus,6,GAM,0.7142449140259931
-3,North Sea,NNFVY,Dasya baillouviana,6,GAM,0.6838900489856398
-3,North Sea,Q9BCD,Karenia mikimotoi,6,GAM,0.5247132373508633
-3,North Sea,RWNKZ,Prorocentrum cordatum,4.5,GAM,0.9394027457440726
-3,North Sea,SHPCB,Rhizosolenia setigera,4.5,GAM,0.922441077819703
-3,North Sea,32WFN,Cyclopterus lumpus,4.5,GAM,0.9044153697903108
-3,North Sea,LBG2M,Apedinella radians,4.5,GAM,0.8871147382911989
-3,North Sea,FNWY,Aplidium glabrum,4.5,GAM,0.8751327466640388
-3,North Sea,Q2LNR,Lennoxia faveolata,4.5,GAM,0.7698076006856232
-3,North Sea,Q9CYR,Karlodinium veneficum,4.5,GAM,0.7634449665546453
-3,North Sea,L9NW8,Alexandrium tamarense,3.5,GAM,0.6917302621133504
-3,North Sea,NFDLC,Dinobryon faculiferum,1,GAM,0.8971353256679007
-3,North Sea,4L63D,Polydora cornuta,0,GAM,0.9165428176956699
-3,North Sea,36PZC,Dipolydora quadrilobata,0,GAM,0.8664807445072866
-3,North Sea,52X2B,Streblospio benedicti,0,GAM,0.8302092663321424
-3,North Sea,59K2N,Tubularia indivisa,0,GAM,0.8187037546661909
-3,North Sea,4VRNP,Scolelepis bonnieri,0,GAM,0.8168213458816722
-3,North Sea,RDJPC,Peridiniella danica,0,GAM,0.7317416081930737
-3,North Sea,3H7P6,Grandidierella japonica,0,GAM,0.7108908725917658
-3,North Sea,SHPG2,Rhizosolenia styliformis,0,GAM,0.6849708283340092
-3,North Sea,7Q5KP,Antiopella cristata,0,GAM,0.6697234463663856
-3,North Sea,4347F,Microporella ciliata,0,GAM,0.6353594742928232
-3,North Sea,73P2T,Monocorophium sextonae,0,GAM,0.6348695554531054
-3,North Sea,4VZML,Scruparia ambigua,0,GAM,0.6328041350883796
-3,North Sea,44JYJ,Mulinia lateralis,0,GAM,0.5509973809143892
-3,North Sea,LWMWN,Asterionellopsis glacialis,0,GAM,0.5447642814385557
-3,North Sea,36PZF,Dipolydora socialis,0,GAM,0.5322286670106262
-3,North Sea,4TV6Q,Sabellaria spinulosa,0,GAM,0.4358936722196512
-3,North Sea,SKMYS,Pterosperma cristatum,0,GAM,0.41330898605644495
-3,North Sea,SFKBR,Pseudochattonella verruculosa,0,GAM,0.29386986332681864
-3,North Sea,4NVZL,Pseudodiaptomus marinus,0,GAM,0.26426102851244887
-6,Celtic-Biscay Shelf,48GMW,Ocinebrellus inornatus,31.5,GAM,1.5621017144138356
-6,Celtic-Biscay Shelf,TB5V,Chaetoceros lorenzianus,31.5,GAM,1.2899520236191138
-6,Celtic-Biscay Shelf,L26KD,Hemigrapsus sanguineus,31.5,GAM,1.1772903827817816
-6,Celtic-Biscay Shelf,3HRQS,Gymnodinium catenatum,31.5,GAM,1.1600916415385345
-6,Celtic-Biscay Shelf,YSGX,Coryphoblennius galerita,31.5,GAM,1.15278460329297
-6,Celtic-Biscay Shelf,6CY2M,Diplodus vulgaris,31.5,GAM,1.1353558305976432
-6,Celtic-Biscay Shelf,LQ348,Asparagopsis armata,31.5,GAM,1.1180261791662314
-6,Celtic-Biscay Shelf,Z8ZR,Craterolophus convolvulus,31.5,GAM,1.1020438313303527
-6,Celtic-Biscay Shelf,NPRJ,Bugula neritina,31.5,GAM,1.085112515010371
-6,Celtic-Biscay Shelf,3T7JW,Lepadogaster candolii,31.5,GAM,1.0834580165350074
-6,Celtic-Biscay Shelf,9GQWD,Palaemon elegans,31.5,GAM,1.0822839861537492
-6,Celtic-Biscay Shelf,7935Q,Rana dalmatina,31.5,GAM,1.0698063263843731
-6,Celtic-Biscay Shelf,MPMK,Botrylloides diegensis,31.5,GAM,1.0648538573552355
-6,Celtic-Biscay Shelf,PGHVY,Fucus distichus,31.5,GAM,1.0584453278773929
-6,Celtic-Biscay Shelf,4FDSH,Petricolaria pholadiformis,31.5,GAM,1.057348262893266
-6,Celtic-Biscay Shelf,MPNZ,Botrylloides violaceus,31.5,GAM,1.0448854041262592
-6,Celtic-Biscay Shelf,R48N,Carcinus maenas,31.5,GAM,1.0406076840936493
-6,Celtic-Biscay Shelf,FNWY,Aplidium glabrum,31.5,GAM,1.0336813824810014
+3,North Sea,6MSH5,Ianiropsis serricaudis,13.5,decision rules,
+3,North Sea,PTTWN,Hobaniella longicruris,11,GAM,0.5759590314876748
+3,North Sea,6B288,Cordylophora caspia,10.5,GAM,1.00347409683334
+3,North Sea,MR4G,Bougainvillia muscus,10.5,GAM,1.0003213438039131
+3,North Sea,3NHYZ,Hymeniacidon perlevis,10.5,GAM,0.9913134547876302
+3,North Sea,69QWD,Chelidonichthys lucerna,10.5,GAM,0.9871239087336982
+3,North Sea,42Z4T,Micromesistius poutassou,10.5,GAM,0.9699574765952849
+3,North Sea,LSKVH,Austrominius modestus,10.5,GAM,0.9666379525372437
+3,North Sea,3JBV8,Halichoerus grypus,10.5,GAM,0.9626240511058766
+3,North Sea,B29V,Agonus cataphractus,10.5,GAM,0.9471047030746764
+3,North Sea,PHYYY,Halosiphon tomentosus,10.5,GAM,0.9348725873386688
+3,North Sea,MPMK,Botrylloides diegensis,10.5,GAM,0.928800839956778
+3,North Sea,LQ348,Asparagopsis armata,10.5,GAM,0.927505804198196
+3,North Sea,688WN,Atherina boyeri,10.5,GAM,0.9263008803826579
+3,North Sea,T8WJW,Thalassiosira nordenskioeldii,10.5,GAM,0.9200378545049028
+3,North Sea,TRJJ4,Undaria pinnatifida,10.5,GAM,0.9124813612550511
+3,North Sea,RVKDP,Pronoctiluca pelagica,10.5,GAM,0.9047285184648267
+3,North Sea,PS2Z,Calliostoma zizyphinum,10.5,GAM,0.8995230606301912
+3,North Sea,33HRJ,Cyprinus carpio,10.5,GAM,0.8945557129830128
+3,North Sea,65BGC,Aetea truncata,10.5,GAM,0.8942563009111646
+3,North Sea,FNWY,Aplidium glabrum,10.5,GAM,0.8808473105763307
+3,North Sea,4HVTW,Pilumnus hirtellus,10.5,GAM,0.8649107623364943
+3,North Sea,NPRJ,Bugula neritina,10.5,GAM,0.8613740677219063
+3,North Sea,364SQ,Dikerogammarus villosus,10.5,GAM,0.8591493689118483
+3,North Sea,43VGP,Molgula manhattensis,10.5,GAM,0.842976438350119
+3,North Sea,472YS,Nephtys ciliata,10.5,GAM,0.8290660414201108
+3,North Sea,M8HY,Boccardiella ligerica,10.5,GAM,0.8141299260658744
+3,North Sea,6R5XM,Marenzelleria neglecta,10.5,GAM,0.7747248872668564
+3,North Sea,5XQWG,Chelicorophium curvispinum,10.5,GAM,0.7492653744205691
+3,North Sea,4NQJ3,Pseudocalanus elongatus,10.5,GAM,0.7255593953834124
+3,North Sea,6WGQH,Pseudopotamilla reniformis,10.5,GAM,0.6849934432819071
+3,North Sea,5XNK6,Chaetoceros concavicornis,10.5,GAM,0.6769386423819606
+3,North Sea,7935Q,Rana dalmatina,10.5,GAM,0.6070233377312045
+3,North Sea,3HRQS,Gymnodinium catenatum,10.5,GAM,0.45253447298245664
+3,North Sea,3KQ9P,Hemimysis anomala,10.5,decision rules,
+3,North Sea,5D4CT,Zeuxo holdichi,10,GAM,0.49748559104130274
+3,North Sea,P6PPT,Gelidium vagum,9.5,GAM,1.5393449372318337
+3,North Sea,48GMW,Ocinebrellus inornatus,9,GAM,1.0027429735714466
+3,North Sea,53D7D,Suberites massa,9,GAM,0.6781627208950106
+3,North Sea,3K4QF,Heleobia charruana,8,GAM,1.0819976531780635
+3,North Sea,6MW6C,Incisocalliope aestuarius,8,GAM,0.6153748324347299
+3,North Sea,BSN6,Alitta succinea,6,GAM,0.9183209957137324
+3,North Sea,4L63D,Polydora cornuta,6,GAM,0.9160262658030373
+3,North Sea,7CXK2,Tubificoides benedii,6,GAM,0.8882109912906333
+3,North Sea,QSCF,Caprella mutica,6,GAM,0.8518371659971915
+3,North Sea,TPF2X,Vertebrata fucoides,6,GAM,0.8395230021215606
+3,North Sea,4VRP9,Scolelepis korsuni,6,GAM,0.8142777123889744
+3,North Sea,53ML9,Syllidia armata,6,GAM,0.809352282902525
+3,North Sea,TB5V,Chaetoceros lorenzianus,6,GAM,0.7773278851439643
+3,North Sea,NNFVY,Dasya baillouviana,6,GAM,0.6941527593430737
+3,North Sea,L9NW8,Alexandrium tamarense,6,GAM,0.6879319787462314
+3,North Sea,Q9BCD,Karenia mikimotoi,6,GAM,0.5248857711590553
+3,North Sea,5CS3F,Yoldia limatula,5,GAM,1.434588047783625
+3,North Sea,RWNKZ,Prorocentrum cordatum,4.5,GAM,0.939079066553347
+3,North Sea,SHPCB,Rhizosolenia setigera,4.5,GAM,0.9250157694821581
+3,North Sea,32WFN,Cyclopterus lumpus,4.5,GAM,0.9037916690159241
+3,North Sea,LBG2M,Apedinella radians,4.5,GAM,0.8869692791437401
+3,North Sea,Q2LNR,Lennoxia faveolata,4.5,GAM,0.7700107759091409
+3,North Sea,Q9CYR,Karlodinium veneficum,4.5,GAM,0.7634449665378079
+3,North Sea,5ZYZX,Corbicula fluminalis,2.5,GAM,0.8684052200847614
+3,North Sea,NFDLC,Dinobryon faculiferum,1,GAM,0.8967225264738079
+3,North Sea,36PZC,Dipolydora quadrilobata,0,GAM,0.8667219753144867
+3,North Sea,52X2B,Streblospio benedicti,0,GAM,0.8302583728822008
+3,North Sea,59K2N,Tubularia indivisa,0,GAM,0.818797404289887
+3,North Sea,4VRNP,Scolelepis bonnieri,0,GAM,0.8163115976969043
+3,North Sea,RDJPC,Peridiniella danica,0,GAM,0.7316221365892479
+3,North Sea,3H7P6,Grandidierella japonica,0,GAM,0.7108908725917916
+3,North Sea,SHPG2,Rhizosolenia styliformis,0,GAM,0.6848979138530108
+3,North Sea,7Q5KP,Antiopella cristata,0,GAM,0.6837954515727346
+3,North Sea,73P2T,Monocorophium sextonae,0,GAM,0.6384792845184731
+3,North Sea,4347F,Microporella ciliata,0,GAM,0.6353594747478091
+3,North Sea,4VZML,Scruparia ambigua,0,GAM,0.632804135445554
+3,North Sea,3Y8B5,Marphysa sanguinea,0,GAM,0.5882803066778838
+3,North Sea,44JYJ,Mulinia lateralis,0,GAM,0.5488237908471975
+3,North Sea,LWMWN,Asterionellopsis glacialis,0,GAM,0.54473553161899
+3,North Sea,36PZF,Dipolydora socialis,0,GAM,0.5322286669815827
+3,North Sea,4TV6Q,Sabellaria spinulosa,0,GAM,0.4362181573472125
+3,North Sea,SKMYS,Pterosperma cristatum,0,GAM,0.4133089860727516
+3,North Sea,SFKBR,Pseudochattonella verruculosa,0,GAM,0.293869863315678
+3,North Sea,4NVZL,Pseudodiaptomus marinus,0,GAM,0.2612932258473855
+6,Celtic-Biscay Shelf,48GMW,Ocinebrellus inornatus,31.5,GAM,1.5621017139257907
+6,Celtic-Biscay Shelf,TB5V,Chaetoceros lorenzianus,31.5,GAM,1.2899520236191144
+6,Celtic-Biscay Shelf,3HRQS,Gymnodinium catenatum,31.5,GAM,1.1600916415384734
+6,Celtic-Biscay Shelf,YSGX,Coryphoblennius galerita,31.5,GAM,1.1530118531802016
+6,Celtic-Biscay Shelf,6CY2M,Diplodus vulgaris,31.5,GAM,1.1353558305976774
+6,Celtic-Biscay Shelf,LQ348,Asparagopsis armata,31.5,GAM,1.118203305845068
+6,Celtic-Biscay Shelf,NPRJ,Bugula neritina,31.5,GAM,1.1172785250109083
+6,Celtic-Biscay Shelf,Z8ZR,Craterolophus convolvulus,31.5,GAM,1.1020438313305378
+6,Celtic-Biscay Shelf,9GQWD,Palaemon elegans,31.5,GAM,1.0831214085983525
+6,Celtic-Biscay Shelf,7935Q,Rana dalmatina,31.5,GAM,1.0750921353409788
+6,Celtic-Biscay Shelf,FNWY,Aplidium glabrum,31.5,GAM,1.0665933397315868
+6,Celtic-Biscay Shelf,MPMK,Botrylloides diegensis,31.5,GAM,1.0651118425975914
+6,Celtic-Biscay Shelf,4FDSH,Petricolaria pholadiformis,31.5,GAM,1.05876435408187
+6,Celtic-Biscay Shelf,PGHVY,Fucus distichus,31.5,GAM,1.0544439052718257
+6,Celtic-Biscay Shelf,MPNZ,Botrylloides violaceus,31.5,GAM,1.0305691580018648
 6,Celtic-Biscay Shelf,3ZTFD,Mercenaria mercenaria,28,GAM,
 6,Celtic-Biscay Shelf,358C6,Diadumene lineata,27,GAM,
-6,Celtic-Biscay Shelf,PGMCT,Fucus serratus,22.5,GAM,1.0093340174811178
-6,Celtic-Biscay Shelf,SXTX7,Sphaerococcus coronopifolius,22.5,GAM,1.0050071984375575
-6,Celtic-Biscay Shelf,44RHY,Mya arenaria,22.5,GAM,0.9500990755311154
-6,Celtic-Biscay Shelf,3VNQM,Littorina obtusata,22.5,GAM,0.9350161460387927
+6,Celtic-Biscay Shelf,3T7JW,Lepadogaster candolii,26.5,GAM,1.083216192211955
+6,Celtic-Biscay Shelf,PGMCT,Fucus serratus,22.5,GAM,1.0091033211834193
+6,Celtic-Biscay Shelf,SXTX7,Sphaerococcus coronopifolius,22.5,GAM,1.0001430745851978
+6,Celtic-Biscay Shelf,69QWD,Chelidonichthys lucerna,22.5,GAM,0.9976564860106928
+6,Celtic-Biscay Shelf,44RHY,Mya arenaria,22.5,GAM,0.9492859889338832
 6,Celtic-Biscay Shelf,LCHL9,Amphibalanus eburneus,21.5,decision rules,
-6,Celtic-Biscay Shelf,4VRP9,Scolelepis korsuni,21,GAM,0.8067916821885756
-6,Celtic-Biscay Shelf,686FK,Asterocarpa humilis,20.5,decision rules,
-6,Celtic-Biscay Shelf,4RF6D,Rangia cuneata,19.5,GAM,1.3689919910335149
-6,Celtic-Biscay Shelf,7C6PW,Thecacera pennigera,19.5,GAM,1.0830052536242252
+6,Celtic-Biscay Shelf,4VRP9,Scolelepis korsuni,21,GAM,0.8067916823345371
+6,Celtic-Biscay Shelf,4RF6D,Rangia cuneata,19.5,GAM,1.368991991033508
 6,Celtic-Biscay Shelf,44JYJ,Mulinia lateralis,19.5,decision rules,
-6,Celtic-Biscay Shelf,SSBTH,Solieria chordalis,18,GAM,0.7645152720729158
+6,Celtic-Biscay Shelf,686FK,Asterocarpa humilis,18.5,decision rules,
+6,Celtic-Biscay Shelf,33HRJ,Cyprinus carpio,17.5,GAM,1.0037106225659456
 6,Celtic-Biscay Shelf,79WZK,Schizoporella japonica,17.5,decision rules,
 6,Celtic-Biscay Shelf,LWYX,Bispira polyomma,17.5,decision rules,
-6,Celtic-Biscay Shelf,7CWT9,Truncatella subcylindrica,16.5,GAM,0.9706427815191943
+6,Celtic-Biscay Shelf,7C6PW,Thecacera pennigera,17,GAM,1.0830052536244406
+6,Celtic-Biscay Shelf,7CWT9,Truncatella subcylindrica,16.5,GAM,0.9695939280770128
+6,Celtic-Biscay Shelf,59435,Tritia neritea,15,GAM,0.9643393417787011
 6,Celtic-Biscay Shelf,6B288,Cordylophora caspia,15,decision rules,
-6,Celtic-Biscay Shelf,QSCF,Caprella mutica,13.5,GAM,0.9614275435122361
+6,Celtic-Biscay Shelf,SSBTH,Solieria chordalis,13.5,GAM,1.161998930628534
+6,Celtic-Biscay Shelf,3VNQM,Littorina obtusata,13.5,GAM,0.9349809382598125
 6,Celtic-Biscay Shelf,4CMHV,Parablennius incognitus,13,decision rules,
-6,Celtic-Biscay Shelf,BSQH5,Watersipora subatra,12.5,GAM,1.076278715185742
 6,Celtic-Biscay Shelf,5D4CT,Zeuxo holdichi,12.5,decision rules,
-6,Celtic-Biscay Shelf,5BV6H,Watersipora subtorquata,11.5,GAM,0.48717625210317617
-6,Celtic-Biscay Shelf,RCDCN,Perforatus perforatus,10.5,GAM,0.9845611737080757
-6,Celtic-Biscay Shelf,MVLMW,Chthamalus stellatus,10.5,GAM,0.9270889252780482
-6,Celtic-Biscay Shelf,LSKVH,Austrominius modestus,10.5,GAM,0.914969781532502
-6,Celtic-Biscay Shelf,PS2Z,Calliostoma zizyphinum,10.5,GAM,0.9143257818826153
-6,Celtic-Biscay Shelf,42Z4T,Micromesistius poutassou,10.5,GAM,0.905990284311837
-6,Celtic-Biscay Shelf,6HVS2,Ficopomatus enigmaticus,10.5,GAM,0.8976938628527297
-6,Celtic-Biscay Shelf,59435,Tritia neritea,10.5,GAM,0.8933923665475748
-6,Celtic-Biscay Shelf,6Z55C,Solea senegalensis,10.5,GAM,0.8755520782062259
-6,Celtic-Biscay Shelf,7WLRT,Procambarus clarkii,10.5,GAM,0.8542871461785555
-6,Celtic-Biscay Shelf,SXGX,Cereus pedunculatus,10.5,GAM,0.8522749454774883
-6,Celtic-Biscay Shelf,ML9NC,Chondria coerulescens,10.5,GAM,0.8052639541668312
-6,Celtic-Biscay Shelf,4YF8Y,Sparus aurata,10.5,GAM,0.7940863287727489
-6,Celtic-Biscay Shelf,PKB9M,Grateloupia subpectinata,10.5,GAM,0.7477111995504829
-6,Celtic-Biscay Shelf,66DTZ,Ammothea hilgendorfi,10.5,GAM,0.7025086754132589
-6,Celtic-Biscay Shelf,3D8MS,Eusarsiella zostericola,10.5,GAM,0.6494688390958309
+6,Celtic-Biscay Shelf,5BV6H,Watersipora subtorquata,11.5,GAM,0.4871762520802841
+6,Celtic-Biscay Shelf,RCDCN,Perforatus perforatus,10.5,GAM,0.9847322949746496
+6,Celtic-Biscay Shelf,QSCF,Caprella mutica,10.5,GAM,0.9588142432161695
+6,Celtic-Biscay Shelf,MVLMW,Chthamalus stellatus,10.5,GAM,0.9271786912692827
+6,Celtic-Biscay Shelf,PS2Z,Calliostoma zizyphinum,10.5,GAM,0.9139210380618537
+6,Celtic-Biscay Shelf,6HVS2,Ficopomatus enigmaticus,10.5,GAM,0.9078343091801377
+6,Celtic-Biscay Shelf,42Z4T,Micromesistius poutassou,10.5,GAM,0.9052837681998983
+6,Celtic-Biscay Shelf,LSKVH,Austrominius modestus,10.5,GAM,0.890352619141056
+6,Celtic-Biscay Shelf,SXGX,Cereus pedunculatus,10.5,GAM,0.8518893636896195
+6,Celtic-Biscay Shelf,3NHYZ,Hymeniacidon perlevis,10.5,GAM,0.8351232941019292
+6,Celtic-Biscay Shelf,4YF8Y,Sparus aurata,10.5,GAM,0.793822388491984
+6,Celtic-Biscay Shelf,ML9NC,Chondria coerulescens,10.5,GAM,0.7850083953373931
+6,Celtic-Biscay Shelf,PKB9M,Grateloupia subpectinata,10.5,GAM,0.7477111998382938
+6,Celtic-Biscay Shelf,66DTZ,Ammothea hilgendorfi,10.5,GAM,0.702508675333928
+6,Celtic-Biscay Shelf,3D8MS,Eusarsiella zostericola,10.5,GAM,0.6482881989769573
 6,Celtic-Biscay Shelf,5CS3F,Yoldia limatula,10.5,decision rules,
-6,Celtic-Biscay Shelf,3NHYZ,Hymeniacidon perlevis,8,GAM,0.8347062100976274
-6,Celtic-Biscay Shelf,N4VRP,Codium fragile,6.5,GAM,1.0113080292457302
-6,Celtic-Biscay Shelf,6RVDM,Necora puber,6,GAM,0.8269195163106156
-6,Celtic-Biscay Shelf,7Q5KP,Antiopella cristata,6,GAM,0.7834866597686405
-6,Celtic-Biscay Shelf,SHPCB,Rhizosolenia setigera,6,GAM,0.7429428600161477
-6,Celtic-Biscay Shelf,3JBV8,Halichoerus grypus,6,GAM,0.6015042773065983
-6,Celtic-Biscay Shelf,4FS5C,Phallusia mammillata,4.5,GAM,0.9965929863135277
-6,Celtic-Biscay Shelf,5387D,Styela clava,4.5,GAM,0.9145787944758701
-6,Celtic-Biscay Shelf,4GRZN,Phoronis hippocrepia,4.5,GAM,0.88343865821463885
-6,Celtic-Biscay Shelf,Q9BCD,Karenia mikimotoi,4.5,GAM,0.7720892727431574
-6,Celtic-Biscay Shelf,32WFN,Cyclopterus lumpus,2.5,GAM,0.8727626104820292
-6,Celtic-Biscay Shelf,4HVTW,Pilumnus hirtellus,1.5,GAM,0.8801486379183664
-6,Celtic-Biscay Shelf,6WYS2,Sabella spallanzanii,0,GAM,0.9718405491244951
-6,Celtic-Biscay Shelf,ZJCF,Crisularia plumosa,0,GAM,0.8936534465213545
-6,Celtic-Biscay Shelf,TVBX,Chelon labrosus,0,GAM,0.8720029486763828
-6,Celtic-Biscay Shelf,43VGP,Molgula manhattensis,0,GAM,0.8111834756792926
-6,Celtic-Biscay Shelf,B29V,Agonus cataphractus,0,GAM,0.8109580874256381
-6,Celtic-Biscay Shelf,4VRNP,Scolelepis bonnieri,0,GAM,0.7671950505108044
-6,Celtic-Biscay Shelf,T8WJW,Thalassiosira nordenskioeldii,0,GAM,0.7404090870023347
-6,Celtic-Biscay Shelf,73P2T,Monocorophium sextonae,0,GAM,0.7328625512214139
-6,Celtic-Biscay Shelf,M9Y66,Caulacanthus okamurae,0,GAM,0.7285961377384855
-6,Celtic-Biscay Shelf,36PZC,Dipolydora quadrilobata,0,GAM,0.7135004352191652
-6,Celtic-Biscay Shelf,Q76B,Calyptraea chinensis,0,GAM,0.6978682398354883
-6,Celtic-Biscay Shelf,7CXK2,Tubificoides benedii,0,GAM,0.6893780628321725
-6,Celtic-Biscay Shelf,RZPNM,Porphyra umbilicalis,0,GAM,0.683947888903007
-6,Celtic-Biscay Shelf,TRJJ4,Undaria pinnatifida,0,GAM,0.661628695190749
-6,Celtic-Biscay Shelf,7D9J2,Tubificoides pseudogaster,0,GAM,0.6368080315296696
-6,Celtic-Biscay Shelf,4L63D,Polydora cornuta,0,GAM,0.6238221851652571
-6,Celtic-Biscay Shelf,SHPG2,Rhizosolenia styliformis,0,GAM,0.5874200177390051
-6,Celtic-Biscay Shelf,4TV6Q,Sabellaria spinulosa,0,GAM,0.5757860197038684
-6,Celtic-Biscay Shelf,59K2N,Tubularia indivisa,0,GAM,0.5506000184562212
-6,Celtic-Biscay Shelf,7VBK3,Halisarca dujardinii,0,GAM,0.5323078183925074
-6,Celtic-Biscay Shelf,4RSPZ,Reptadeonella violacea,0,GAM,0.517477374188729
-6,Celtic-Biscay Shelf,RWNKZ,Prorocentrum cordatum,0,GAM,0.48645763701879047
-6,Celtic-Biscay Shelf,BSN6,Alitta succinea,0,GAM,0.47131052230300446
-6,Celtic-Biscay Shelf,52F56,Sternaspis scutata,0,GAM,0.4347993963350621
-11,Black Sea,7FFK2,Vanellus spinosus,31.5,GAM,1.1911029664450854
-11,Black Sea,9GQWD,Palaemon elegans,31.5,GAM,1.0600042250518864
-11,Black Sea,59435,Tritia neritea,25.5,GAM,1.1103406582931745
-11,Black Sea,4JJZC,Planiliza haematocheilus,22.5,GAM,0.9099118925605504
+6,Celtic-Biscay Shelf,6Z55C,Solea senegalensis,8,GAM,0.8755520782057545
+6,Celtic-Biscay Shelf,N4VRP,Codium fragile,6.5,GAM,1.0141917918079406
+6,Celtic-Biscay Shelf,6RVDM,Necora puber,6,GAM,0.8270696140754136
+6,Celtic-Biscay Shelf,7Q5KP,Antiopella cristata,6,GAM,0.783374435261524
+6,Celtic-Biscay Shelf,SHPCB,Rhizosolenia setigera,6,GAM,0.7429927074450945
+6,Celtic-Biscay Shelf,3JBV8,Halichoerus grypus,6,GAM,0.6017928099458556
+6,Celtic-Biscay Shelf,4FS5C,Phallusia mammillata,4.5,GAM,0.9965929863106514
+6,Celtic-Biscay Shelf,5387D,Styela clava,4.5,GAM,0.9219536630680741
+6,Celtic-Biscay Shelf,4GRZN,Phoronis hippocrepia,4.5,GAM,0.883113175233106
+6,Celtic-Biscay Shelf,Q9BCD,Karenia mikimotoi,4.5,GAM,0.7720330642846276
+6,Celtic-Biscay Shelf,TVBX,Chelon labrosus,2.5,GAM,0.884204836966133
+6,Celtic-Biscay Shelf,32WFN,Cyclopterus lumpus,2.5,GAM,0.873835053461223
+6,Celtic-Biscay Shelf,4HVTW,Pilumnus hirtellus,1.5,GAM,0.8856480595432221
+6,Celtic-Biscay Shelf,6WYS2,Sabella spallanzanii,0,GAM,0.9718405495736114
+6,Celtic-Biscay Shelf,ZJCF,Crisularia plumosa,0,GAM,0.8949191490300173
+6,Celtic-Biscay Shelf,43VGP,Molgula manhattensis,0,GAM,0.8185533093855184
+6,Celtic-Biscay Shelf,B29V,Agonus cataphractus,0,GAM,0.8108904031480042
+6,Celtic-Biscay Shelf,4VRNP,Scolelepis bonnieri,0,GAM,0.8030945427912731
+6,Celtic-Biscay Shelf,T8WJW,Thalassiosira nordenskioeldii,0,GAM,0.7404090870009874
+6,Celtic-Biscay Shelf,73P2T,Monocorophium sextonae,0,GAM,0.7323970606516959
+6,Celtic-Biscay Shelf,M9Y66,Caulacanthus okamurae,0,GAM,0.7273719224851698
+6,Celtic-Biscay Shelf,36PZC,Dipolydora quadrilobata,0,GAM,0.7134330315355868
+6,Celtic-Biscay Shelf,Q76B,Calyptraea chinensis,0,GAM,0.6969572169453933
+6,Celtic-Biscay Shelf,7CXK2,Tubificoides benedii,0,GAM,0.689357454239485
+6,Celtic-Biscay Shelf,RZPNM,Porphyra umbilicalis,0,GAM,0.6806776088587648
+6,Celtic-Biscay Shelf,TRJJ4,Undaria pinnatifida,0,GAM,0.662637316620971
+6,Celtic-Biscay Shelf,7D9J2,Tubificoides pseudogaster,0,GAM,0.6372637267492287
+6,Celtic-Biscay Shelf,4L63D,Polydora cornuta,0,GAM,0.6325410564403283
+6,Celtic-Biscay Shelf,SHPG2,Rhizosolenia styliformis,0,GAM,0.5874719803063144
+6,Celtic-Biscay Shelf,4TV6Q,Sabellaria spinulosa,0,GAM,0.5757442074272324
+6,Celtic-Biscay Shelf,59K2N,Tubularia indivisa,0,GAM,0.5494000890493812
+6,Celtic-Biscay Shelf,7VBK3,Halisarca dujardinii,0,GAM,0.5323078183570664
+6,Celtic-Biscay Shelf,4RSPZ,Reptadeonella violacea,0,GAM,0.5174773741992558
+6,Celtic-Biscay Shelf,RWNKZ,Prorocentrum cordatum,0,GAM,0.48645763701922307
+6,Celtic-Biscay Shelf,BSN6,Alitta succinea,0,GAM,0.47131052225596193
+6,Celtic-Biscay Shelf,52F56,Sternaspis scutata,0,GAM,0.43479939635950876
+11,Black Sea,7FFK2,Vanellus spinosus,31.5,GAM,1.1938957971556388
+11,Black Sea,9GQWD,Palaemon elegans,31.5,GAM,1.1258544167665214
+11,Black Sea,59435,Tritia neritea,25.5,GAM,1.0765989641486018
+11,Black Sea,4JJZC,Planiliza haematocheilus,22.5,GAM,0.9099118925605967
 11,Black Sea,4TV6Q,Sabellaria spinulosa,19.5,decision rules,
 11,Black Sea,4CMHV,Parablennius incognitus,18.5,decision rules,
-11,Black Sea,4LQXH,Pomatoschistus marmoratus,15,GAM,0.9344116483636701
-11,Black Sea,44RHY,Mya arenaria,10.5,GAM,1.006015076317477
-11,Black Sea,7935Q,Rana dalmatina,10.5,GAM,0.9511938519842011
-11,Black Sea,53WJY,Syngnathus abaster,10.5,GAM,0.941999954871835
-11,Black Sea,6RW9X,Neogobius melanostomus,10.5,GAM,0.8893455098963705
-11,Black Sea,Q76B,Calyptraea chinensis,10.5,GAM,0.7870931186518328
-11,Black Sea,YSGX,Coryphoblennius galerita,9.5,GAM,1.1386552088785618
-11,Black Sea,688WN,Atherina boyeri,4.5,GAM,0.8125187920180775
-11,Black Sea,4HVTW,Pilumnus hirtellus,4.5,GAM,0.5428345879183625
-11,Black Sea,5WJTR,Beroe ovata,0,GAM,0.648125306586685
-13,Mediterranean Sea,7RTD2,Lamprohaminoea ovalis,31.5,GAM,2.1466149964634202
-13,Mediterranean Sea,79VXT,Scarus ghobban,31.5,GAM,1.632902607265443
-13,Mediterranean Sea,6GHWY,Ergalatax junionae,31.5,GAM,1.6299296470304037
-13,Mediterranean Sea,TPTB,Charybdis hellerii,31.5,GAM,1.6193882681346412
-13,Mediterranean Sea,6JWF2,Gafrarium savignyi,31.5,GAM,1.4531431704963655
-13,Mediterranean Sea,4P4YV,Pseudonereis anomala,31.5,GAM,1.440256122460825
-13,Mediterranean Sea,6T3K7,Opuntia elatior,31.5,GAM,1.400268590934372
-13,Mediterranean Sea,36WJ4,Distaplia bermudensis,31.5,GAM,1.3432695151746443
-13,Mediterranean Sea,MVLMW,Chthamalus stellatus,31.5,GAM,1.3389410773405692
-13,Mediterranean Sea,6Z55C,Solea senegalensis,31.5,GAM,1.3251488307429655
-13,Mediterranean Sea,6XX9B,Schizoporella errata,31.5,GAM,1.312325123296471
-13,Mediterranean Sea,DCJ6,Anadara transversa,31.5,GAM,1.3100178604321027
-13,Mediterranean Sea,LCHL9,Amphibalanus eburneus,31.5,GAM,1.3038787198306272
-13,Mediterranean Sea,RCDCN,Perforatus perforatus,31.5,GAM,1.3017382659518386
-13,Mediterranean Sea,4JK6F,Planocera ceratommata,31.5,GAM,1.2989728890391419
-13,Mediterranean Sea,38PCQ,Ecteinascidia turbinata,31.5,GAM,1.2810614809728464
-13,Mediterranean Sea,THS7,Chama pacifica,31.5,GAM,1.2798662083272758
-13,Mediterranean Sea,7CWT9,Truncatella subcylindrica,31.5,GAM,1.2629465287064243
-13,Mediterranean Sea,6YVDG,Sparisoma cretense,31.5,GAM,1.2552681857326247
-13,Mediterranean Sea,6ZBYD,Spondylus spinosus,31.5,GAM,1.2468406765449822
-13,Mediterranean Sea,7FFK2,Vanellus spinosus,31.5,GAM,1.2439624035288082
-13,Mediterranean Sea,YSGX,Coryphoblennius galerita,31.5,GAM,1.2429755276289929
-13,Mediterranean Sea,4CMHV,Parablennius incognitus,31.5,GAM,1.2379484914607888
-13,Mediterranean Sea,72PX9,Lumbrineris perkinsi,31.5,GAM,1.2376929730989843
-13,Mediterranean Sea,QJZ24,Microeuraphia depressa,31.5,GAM,1.216705277384544
-13,Mediterranean Sea,6MJMF,Hydroides dirampha,31.5,GAM,1.213786207005027
-13,Mediterranean Sea,39NJT,Enchelycore anatina,31.5,GAM,1.2117908401353448
-13,Mediterranean Sea,3T7JW,Lepadogaster candolii,31.5,GAM,1.209837474732145
-13,Mediterranean Sea,6Y7Y7,Scartella cristata,31.5,GAM,1.2093008607498696
-13,Mediterranean Sea,J98K,Atergatis roseus,31.5,GAM,1.2053832075327537
-13,Mediterranean Sea,6XPVZ,Saurida lessepsianus,31.5,GAM,1.2014165622949555
-13,Mediterranean Sea,42Z4T,Micromesistius poutassou,31.5,GAM,1.19617545287115
-13,Mediterranean Sea,5VWXQ,Atherinomorus forskalii,31.5,GAM,1.1690297352020371
-13,Mediterranean Sea,N6PH,Branchiomma luctuosum,31.5,GAM,1.1647308358064763
-13,Mediterranean Sea,4M2PP,Portunus segnis,31.5,GAM,1.1527758850080823
-13,Mediterranean Sea,4LQXH,Pomatoschistus marmoratus,31.5,GAM,1.148811749343928
-13,Mediterranean Sea,44RHY,Mya arenaria,31.5,GAM,1.1448112242691317
-13,Mediterranean Sea,6XMPJ,Sargocentron rubrum,31.5,GAM,1.1427874702093597
-13,Mediterranean Sea,R2NP,Caranx crysos,31.5,GAM,1.141418202496905
-13,Mediterranean Sea,76G5K,Pempheris rhomboidea,31.5,GAM,1.139292381893506
-13,Mediterranean Sea,SZDC,Cerithium scabridum,31.5,GAM,1.1371929877423395
-13,Mediterranean Sea,4FS5J,Phallusia nigra,31.5,GAM,1.1333171163723912
-13,Mediterranean Sea,9XW6F,Penaeus kerathurus,31.5,GAM,1.1307947962987843
-13,Mediterranean Sea,75CY5,Ostrea stentina,31.5,GAM,1.1222844481502585
-13,Mediterranean Sea,7B7ZG,Synaptula reciprocans,31.5,GAM,1.1168901594325924
-13,Mediterranean Sea,59435,Tritia neritea,31.5,GAM,1.101289170485081
-13,Mediterranean Sea,688WN,Atherina boyeri,31.5,GAM,1.0873138854630444
-13,Mediterranean Sea,3FZJF,Gibbula ardens,31.5,GAM,1.082314340054469
-13,Mediterranean Sea,6CY2M,Diplodus vulgaris,31.5,GAM,1.0774384114596753
-13,Mediterranean Sea,PS2Z,Calliostoma zizyphinum,31.5,GAM,1.0726724672686545
-13,Mediterranean Sea,MSSL,Brachidontes pharaonis,31.5,GAM,1.0676352551313932
-13,Mediterranean Sea,S6DTJ,Pseudo-nitzschia australis,31.5,GAM,1.0574699294273764
-13,Mediterranean Sea,4RSPZ,Reptadeonella violacea,31.5,GAM,1.039797868511748
-13,Mediterranean Sea,LY3S,Bivetiella cancellata,31.5,GAM,1.0318238058785445
-13,Mediterranean Sea,53R5D,Symplegma brakenhielmi,27.5,GAM,1.3070927417678166
-13,Mediterranean Sea,76JN9,Pennaria disticha,27.5,GAM,1.0408937321275498
-13,Mediterranean Sea,446DR,Monocorophium insidiosum,27,GAM,0.924052281153403
+11,Black Sea,4LQXH,Pomatoschistus marmoratus,15,GAM,0.9344116481937859
+11,Black Sea,69QWD,Chelidonichthys lucerna,15,GAM,0.9118031355648419
+11,Black Sea,44RHY,Mya arenaria,10.5,GAM,1.0081266078992155
+11,Black Sea,7935Q,Rana dalmatina,10.5,GAM,0.9614810228331858
+11,Black Sea,53WJY,Syngnathus abaster,10.5,GAM,0.9419999548314684
+11,Black Sea,33HRJ,Cyprinus carpio,10.5,GAM,0.9294765895255648
+11,Black Sea,6RW9X,Neogobius melanostomus,10.5,GAM,0.9005543329360903
+11,Black Sea,Q76B,Calyptraea chinensis,10.5,GAM,0.7870931176667042
+11,Black Sea,YSGX,Coryphoblennius galerita,9.5,GAM,1.1856936645938112
+11,Black Sea,4HVTW,Pilumnus hirtellus,6,GAM,0.5693310460900665
+11,Black Sea,688WN,Atherina boyeri,4.5,GAM,0.8125187923273012
+11,Black Sea,5WJTR,Beroe ovata,0,GAM,0.6562741926059772
+13,Mediterranean Sea,7RTD2,Lamprohaminoea ovalis,31.5,GAM,2.165601608985956
+13,Mediterranean Sea,79VXT,Scarus ghobban,31.5,GAM,1.6329026072517736
+13,Mediterranean Sea,6GHWY,Ergalatax junionae,31.5,GAM,1.6299296472971454
+13,Mediterranean Sea,TPTB,Charybdis hellerii,31.5,GAM,1.619388268119942
+13,Mediterranean Sea,6JWF2,Gafrarium savignyi,31.5,GAM,1.4531431704823665
+13,Mediterranean Sea,4P4YV,Pseudonereis anomala,31.5,GAM,1.4402561223417454
+13,Mediterranean Sea,6T3K7,Opuntia elatior,31.5,GAM,1.4041841936213801
+13,Mediterranean Sea,36WJ4,Distaplia bermudensis,31.5,GAM,1.3439007722979601
+13,Mediterranean Sea,MVLMW,Chthamalus stellatus,31.5,GAM,1.3396754971228781
+13,Mediterranean Sea,6Z55C,Solea senegalensis,31.5,GAM,1.3346476196414372
+13,Mediterranean Sea,DCJ6,Anadara transversa,31.5,GAM,1.310017860415088
+13,Mediterranean Sea,6XX9B,Schizoporella errata,31.5,GAM,1.3099383597179832
+13,Mediterranean Sea,RCDCN,Perforatus perforatus,31.5,GAM,1.3026501673675253
+13,Mediterranean Sea,4JK6F,Planocera ceratommata,31.5,GAM,1.29897288903909
+13,Mediterranean Sea,LCHL9,Amphibalanus eburneus,31.5,GAM,1.2922970941787122
+13,Mediterranean Sea,38PCQ,Ecteinascidia turbinata,31.5,GAM,1.281061480972048
+13,Mediterranean Sea,6YVDG,Sparisoma cretense,31.5,GAM,1.2550939155338918
+13,Mediterranean Sea,7CWT9,Truncatella subcylindrica,31.5,GAM,1.2524706073717389
+13,Mediterranean Sea,6ZBYD,Spondylus spinosus,31.5,GAM,1.2468406764855076
+13,Mediterranean Sea,7FFK2,Vanellus spinosus,31.5,GAM,1.2447483285454841
+13,Mediterranean Sea,4CMHV,Parablennius incognitus,31.5,GAM,1.2437303113403966
+13,Mediterranean Sea,YSGX,Coryphoblennius galerita,31.5,GAM,1.2405024863856686
+13,Mediterranean Sea,72PX9,Lumbrineris perkinsi,31.5,GAM,1.2376929730982407
+13,Mediterranean Sea,6Y7Y7,Scartella cristata,31.5,GAM,1.2318902539129244
+13,Mediterranean Sea,QJZ24,Microeuraphia depressa,31.5,GAM,1.2167052773830735
+13,Mediterranean Sea,3T7JW,Lepadogaster candolii,31.5,GAM,1.209837474815553
+13,Mediterranean Sea,6MJMF,Hydroides dirampha,31.5,GAM,1.2092525145922635
+13,Mediterranean Sea,39NJT,Enchelycore anatina,31.5,GAM,1.2060143332606452
+13,Mediterranean Sea,J98K,Atergatis roseus,31.5,GAM,1.1927354858875239
+13,Mediterranean Sea,5VWXQ,Atherinomorus forskalii,31.5,GAM,1.169029735173171
+13,Mediterranean Sea,42Z4T,Micromesistius poutassou,31.5,GAM,1.165560340114765
+13,Mediterranean Sea,N6PH,Branchiomma luctuosum,31.5,GAM,1.1649702103900803
+13,Mediterranean Sea,4FS5J,Phallusia nigra,31.5,GAM,1.1644716360358807
+13,Mediterranean Sea,THS7,Chama pacifica,31.5,GAM,1.1637460901448888
+13,Mediterranean Sea,4M2PP,Portunus segnis,31.5,GAM,1.1527758850082717
+13,Mediterranean Sea,4LQXH,Pomatoschistus marmoratus,31.5,GAM,1.1487401907177806
+13,Mediterranean Sea,44RHY,Mya arenaria,31.5,GAM,1.14481122426942
+13,Mediterranean Sea,6XMPJ,Sargocentron rubrum,31.5,GAM,1.1439478859107857
+13,Mediterranean Sea,3LY4N,Himantura uarnak,31.5,GAM,1.1434705244881387
+13,Mediterranean Sea,R2NP,Caranx crysos,31.5,GAM,1.1411288287462584
+13,Mediterranean Sea,SZDC,Cerithium scabridum,31.5,GAM,1.1371929877423101
+13,Mediterranean Sea,76G5K,Pempheris rhomboidea,31.5,GAM,1.1343049187628413
+13,Mediterranean Sea,6XPVZ,Saurida lessepsianus,31.5,GAM,1.1296112696403993
+13,Mediterranean Sea,75CY5,Ostrea stentina,31.5,GAM,1.1233031091765573
+13,Mediterranean Sea,9XW6F,Penaeus kerathurus,31.5,GAM,1.1196695666589525
+13,Mediterranean Sea,7B7ZG,Synaptula reciprocans,31.5,GAM,1.113658688290135
+13,Mediterranean Sea,59435,Tritia neritea,31.5,GAM,1.0981998863941413
+13,Mediterranean Sea,69QWD,Chelidonichthys lucerna,31.5,GAM,1.0981938528963264
+13,Mediterranean Sea,688WN,Atherina boyeri,31.5,GAM,1.0896166334069317
+13,Mediterranean Sea,6CY2M,Diplodus vulgaris,31.5,GAM,1.0775406043368305
+13,Mediterranean Sea,3FZJF,Gibbula ardens,31.5,GAM,1.0750668615556431
+13,Mediterranean Sea,PS2Z,Calliostoma zizyphinum,31.5,GAM,1.0705184085295354
+13,Mediterranean Sea,MSSL,Brachidontes pharaonis,31.5,GAM,1.063912076325099
+13,Mediterranean Sea,4RSPZ,Reptadeonella violacea,31.5,GAM,1.0397978685218485
+13,Mediterranean Sea,LY3S,Bivetiella cancellata,31.5,GAM,1.0319486159004931
+13,Mediterranean Sea,53R5D,Symplegma brakenhielmi,27.5,GAM,1.2722941548707252
+13,Mediterranean Sea,76JN9,Pennaria disticha,27.5,GAM,1.0412623962138996
+13,Mediterranean Sea,5ZYZX,Corbicula fluminalis,27,GAM,1.4787441924198552
+13,Mediterranean Sea,446DR,Monocorophium insidiosum,27,GAM,0.9244616257004153
 13,Mediterranean Sea,3R8JQ,Kirkegaardia dorsobranchialis,27,GAM,
 13,Mediterranean Sea,4M3CW,Potamilla torelli,27,GAM,
-13,Mediterranean Sea,R48N,Carcinus maenas,26.5,GAM,1.0915197680431372
 13,Mediterranean Sea,6L2HF,Gonioinfradens giardi,26.5,decision rules,
-13,Mediterranean Sea,N7ZH7,Dictyota cyanoloma,25.5,GAM,1.2891898684436465
-13,Mediterranean Sea,783MS,Plotosus lineatus,25.5,GAM,0.8866571190578314
-13,Mediterranean Sea,6GBJQ,Ercolania viridis,24.5,GAM,1.0778336927138081
-13,Mediterranean Sea,4YF8Y,Sparus aurata,24.5,GAM,1.017702652568025
+13,Mediterranean Sea,N7ZH7,Dictyota cyanoloma,25.5,GAM,1.2891898684426522
+13,Mediterranean Sea,783MS,Plotosus lineatus,25.5,GAM,0.8866571190657884
+13,Mediterranean Sea,MMNXQ,Balanus trigonus,25.5,GAM,
+13,Mediterranean Sea,TRZ5,Cheilodipterus novemstriatus,24.5,GAM,1.1074485078589762
+13,Mediterranean Sea,6GBJQ,Ercolania viridis,24.5,GAM,1.0778336927109267
+13,Mediterranean Sea,4YF8Y,Sparus aurata,24.5,GAM,1.020457461568295
 13,Mediterranean Sea,4XDQP,Sillago suezensis,24.5,decision rules,
+13,Mediterranean Sea,725YR,Leucos aula,23,GAM,
 13,Mediterranean Sea,6D7D3,Diodora ruppellii,23,decision rules,
-13,Mediterranean Sea,VFD7,Ciona robusta,22.5,GAM,1.2130863649819945
-13,Mediterranean Sea,3P33V,Hypselodoris infucata,22.5,GAM,1.1689404952592228
-13,Mediterranean Sea,78LBQ,Pteragogus trispilus,22.5,GAM,1.153740200505598
-13,Mediterranean Sea,552GG,Tayuva lilacina,22.5,GAM,1.133362479979702
-13,Mediterranean Sea,5WJTR,Beroe ovata,22.5,GAM,1.0972964800760499
-13,Mediterranean Sea,57GHQ,Torquigener flavimaculosus,22.5,GAM,1.0603308813748071
-13,Mediterranean Sea,773T8,Percnon gibbesi,22.5,GAM,1.0008617815274998
-13,Mediterranean Sea,738Y7,Melibe viridis,22.5,GAM,0.9999383815614199
-13,Mediterranean Sea,6HVS2,Ficopomatus enigmaticus,22.5,GAM,0.9927626006898025
-13,Mediterranean Sea,TVBX,Chelon labrosus,22.5,GAM,0.9884092476013738
-13,Mediterranean Sea,6TDDM,Ova canalifera,22.5,GAM,0.9794470176852499
-13,Mediterranean Sea,XRF9,Conomurex persicus,22.5,GAM,0.9443930233906976
-13,Mediterranean Sea,7935Q,Rana dalmatina,22.5,GAM,0.8886716933946025
-13,Mediterranean Sea,LQ348,Asparagopsis armata,22.5,GAM,0.830514434299355
+13,Mediterranean Sea,6NBLQ,Istiblennius meleagris,23,decision rules,
+13,Mediterranean Sea,8VC8J,Saron marmoratus,23,decision rules,
+13,Mediterranean Sea,MPMK,Botrylloides diegensis,22.5,GAM,1.2171182549846906
+13,Mediterranean Sea,VFD7,Ciona robusta,22.5,GAM,1.212387313227084
+13,Mediterranean Sea,78LBQ,Pteragogus trispilus,22.5,GAM,1.1537402006412483
+13,Mediterranean Sea,552GG,Tayuva lilacina,22.5,GAM,1.133362479979864
+13,Mediterranean Sea,5WJTR,Beroe ovata,22.5,GAM,1.1212829958903654
+13,Mediterranean Sea,57GHQ,Torquigener flavimaculosus,22.5,GAM,1.0622365149614907
+13,Mediterranean Sea,773T8,Percnon gibbesi,22.5,GAM,1.0029395777534387
+13,Mediterranean Sea,TVBX,Chelon labrosus,22.5,GAM,0.9942957024981903
+13,Mediterranean Sea,6HVS2,Ficopomatus enigmaticus,22.5,GAM,0.9930414943298351
+13,Mediterranean Sea,6TDDM,Ova canalifera,22.5,GAM,0.9785036911163459
+13,Mediterranean Sea,XRF9,Conomurex persicus,22.5,GAM,0.9437691056021213
+13,Mediterranean Sea,4CYRR,Paraleucilla magna,22.5,GAM,0.8729763347680469
+13,Mediterranean Sea,LQ348,Asparagopsis armata,22.5,GAM,0.8299806045016959
+13,Mediterranean Sea,44M44,Murex forskoehlii,22.5,GAM,0.8296489061269383
 13,Mediterranean Sea,FNWY,Aplidium glabrum,22.5,decision rules,
-13,Mediterranean Sea,5ZYZX,Corbicula fluminalis,20,GAM,1.1714066498906415
-13,Mediterranean Sea,358C6,Diadumene lineata,20,GAM,1.0325941218924286
-13,Mediterranean Sea,MMNXQ,Balanus trigonus,20,decision rules,
-13,Mediterranean Sea,4XPGQ,Siphonaria pectinata,19.5,GAM,1.1173658011874898
-13,Mediterranean Sea,4HVTW,Pilumnus hirtellus,19.5,GAM,1.1087541966117047
-13,Mediterranean Sea,TRZ5,Cheilodipterus novemstriatus,19.5,GAM,1.1074485078917644
-13,Mediterranean Sea,6J77G,Fistularia commersonii,19.5,GAM,1.1021907049822544
-13,Mediterranean Sea,4KZVJ,Polyandrocarpa zorritensis,19.5,GAM,1.0749250761082798
-13,Mediterranean Sea,4FS5C,Phallusia mammillata,19.5,GAM,1.0437723902203062
-13,Mediterranean Sea,3KZ74,Herklotsichthys punctatus,19.5,GAM,1.0319111501239868
-13,Mediterranean Sea,9GQWD,Palaemon elegans,19.5,GAM,1.0268318315551257
-13,Mediterranean Sea,4PFGR,Pseudupeneus prayensis,19.5,decision rules,
+13,Mediterranean Sea,7FFDN,Vanderhorstia mertensi,21,decision rules,
+13,Mediterranean Sea,4KZVJ,Polyandrocarpa zorritensis,19.5,GAM,1.1441806782909594
+13,Mediterranean Sea,4XPGQ,Siphonaria pectinata,19.5,GAM,1.1214842523575792
+13,Mediterranean Sea,4HVTW,Pilumnus hirtellus,19.5,GAM,1.1082787306932498
+13,Mediterranean Sea,6J77G,Fistularia commersonii,19.5,GAM,1.1053172233691677
+13,Mediterranean Sea,4FS5C,Phallusia mammillata,19.5,GAM,1.0462390632468703
+13,Mediterranean Sea,3KZ74,Herklotsichthys punctatus,19.5,GAM,1.0319111501234715
 13,Mediterranean Sea,8L46,Ablennes hians,19.5,decision rules,
 13,Mediterranean Sea,LY29,Biuve fulvipunctata,19.5,decision rules,
-13,Mediterranean Sea,MPMK,Botrylloides diegensis,18.5,GAM,1.2068891806656585
-13,Mediterranean Sea,6NBLQ,Istiblennius meleagris,18.5,decision rules,
 13,Mediterranean Sea,6ZMPN,Stenothoe gallensis,18.5,decision rules,
-13,Mediterranean Sea,7FFDN,Vanderhorstia mertensi,18.5,decision rules,
-13,Mediterranean Sea,8VC8J,Saron marmoratus,18.5,decision rules,
-13,Mediterranean Sea,9XW52,Penaeus aztecus,18.5,decision rules,
-13,Mediterranean Sea,7QHBL,Bursatella leachii,17.5,GAM,0.9312935378853581
+13,Mediterranean Sea,7935Q,Rana dalmatina,18,GAM,0.7893348320050357
+13,Mediterranean Sea,3GW52,Goniobranchus annulatus,17.5,GAM,0.9878080654165733
+13,Mediterranean Sea,7QHBL,Bursatella leachii,17.5,GAM,0.92602216511778
 13,Mediterranean Sea,4L63Z,Polydora hoplura,17.5,decision rules,
 13,Mediterranean Sea,7DM4K,Upeneus pori,17.5,decision rules,
 13,Mediterranean Sea,D58Q3,Hazeus ingressus,17.5,decision rules,
 13,Mediterranean Sea,3XNGV,Malleus regula,17,decision rules,
-13,Mediterranean Sea,3QN26,Jassa slatteryi,16.5,GAM,0.9254115559910223
-13,Mediterranean Sea,YZCQ,Cotylorhiza erythraea,16,GAM,0.9337099296577906
-13,Mediterranean Sea,75SSX,Parupeneus forsskali,15.5,GAM,1.109170975930011
-13,Mediterranean Sea,TRJJ4,Undaria pinnatifida,15.5,GAM,1.044889138082605
-13,Mediterranean Sea,6YMVB,Siganus luridus,15.5,GAM,1.0428211678966983
-13,Mediterranean Sea,7Q5KP,Antiopella cristata,15.5,GAM,1.0364230700059953
+13,Mediterranean Sea,3QN26,Jassa slatteryi,16.5,GAM,0.9254115560042472
+13,Mediterranean Sea,9XW52,Penaeus aztecus,16,decision rules,
+13,Mediterranean Sea,75SSX,Parupeneus forsskali,15.5,GAM,1.1020568615926232
+13,Mediterranean Sea,TRJJ4,Undaria pinnatifida,15.5,GAM,1.042184675464786
+13,Mediterranean Sea,6YMVB,Siganus luridus,15.5,GAM,1.0402075926663548
 13,Mediterranean Sea,525XX,Stenothoe georgiana,15.5,decision rules,
-13,Mediterranean Sea,MPNZ,Botrylloides violaceus,15,GAM,2.065580079635505
-13,Mediterranean Sea,725YR,Leucos aula,15,decision rules,
+13,Mediterranean Sea,MPNZ,Botrylloides violaceus,15,GAM,2.065580079188647
 13,Mediterranean Sea,BSN6,Alitta succinea,15,decision rules,
 13,Mediterranean Sea,TLVD,Champsodon nudivittis,15,decision rules,
 13,Mediterranean Sea,84MWV,Chrysaora pseudoocellata,14,decision rules,
 13,Mediterranean Sea,ZJCF,Crisularia plumosa,14,decision rules,
-13,Mediterranean Sea,N4VRP,Codium fragile,13.5,GAM,1.2035875665334632
-13,Mediterranean Sea,52CCT,Stephanolepis diaspros,13.5,GAM,0.9465323531491736
-13,Mediterranean Sea,4CYRR,Paraleucilla magna,13.5,GAM,0.8711774383825276
-13,Mediterranean Sea,4BZB9,Pagellus bellottii,13,GAM,3.2577005024534085
+13,Mediterranean Sea,N4VRP,Codium fragile,13.5,GAM,1.203869898521879
+13,Mediterranean Sea,9GQWD,Palaemon elegans,13.5,GAM,0.9968149327499709
+13,Mediterranean Sea,52CCT,Stephanolepis diaspros,13.5,GAM,0.9465323530806823
+13,Mediterranean Sea,4BZB9,Pagellus bellottii,13,GAM,3.2577005035496125
 13,Mediterranean Sea,4224W,Mesochaetopterus rogeri,13,decision rules,
-13,Mediterranean Sea,3YFLW,Matuta victor,12.5,GAM,1.0206841571577498
+13,Mediterranean Sea,358C6,Diadumene lineata,12.5,GAM,1.032594122143951
+13,Mediterranean Sea,7Q5KP,Antiopella cristata,12.5,GAM,1.0325381170627455
+13,Mediterranean Sea,3YFLW,Matuta victor,12.5,GAM,1.0206841571575747
 13,Mediterranean Sea,58N2C,Triconia umerus,12.5,decision rules,
-13,Mediterranean Sea,5WVDL,Calocalanus pavoninus,12,GAM,0.946771962351705
+13,Mediterranean Sea,5WVDL,Calocalanus pavoninus,12,GAM,0.9467719623497288
 13,Mediterranean Sea,3F8NP,Gammogobius steinitzi,12,decision rules,
 13,Mediterranean Sea,456PK,Myra subgranulata,11.5,decision rules,
-13,Mediterranean Sea,6G5LM,Epinephelus caninus,10.5,GAM,1.007356417019422
-13,Mediterranean Sea,5YHDK,Chromogobius zebratus,10.5,GAM,0.9843551491513264
-13,Mediterranean Sea,3GW52,Goniobranchus annulatus,10.5,GAM,0.9747016295404136
-13,Mediterranean Sea,4LCTF,Polyophthalmus pictus,10.5,GAM,0.9671971668109332
-13,Mediterranean Sea,3JFLP,Halophila stipulacea,10.5,GAM,0.9667297059287085
-13,Mediterranean Sea,VV7H,Clavelina dellavallei,10.5,GAM,0.9593145351436887
-13,Mediterranean Sea,Q76B,Calyptraea chinensis,10.5,GAM,0.9550624588936427
-13,Mediterranean Sea,77FKP,Phyllorhiza punctata,10.5,GAM,0.9425630034831782
-13,Mediterranean Sea,4VTWY,Scomberomorus commerson,10.5,GAM,0.9317582056614063
-13,Mediterranean Sea,FT9T,Apogonichthyoides pharaonis,10.5,GAM,0.9248711718916676
-13,Mediterranean Sea,663JW,Agetus typicus,10.5,GAM,0.9149300695762004
-13,Mediterranean Sea,3LY4N,Himantura uarnak,10.5,GAM,0.9073161615714745
-13,Mediterranean Sea,6W6JT,Pomadasys incisus,10.5,GAM,0.8764855404292855
-13,Mediterranean Sea,3RX8X,Lagocephalus sceleratus,10.5,GAM,0.8719349589444305
-13,Mediterranean Sea,5ZLQH,Coleusia signata,10.5,GAM,0.8524437351697877
-13,Mediterranean Sea,48L55,Oculina patagonica,10.5,GAM,0.8463804896194179
-13,Mediterranean Sea,44M44,Murex forskoehlii,10.5,GAM,0.8456932399679205
-13,Mediterranean Sea,MB27H,Caulerpa taxifolia,10.5,GAM,0.8213995430242512
-13,Mediterranean Sea,46829,Nemipterus randalli,10.5,GAM,0.8129180317645018
-13,Mediterranean Sea,4PWV4,Pterois miles,10.5,GAM,0.8081452991679061
-13,Mediterranean Sea,6DHDK,Dorvillea similis,10.5,GAM,0.8077882812362143
-13,Mediterranean Sea,D626,Amphistegina lobifera,10.5,GAM,0.7977321704928222
-13,Mediterranean Sea,FB5F,Aphanius fasciatus,10.5,GAM,0.7967952642505156
-13,Mediterranean Sea,PX2G,Calocalanus plumulosus,10.5,GAM,0.7850147883886388
-13,Mediterranean Sea,6WWSX,Rissoina bertholleti,10.5,GAM,0.7680271784255497
-13,Mediterranean Sea,4Z2MX,Sphyraena pinguis,10.5,GAM,0.7171076038317861
-13,Mediterranean Sea,4LQMJ,Pomadasys stridens,10.5,GAM,0.6841104233573924
-13,Mediterranean Sea,FZX4,Aquilonastra burtoni,10.5,GAM,0.6764104029428969
-13,Mediterranean Sea,BNXS,Alepes djedaba,10.5,GAM,0.6540942591020299
-13,Mediterranean Sea,4CP6R,Paracerceis sculpta,10.5,GAM,0.595069752829127
+13,Mediterranean Sea,6G5LM,Epinephelus caninus,10.5,GAM,1.0073564170431182
+13,Mediterranean Sea,3P33V,Hypselodoris infucata,10.5,GAM,1.0007557945970909
+13,Mediterranean Sea,5YHDK,Chromogobius zebratus,10.5,GAM,0.9843551491489293
+13,Mediterranean Sea,3JFLP,Halophila stipulacea,10.5,GAM,0.9685878350798951
+13,Mediterranean Sea,4LCTF,Polyophthalmus pictus,10.5,GAM,0.9667388707665002
+13,Mediterranean Sea,VV7H,Clavelina dellavallei,10.5,GAM,0.9546851536360565
+13,Mediterranean Sea,Q76B,Calyptraea chinensis,10.5,GAM,0.9476846043422813
+13,Mediterranean Sea,77FKP,Phyllorhiza punctata,10.5,GAM,0.944363746766017
+13,Mediterranean Sea,YZCQ,Cotylorhiza erythraea,10.5,GAM,0.9386824330096636
+13,Mediterranean Sea,4VTWY,Scomberomorus commerson,10.5,GAM,0.9338267705222417
+13,Mediterranean Sea,FT9T,Apogonichthyoides pharaonis,10.5,GAM,0.9248711718918774
+13,Mediterranean Sea,663JW,Agetus typicus,10.5,GAM,0.9149300695758031
+13,Mediterranean Sea,6W6JT,Pomadasys incisus,10.5,GAM,0.8799717701155353
+13,Mediterranean Sea,3RX8X,Lagocephalus sceleratus,10.5,GAM,0.8754513157348427
+13,Mediterranean Sea,5ZLQH,Coleusia signata,10.5,GAM,0.8524437351954388
+13,Mediterranean Sea,48L55,Oculina patagonica,10.5,GAM,0.8461381276972951
+13,Mediterranean Sea,46829,Nemipterus randalli,10.5,GAM,0.8129180320780915
+13,Mediterranean Sea,6DHDK,Dorvillea similis,10.5,GAM,0.8077882812189481
+13,Mediterranean Sea,4PWV4,Pterois miles,10.5,GAM,0.8072476336884667
+13,Mediterranean Sea,FB5F,Aphanius fasciatus,10.5,GAM,0.7989144678229303
+13,Mediterranean Sea,D626,Amphistegina lobifera,10.5,GAM,0.7977321704917925
+13,Mediterranean Sea,MB27H,Caulerpa taxifolia,10.5,GAM,0.7968412976072415
+13,Mediterranean Sea,PX2G,Calocalanus plumulosus,10.5,GAM,0.7850147884900474
+13,Mediterranean Sea,6WWSX,Rissoina bertholleti,10.5,GAM,0.7680271784349644
+13,Mediterranean Sea,4Z2MX,Sphyraena pinguis,10.5,GAM,0.7171076038263894
+13,Mediterranean Sea,4LQMJ,Pomadasys stridens,10.5,GAM,0.6841104233919838
+13,Mediterranean Sea,FZX4,Aquilonastra burtoni,10.5,GAM,0.676410403119558
+13,Mediterranean Sea,BNXS,Alepes djedaba,10.5,GAM,0.6650610978884431
+13,Mediterranean Sea,4CP6R,Paracerceis sculpta,10.5,GAM,0.5781126328938464
 13,Mediterranean Sea,3JBV8,Halichoerus grypus,10.5,decision rules,
-13,Mediterranean Sea,6YN5N,Siganus rivulatus,9,GAM,0.595794783366283
+13,Mediterranean Sea,S6DTJ,Pseudo-nitzschia australis,10.5,decision rules,
+13,Mediterranean Sea,6YN5N,Siganus rivulatus,9,GAM,0.5957397463913637
 13,Mediterranean Sea,YSDX,Coryphellina rubrolineata,7.5,GAM,
-13,Mediterranean Sea,SXGX,Cereus pedunculatus,6,GAM,0.9293585586608386
-13,Mediterranean Sea,Z4FP,Crambe crambe,6,GAM,0.9127111415516299
-13,Mediterranean Sea,6WYS2,Sabella spallanzanii,6,GAM,0.8894322325089441
-13,Mediterranean Sea,YNT5,Corycaeus clausi,6,GAM,0.8785701079352279
-13,Mediterranean Sea,6TNVH,Paracalanus nanus,6,GAM,0.8586274527066721
-13,Mediterranean Sea,6WVVY,Rhopilema nomadica,6,GAM,0.8259155324719144
-13,Mediterranean Sea,6RVDM,Necora puber,6,GAM,0.8248881617502932
-13,Mediterranean Sea,4925M,Oithona plumifera,6,GAM,0.7807092705096357
-13,Mediterranean Sea,7WLRT,Procambarus clarkii,6,GAM,0.769936297083191
-13,Mediterranean Sea,6K3WF,Fulvia fragilis,6,GAM,0.7606742499829222
-13,Mediterranean Sea,53WJY,Syngnathus abaster,6,GAM,0.7531370247307125
-13,Mediterranean Sea,4WR9Q,Septifer cumingii,6,GAM,0.6811383540054652
-13,Mediterranean Sea,BSQH5,Watersipora subatra,6,GAM,0.6440768190505549
-13,Mediterranean Sea,M9ZRK,Caulerpa prolifera,6,GAM,0.6267838311386408
-13,Mediterranean Sea,58MZR,Triconia dentipes,6,GAM,0.5830017946676224
-13,Mediterranean Sea,3NHYZ,Hymeniacidon perlevis,6,GAM,0.5789467140962629
-13,Mediterranean Sea,PX2R,Calocalanus tenuis,6,GAM,0.5722680967623393
-13,Mediterranean Sea,65RJW,Agetus flaccus,6,GAM,0.5555868449614215
-13,Mediterranean Sea,7DTG3,Urocorycaeus furcifer,6,GAM,0.5545405023629719
-13,Mediterranean Sea,3GW5Z,Goniobranchus obsoletus,6,GAM,0.5516299723191431
-13,Mediterranean Sea,3X99P,Macrorhynchia philippina,6,GAM,0.4357173712075205
-13,Mediterranean Sea,53ML9,Syllidia armata,4.5,GAM,0.792007495189211
-13,Mediterranean Sea,4D6PW,Paranthura japonica,4.5,GAM,0.7707810792190363
-13,Mediterranean Sea,6YMS7,Sigambra parva,4.5,GAM,0.6596863062790105
+13,Mediterranean Sea,SXGX,Cereus pedunculatus,6,GAM,0.9297246697563079
+13,Mediterranean Sea,Z4FP,Crambe crambe,6,GAM,0.9125577915978758
+13,Mediterranean Sea,6WYS2,Sabella spallanzanii,6,GAM,0.888968857259581
+13,Mediterranean Sea,YNT5,Corycaeus clausi,6,GAM,0.8785701079347703
+13,Mediterranean Sea,6TNVH,Paracalanus nanus,6,GAM,0.8586274527055484
+13,Mediterranean Sea,49FLG,Oncaea mediterranea,6,GAM,0.8468057350695957
+13,Mediterranean Sea,4925M,Oithona plumifera,6,GAM,0.7807092704564561
+13,Mediterranean Sea,53WJY,Syngnathus abaster,6,GAM,0.7618862715833978
+13,Mediterranean Sea,6K3WF,Fulvia fragilis,6,GAM,0.7591808497954536
+13,Mediterranean Sea,33HRJ,Cyprinus carpio,6,GAM,0.7545370813497608
+13,Mediterranean Sea,4WR9Q,Septifer cumingii,6,GAM,0.6811383540304128
+13,Mediterranean Sea,M9ZRK,Caulerpa prolifera,6,GAM,0.626889065477964
+13,Mediterranean Sea,58MZR,Triconia dentipes,6,GAM,0.5830017948438204
+13,Mediterranean Sea,3NHYZ,Hymeniacidon perlevis,6,GAM,0.5789467140979462
+13,Mediterranean Sea,PX2R,Calocalanus tenuis,6,GAM,0.5722680967403069
+13,Mediterranean Sea,65RJW,Agetus flaccus,6,GAM,0.5555868450416227
+13,Mediterranean Sea,7DTG3,Urocorycaeus furcifer,6,GAM,0.5545405025637032
+13,Mediterranean Sea,3GW5Z,Goniobranchus obsoletus,6,GAM,0.5516299723189272
+13,Mediterranean Sea,3X99P,Macrorhynchia philippina,6,GAM,0.43571737122777293
+13,Mediterranean Sea,53ML9,Syllidia armata,4.5,GAM,0.792007495196641
+13,Mediterranean Sea,4D6PW,Paranthura japonica,4.5,GAM,0.7707810792188792
+13,Mediterranean Sea,6YMS7,Sigambra parva,4.5,GAM,0.659686306293464
 13,Mediterranean Sea,CFJXC,Calocalanus pavo,4.5,GAM,
-13,Mediterranean Sea,49FLG,Oncaea mediterranea,3.5,GAM,0.8468057350673541
-13,Mediterranean Sea,3256V,Ctenocalanus vanus,0,GAM,0.9046915294398685
-13,Mediterranean Sea,3GQ9Z,Gobius xanthocephalus,0,GAM,0.8791019853047604
-13,Mediterranean Sea,NPRJ,Bugula neritina,0,GAM,0.8265313976080138
-13,Mediterranean Sea,35864,Diadema setosum,0,GAM,0.7201598332002375
-13,Mediterranean Sea,7DLS5,Upeneus moluccensis,0,GAM,0.70209969277042406
-13,Mediterranean Sea,6F5ZX,Elysia ornata,0,GAM,0.6689994361022281
-13,Mediterranean Sea,52F56,Sternaspis scutata,0,GAM,0.6546417635797835
-13,Mediterranean Sea,3DJK6,Exaiptasia diaphana,0,GAM,0.6487783715075693
-13,Mediterranean Sea,6RMTQ,Mobula mobular,0,GAM,0.6171001830726737
-13,Mediterranean Sea,3HRQS,Gymnodinium catenatum,0,GAM,0.6057261494705785
-13,Mediterranean Sea,SXTX7,Sphaerococcus coronopifolius,0,GAM,0.5920173597784907
-13,Mediterranean Sea,3KYK3,Herdmania momus,0,GAM,0.5857095317506671
-13,Mediterranean Sea,3Y7LV,Marivagia stellata,0,GAM,0.581075046077732
-13,Mediterranean Sea,4GRZN,Phoronis hippocrepia,0,GAM,0.5322934392770393
-13,Mediterranean Sea,53D7D,Suberites massa,0,GAM,0.4839529168008449
-14,Iberian Coastal,TRJJ4,Undaria pinnatifida,31.5,GAM,1.4321465677068141
-14,Iberian Coastal,MVLMW,Chthamalus stellatus,31.5,GAM,1.4016353365481613
-14,Iberian Coastal,6W6JT,Pomadasys incisus,31.5,GAM,1.3351059750157548
-14,Iberian Coastal,Q76B,Calyptraea chinensis,31.5,GAM,1.228356105689266
-14,Iberian Coastal,4GRD8,Phorcus sauciatus,31.5,GAM,1.184090191976666
-14,Iberian Coastal,4XPGQ,Siphonaria pectinata,31.5,GAM,1.166440226420628
-14,Iberian Coastal,9GQWD,Palaemon elegans,31.5,GAM,1.1648671932460408
-14,Iberian Coastal,SXGX,Cereus pedunculatus,31.5,GAM,1.158230318029745
-14,Iberian Coastal,N4VRP,Codium fragile,31.5,GAM,1.1505756505029947
-14,Iberian Coastal,PS2Z,Calliostoma zizyphinum,31.5,GAM,1.148271165577808
-14,Iberian Coastal,59435,Tritia neritea,31.5,GAM,1.1158165241827545
-14,Iberian Coastal,PGMCT,Fucus serratus,31.5,GAM,1.0888788727885415
-14,Iberian Coastal,LQ348,Asparagopsis armata,31.5,GAM,1.0843389508620622
-14,Iberian Coastal,TVBX,Chelon labrosus,31.5,GAM,1.048611674264885
+13,Mediterranean Sea,3256V,Ctenocalanus vanus,0,GAM,0.9046915294390034
+13,Mediterranean Sea,3GQ9Z,Gobius xanthocephalus,0,GAM,0.8844882704568864
+13,Mediterranean Sea,6RVDM,Necora puber,0,GAM,0.8277097544727512
+13,Mediterranean Sea,NPRJ,Bugula neritina,0,GAM,0.8276182883681237
+13,Mediterranean Sea,6WVVY,Rhopilema nomadica,0,GAM,0.8245121243340496
+13,Mediterranean Sea,35864,Diadema setosum,0,GAM,0.721118368816543
+13,Mediterranean Sea,7DLS5,Upeneus moluccensis,0,GAM,0.7020996927774558
+13,Mediterranean Sea,52F56,Sternaspis scutata,0,GAM,0.6546417635273535
+13,Mediterranean Sea,3DJK6,Exaiptasia diaphana,0,GAM,0.6443013165793384
+13,Mediterranean Sea,6F5ZX,Elysia ornata,0,GAM,0.6295281405795776
+13,Mediterranean Sea,6RMTQ,Mobula mobular,0,GAM,0.6110327922235905
+13,Mediterranean Sea,SXTX7,Sphaerococcus coronopifolius,0,GAM,0.5920173605585258
+13,Mediterranean Sea,3KYK3,Herdmania momus,0,GAM,0.5857095317049646
+13,Mediterranean Sea,3Y7LV,Marivagia stellata,0,GAM,0.5808510520782633
+13,Mediterranean Sea,4GRZN,Phoronis hippocrepia,0,GAM,0.5306577619200311
+13,Mediterranean Sea,3HRQS,Gymnodinium catenatum,0,GAM,0.5238916759600074
+13,Mediterranean Sea,53D7D,Suberites massa,0,GAM,0.483061132440011
+14,Iberian Coastal,TRJJ4,Undaria pinnatifida,31.5,GAM,1.4331657488854046
+14,Iberian Coastal,6W6JT,Pomadasys incisus,31.5,GAM,1.3351059750155774
+14,Iberian Coastal,LSKVH,Austrominius modestus,31.5,GAM,1.25251753417232
+14,Iberian Coastal,Q76B,Calyptraea chinensis,31.5,GAM,1.229097291613446
+14,Iberian Coastal,4GRD8,Phorcus sauciatus,31.5,GAM,1.184090191965924
+14,Iberian Coastal,9GQWD,Palaemon elegans,31.5,GAM,1.1706455500686723
+14,Iberian Coastal,N4VRP,Codium fragile,31.5,GAM,1.1658863421965855
+14,Iberian Coastal,4XPGQ,Siphonaria pectinata,31.5,GAM,1.1623382233591724
+14,Iberian Coastal,SXGX,Cereus pedunculatus,31.5,GAM,1.1582200480638323
+14,Iberian Coastal,PS2Z,Calliostoma zizyphinum,31.5,GAM,1.1496110188883681
+14,Iberian Coastal,59435,Tritia neritea,31.5,GAM,1.1036569510090788
+14,Iberian Coastal,PGMCT,Fucus serratus,31.5,GAM,1.0857759239453488
+14,Iberian Coastal,LQ348,Asparagopsis armata,31.5,GAM,1.0614609793612395
+14,Iberian Coastal,TVBX,Chelon labrosus,31.5,GAM,1.0488544203978416
 14,Iberian Coastal,36WJ4,Distaplia bermudensis,31.5,decision rules,
-14,Iberian Coastal,5387D,Styela clava,28.5,GAM,1.274423208240488
-14,Iberian Coastal,44RHY,Mya arenaria,27.5,GAM,1.1470523056449342
-14,Iberian Coastal,N6PH,Branchiomma luctuosum,24,GAM,2.261033558551548
-14,Iberian Coastal,6WYS2,Sabella spallanzanii,22.5,GAM,0.9806757067477068
-14,Iberian Coastal,YSGX,Coryphoblennius galerita,22.5,GAM,0.9522526085129474
-14,Iberian Coastal,4YF8Y,Sparus aurata,22.5,GAM,0.9122102710645077
-14,Iberian Coastal,RCDCN,Perforatus perforatus,22.5,GAM,0.8966005720048136
-14,Iberian Coastal,3JBV8,Halichoerus grypus,22.5,GAM,0.8855620333311836
-14,Iberian Coastal,SXTX7,Sphaerococcus coronopifolius,22.5,GAM,0.8763475363658708
-14,Iberian Coastal,4HVTW,Pilumnus hirtellus,22.5,GAM,0.8345330927988127
-14,Iberian Coastal,7WLRT,Procambarus clarkii,22.5,GAM,0.8246613585235045
-14,Iberian Coastal,N7ZH7,Dictyota cyanoloma,22.5,GAM,0.7668669217379157
+14,Iberian Coastal,MVLMW,Chthamalus stellatus,30,GAM,1.4016353234819148
+14,Iberian Coastal,5387D,Styela clava,28.5,GAM,1.2744232082414215
+14,Iberian Coastal,44RHY,Mya arenaria,27.5,GAM,1.1470523056372808
+14,Iberian Coastal,N6PH,Branchiomma luctuosum,24,GAM,2.2610335591544026
+14,Iberian Coastal,6WYS2,Sabella spallanzanii,22.5,GAM,0.9806757067464125
+14,Iberian Coastal,YSGX,Coryphoblennius galerita,22.5,GAM,0.9522908445801345
+14,Iberian Coastal,4YF8Y,Sparus aurata,22.5,GAM,0.9089082741807634
+14,Iberian Coastal,SXTX7,Sphaerococcus coronopifolius,22.5,GAM,0.9073262129530186
+14,Iberian Coastal,4HVTW,Pilumnus hirtellus,22.5,GAM,0.8423435748769194
+14,Iberian Coastal,N7ZH7,Dictyota cyanoloma,22.5,GAM,0.7692535531364832
 14,Iberian Coastal,M9Y66,Caulacanthus okamurae,22.5,decision rules,
-14,Iberian Coastal,MPMK,Botrylloides diegensis,21,decision rules,
+14,Iberian Coastal,NPRJ,Bugula neritina,21,decision rules,
 14,Iberian Coastal,38PCQ,Ecteinascidia turbinata,20.5,decision rules,
+14,Iberian Coastal,3VNQM,Littorina obtusata,19.5,GAM,1.029109509029918
 14,Iberian Coastal,4CMHV,Parablennius incognitus,19.5,decision rules,
 14,Iberian Coastal,53WJY,Syngnathus abaster,19.5,decision rules,
 14,Iberian Coastal,6T3K7,Opuntia elatior,19.5,decision rules,
+14,Iberian Coastal,MPMK,Botrylloides diegensis,19.5,decision rules,
 14,Iberian Coastal,QSCF,Caprella mutica,19.5,decision rules,
-14,Iberian Coastal,NPRJ,Bugula neritina,18.5,decision rules,
-14,Iberian Coastal,M9ZRK,Caulerpa prolifera,18,GAM,1.2775150313445343
+14,Iberian Coastal,M9ZRK,Caulerpa prolifera,18,GAM,1.2775150313445347
 14,Iberian Coastal,6BVN8,Cynoscion regalis,17.5,decision rules,
 14,Iberian Coastal,7CWT9,Truncatella subcylindrica,17.5,decision rules,
-14,Iberian Coastal,K7PV,Baccharis spicata,17.5,decision rules,
 14,Iberian Coastal,MMNXQ,Balanus trigonus,17.5,decision rules,
 14,Iberian Coastal,4CYRR,Paraleucilla magna,14.5,decision rules,
 14,Iberian Coastal,Z4FP,Crambe crambe,14,decision rules,
-14,Iberian Coastal,R48N,Carcinus maenas,13.5,GAM,0.9998609479324881
-14,Iberian Coastal,34TT2,Dentex canariensis,13.5,GAM,0.03803780339428473
-14,Iberian Coastal,3VNQM,Littorina obtusata,12.5,GAM,1.0141671692816987
-14,Iberian Coastal,4GRZN,Phoronis hippocrepia,12,decision rules,
-14,Iberian Coastal,LSKVH,Austrominius modestus,10.5,GAM,0.9149490764590493
-14,Iberian Coastal,42Z4T,Micromesistius poutassou,10.5,GAM,0.9020019329981229
-14,Iberian Coastal,6RVDM,Necora puber,10.5,GAM,0.8651264710493787
-14,Iberian Coastal,7Q5KP,Antiopella cristata,10.5,GAM,0.8616618850580576
-14,Iberian Coastal,ML9NC,Chondria coerulescens,10.5,GAM,0.8029351013077716
-14,Iberian Coastal,4FS5C,Phallusia mammillata,10.5,GAM,0.7464226564163943
-14,Iberian Coastal,6HVS2,Ficopomatus enigmaticus,10.5,GAM,0.5699486670731043
+14,Iberian Coastal,RCDCN,Perforatus perforatus,13.5,GAM,0.9004063290442053
+14,Iberian Coastal,34TT2,Dentex canariensis,13.5,GAM,0.038037803394284635
+14,Iberian Coastal,42Z4T,Micromesistius poutassou,10.5,GAM,0.9019728367997244
+14,Iberian Coastal,69QWD,Chelidonichthys lucerna,10.5,GAM,0.8669594602966917
+14,Iberian Coastal,6RVDM,Necora puber,10.5,GAM,0.8636579837024644
+14,Iberian Coastal,7Q5KP,Antiopella cristata,10.5,GAM,0.8429393158848763
+14,Iberian Coastal,3JBV8,Halichoerus grypus,10.5,GAM,0.8315213642382813
+14,Iberian Coastal,ML9NC,Chondria coerulescens,10.5,GAM,0.800820357290269
+14,Iberian Coastal,4FS5C,Phallusia mammillata,10.5,GAM,0.7464226564159334
+14,Iberian Coastal,6HVS2,Ficopomatus enigmaticus,10.5,GAM,0.5699486671252838
+14,Iberian Coastal,4GRZN,Phoronis hippocrepia,10.5,decision rules,
 14,Iberian Coastal,5BV6H,Watersipora subtorquata,10.5,decision rules,
 14,Iberian Coastal,VFD7,Ciona robusta,10.5,decision rules,
-14,Iberian Coastal,M9Y6S,Caulacanthus ustulatus,6,GAM,0.7368626201664005
-14,Iberian Coastal,9XW6F,Penaeus kerathurus,6,GAM,0.5951534593228641
-14,Iberian Coastal,3T7JW,Lepadogaster candolii,6,GAM,0.5903447412924134
-14,Iberian Coastal,3GQ9Z,Gobius xanthocephalus,6,GAM,0.5590188522862268
-14,Iberian Coastal,6Z55C,Solea senegalensis,6,GAM,0.5133439222424282
-14,Iberian Coastal,5D2L9,Zenopsis conchifer,4.5,GAM,0.7835257854649542
-14,Iberian Coastal,6CY2M,Diplodus vulgaris,3.5,GAM,0.743272416415602
-14,Iberian Coastal,4Z2GH,Sphoeroides pachygaster,1.5,GAM,0.6346670393731668
-14,Iberian Coastal,3KP8C,Hemigrapsus takanoi,1.5,GAM,0.6305409561047725
-14,Iberian Coastal,7935Q,Rana dalmatina,0,GAM,0.6042854873831844
+14,Iberian Coastal,M9Y6S,Caulacanthus ustulatus,6,GAM,0.7368626201391587
+14,Iberian Coastal,9XW6F,Penaeus kerathurus,6,GAM,0.5951534593121315
+14,Iberian Coastal,33HRJ,Cyprinus carpio,6,GAM,0.5935860854334397
+14,Iberian Coastal,3T7JW,Lepadogaster candolii,6,GAM,0.5846317369704369
+14,Iberian Coastal,3GQ9Z,Gobius xanthocephalus,6,GAM,0.5596253791138674
+14,Iberian Coastal,6Z55C,Solea senegalensis,6,GAM,0.5087014760348502
+14,Iberian Coastal,6K3GC,Fundulus heteroclitus,6,GAM,0.3880440515546846
+14,Iberian Coastal,5D2L9,Zenopsis conchifer,4.5,GAM,0.7884352150618383
+14,Iberian Coastal,6CY2M,Diplodus vulgaris,3.5,GAM,0.7438232493063263
+14,Iberian Coastal,4Z2GH,Sphoeroides pachygaster,3.5,GAM,0.6346670394225202
+14,Iberian Coastal,S6DTJ,Pseudo-nitzschia australis,0,GAM,0.7741638933512311
+14,Iberian Coastal,3KP8C,Hemigrapsus takanoi,0,GAM,0.6055908702651984
+14,Iberian Coastal,7935Q,Rana dalmatina,0,GAM,0.5737061380852657
 50,Faroe Plateau,42Z4T,Micromesistius poutassou,21,decision rules,
 50,Faroe Plateau,32WFN,Cyclopterus lumpus,17.5,decision rules,
-50,Faroe Plateau,R48N,Carcinus maenas,14.5,decision rules,
-50,Faroe Plateau,3JBV8,Halichoerus grypus,10.5,GAM,0.8253754316952602
-53,Norwegian Sea,564M4,Tharyx killariensis,31.5,GAM,1.3300494111322503
-53,Norwegian Sea,PS2Z,Calliostoma zizyphinum,31.5,GAM,1.2243504576167175
-53,Norwegian Sea,R48N,Carcinus maenas,31.5,GAM,1.1932336140781392
-53,Norwegian Sea,PGHVY,Fucus distichus,31.5,GAM,1.1804452061760762
-53,Norwegian Sea,B29V,Agonus cataphractus,31.5,GAM,1.150540331651691
-53,Norwegian Sea,PGMCT,Fucus serratus,31.5,GAM,1.0900701316030128
-53,Norwegian Sea,SHPCB,Rhizosolenia setigera,31.5,GAM,1.0502811275805883
-53,Norwegian Sea,42Z4T,Micromesistius poutassou,30.5,GAM,0.9907922315577008
+50,Faroe Plateau,3JBV8,Halichoerus grypus,10.5,GAM,0.8253754313911639
+53,Norwegian Sea,564M4,Tharyx killariensis,31.5,GAM,1.3300494111340841
+53,Norwegian Sea,PS2Z,Calliostoma zizyphinum,31.5,GAM,1.2243504576162934
+53,Norwegian Sea,PGHVY,Fucus distichus,31.5,GAM,1.1804452061744835
+53,Norwegian Sea,B29V,Agonus cataphractus,31.5,GAM,1.1505403316343799
+53,Norwegian Sea,PGMCT,Fucus serratus,31.5,GAM,1.086922780087537
+53,Norwegian Sea,SHPCB,Rhizosolenia setigera,31.5,GAM,1.0502811275133659
+53,Norwegian Sea,42Z4T,Micromesistius poutassou,30.5,GAM,0.9897637923708195
 53,Norwegian Sea,LBG2M,Apedinella radians,27,GAM,
 53,Norwegian Sea,52F56,Sternaspis scutata,27,decision rules,
 53,Norwegian Sea,PHYYY,Halosiphon tomentosus,23,decision rules,
-53,Norwegian Sea,44RHY,Mya arenaria,22.5,GAM,1.0750204187597507
-53,Norwegian Sea,36PZC,Dipolydora quadrilobata,22.5,GAM,0.9852156271100813
+53,Norwegian Sea,44RHY,Mya arenaria,22.5,GAM,1.0750204188793107
+53,Norwegian Sea,36PZC,Dipolydora quadrilobata,22.5,GAM,0.9852156269941574
 53,Norwegian Sea,Q9CYR,Karlodinium veneficum,21,GAM,
 53,Norwegian Sea,3BT78,Euchone incolor,21,decision rules,
-53,Norwegian Sea,3JBV8,Halichoerus grypus,19.5,GAM,1.022388137082787
+53,Norwegian Sea,69QWD,Chelidonichthys lucerna,20,decision rules,
+53,Norwegian Sea,3JBV8,Halichoerus grypus,19.5,GAM,1.0217919639715478
 53,Norwegian Sea,65BGC,Aetea truncata,19.5,decision rules,
 53,Norwegian Sea,79WZK,Schizoporella japonica,17.5,decision rules,
 53,Norwegian Sea,RWNKZ,Prorocentrum cordatum,17.5,decision rules,
 53,Norwegian Sea,RVKDP,Pronoctiluca pelagica,16,decision rules,
 53,Norwegian Sea,VJY5B,Lessardia elongata,16,decision rules,
 53,Norwegian Sea,L9NRY,Alexandrium minutum,15,decision rules,
-53,Norwegian Sea,TPF2X,Vertebrata fucoides,13.5,GAM,0.8768590420419209
+53,Norwegian Sea,TPF2X,Vertebrata fucoides,13.5,GAM,0.8768590419761575
 53,Norwegian Sea,4VZML,Scruparia ambigua,12.5,decision rules,
-53,Norwegian Sea,4VRP9,Scolelepis korsuni,10.5,GAM,0.9582145221442708
-53,Norwegian Sea,RZPNM,Porphyra umbilicalis,10.5,GAM,0.9356711849063203
-53,Norwegian Sea,36PZF,Dipolydora socialis,10.5,GAM,0.9335121361836772
-53,Norwegian Sea,9GQWD,Palaemon elegans,10.5,GAM,0.9190404425175644
-53,Norwegian Sea,32WFN,Cyclopterus lumpus,10.5,GAM,0.9093382783876337
-53,Norwegian Sea,59K2N,Tubularia indivisa,10.5,GAM,0.9039687075395363
-53,Norwegian Sea,6WGQH,Pseudopotamilla reniformis,10.5,GAM,0.82012278341451506
+53,Norwegian Sea,4VRP9,Scolelepis korsuni,10.5,GAM,0.9582145221434621
+53,Norwegian Sea,RZPNM,Porphyra umbilicalis,10.5,GAM,0.9356711850590996
+53,Norwegian Sea,36PZF,Dipolydora socialis,10.5,GAM,0.9335121361809703
+53,Norwegian Sea,9GQWD,Palaemon elegans,10.5,GAM,0.9190404425442456
+53,Norwegian Sea,32WFN,Cyclopterus lumpus,10.5,GAM,0.9100377481690739
+53,Norwegian Sea,59K2N,Tubularia indivisa,10.5,GAM,0.8902396118752528
+53,Norwegian Sea,6WGQH,Pseudopotamilla reniformis,10.5,GAM,0.8201227834109136
 53,Norwegian Sea,NFCHP,Ectocarpus siliculosus,10.5,decision rules,
-53,Norwegian Sea,Q9BCD,Karenia mikimotoi,8,GAM,0.6128814794822707
-53,Norwegian Sea,53ML9,Syllidia armata,4.5,GAM,0.7887122363246731
-53,Norwegian Sea,7CXK2,Tubificoides benedii,2,GAM,1.0141905245337268
-53,Norwegian Sea,N4VRP,Codium fragile,0,GAM,0.9130869932830096
-53,Norwegian Sea,3VNQM,Littorina obtusata,0,GAM,0.7874089591195608
-53,Norwegian Sea,T8WJW,Thalassiosira nordenskioeldii,0,GAM,0.7018576819565137
-53,Norwegian Sea,472YS,Nephtys ciliata,0,GAM,0.6982168681917769
-53,Norwegian Sea,L9NW8,Alexandrium tamarense,0,GAM,0.6359209866479444
-53,Norwegian Sea,QSCF,Caprella mutica,0,GAM,0.3665548400796284
-54,Barents Sea,T8WJW,Thalassiosira nordenskioeldii,31.5,GAM,1.6376993093350745
-54,Barents Sea,PGMCT,Fucus serratus,31.5,GAM,1.2274373848227598
-54,Barents Sea,LWMWN,Asterionellopsis glacialis,31.5,GAM,1.1950895627378664
-54,Barents Sea,NFCHP,Ectocarpus siliculosus,31.5,GAM,1.1905160448826777
-54,Barents Sea,PHYYY,Halosiphon tomentosus,31.5,GAM,1.1762920099694303
-54,Barents Sea,RZPNM,Porphyra umbilicalis,31.5,GAM,1.1728352664279005
-54,Barents Sea,3JBV8,Halichoerus grypus,31.5,GAM,1.1542836707801627
-54,Barents Sea,42Z4T,Micromesistius poutassou,31.5,GAM,1.1487387563305296
-54,Barents Sea,44RHY,Mya arenaria,31.5,GAM,1.1267146602347697
-54,Barents Sea,PGJ56,Fucus evanescens,31.5,GAM,1.0813457408552885
-54,Barents Sea,7CXK2,Tubificoides benedii,31.5,GAM,1.0360779406421243
-54,Barents Sea,36PZC,Dipolydora quadrilobata,31.5,GAM,1.031256823201583
-54,Barents Sea,32WFN,Cyclopterus lumpus,31.5,GAM,1.0272664668896212
+53,Norwegian Sea,Q9BCD,Karenia mikimotoi,8,GAM,0.6128814794827719
+53,Norwegian Sea,53ML9,Syllidia armata,4.5,GAM,0.7901883006429646
+53,Norwegian Sea,7CXK2,Tubificoides benedii,2,GAM,1.0141905245083782
+53,Norwegian Sea,N4VRP,Codium fragile,0,GAM,0.9130869933158833
+53,Norwegian Sea,3VNQM,Littorina obtusata,0,GAM,0.8058037988648451
+53,Norwegian Sea,T8WJW,Thalassiosira nordenskioeldii,0,GAM,0.7018576818176526
+53,Norwegian Sea,472YS,Nephtys ciliata,0,GAM,0.7004550797252732
+53,Norwegian Sea,L9NW8,Alexandrium tamarense,0,GAM,0.5890296840000095
+53,Norwegian Sea,QSCF,Caprella mutica,0,GAM,0.36655484008004546
+54,Barents Sea,T8WJW,Thalassiosira nordenskioeldii,31.5,GAM,1.638194439788072
+54,Barents Sea,PGMCT,Fucus serratus,31.5,GAM,1.216931026201871
+54,Barents Sea,LWMWN,Asterionellopsis glacialis,31.5,GAM,1.1950895627397216
+54,Barents Sea,NFCHP,Ectocarpus siliculosus,31.5,GAM,1.190516044882313
+54,Barents Sea,PHYYY,Halosiphon tomentosus,31.5,GAM,1.1762920099690464
+54,Barents Sea,RZPNM,Porphyra umbilicalis,31.5,GAM,1.172835266428043
+54,Barents Sea,3JBV8,Halichoerus grypus,31.5,GAM,1.1535118741154955
+54,Barents Sea,42Z4T,Micromesistius poutassou,31.5,GAM,1.14876887984388
+54,Barents Sea,44RHY,Mya arenaria,31.5,GAM,1.1334162636471479
+54,Barents Sea,PGJ56,Fucus evanescens,31.5,GAM,1.0707782206018595
+54,Barents Sea,7CXK2,Tubificoides benedii,31.5,GAM,1.0360779406563507
+54,Barents Sea,36PZC,Dipolydora quadrilobata,31.5,GAM,1.0346413330089752
+54,Barents Sea,32WFN,Cyclopterus lumpus,31.5,GAM,1.027336694775096
 54,Barents Sea,59K2N,Tubularia indivisa,28,GAM,
 54,Barents Sea,PGHVY,Fucus distichus,27,GAM,
-54,Barents Sea,R48N,Carcinus maenas,26.5,GAM,1.059161226110569
-54,Barents Sea,472YS,Nephtys ciliata,22.5,GAM,1.1042388145800963
-54,Barents Sea,3VNQM,Littorina obtusata,22.5,GAM,0.9967161844521056
+54,Barents Sea,472YS,Nephtys ciliata,26.5,GAM,1.1106614978777365
+54,Barents Sea,3VNQM,Littorina obtusata,22.5,GAM,0.9909830907473811
+54,Barents Sea,L9NRY,Alexandrium minutum,21,GAM,0.7541281883025324
 54,Barents Sea,3BT78,Euchone incolor,21,decision rules,
 54,Barents Sea,B29V,Agonus cataphractus,21,decision rules,
-54,Barents Sea,L9NRY,Alexandrium minutum,21,decision rules,
 54,Barents Sea,3HRPR,Gymnodinium aureolum,15,decision rules,
 54,Barents Sea,MV9KS,Coscinodiscus wailesii,14.5,decision rules,
-54,Barents Sea,4VRP9,Scolelepis korsuni,13.5,GAM,0.9080757536354288
+54,Barents Sea,53ML9,Syllidia armata,14,decision rules,
+54,Barents Sea,4VRP9,Scolelepis korsuni,13.5,GAM,0.9084441785048529
 54,Barents Sea,LBG2M,Apedinella radians,11.5,decision rules,
-54,Barents Sea,N4VRP,Codium fragile,10.5,GAM,0.870538475528673
-54,Barents Sea,564M4,Tharyx killariensis,10.5,GAM,0.8217195455192353
-54,Barents Sea,SKMYS,Pterosperma cristatum,10.5,GAM,0.7985920422803813
-54,Barents Sea,6WGQH,Pseudopotamilla reniformis,10.5,GAM,0.6373809426759557
-54,Barents Sea,53ML9,Syllidia armata,10.5,decision rules,
+54,Barents Sea,N4VRP,Codium fragile,10.5,GAM,0.8705384755661729
+54,Barents Sea,564M4,Tharyx killariensis,10.5,GAM,0.8223789500224594
+54,Barents Sea,SKMYS,Pterosperma cristatum,10.5,GAM,0.7985920422803814
+54,Barents Sea,6WGQH,Pseudopotamilla reniformis,10.5,GAM,0.6373809426943021
 54,Barents Sea,TB5V,Chaetoceros lorenzianus,10.5,decision rules,
-54,Barents Sea,VJY5B,Lessardia elongata,4.5,GAM,0.6943155476827568
-54,Barents Sea,QSCF,Caprella mutica,2.5,GAM,0.6985308740610886
-54,Barents Sea,SHPCB,Rhizosolenia setigera,0,GAM,0.6674518508188753
-54,Barents Sea,NFDLC,Dinobryon faculiferum,0,GAM,0.6330253115976785
-54,Barents Sea,SHPG2,Rhizosolenia styliformis,0,GAM,0.6107488456346635
-54,Barents Sea,36PZF,Dipolydora socialis,0,GAM,0.5808449200296332
-54,Barents Sea,RVKDP,Pronoctiluca pelagica,0,GAM,0.5484273183105811
-54,Barents Sea,RWNKZ,Prorocentrum cordatum,0,GAM,0.4576284832187498
-54,Barents Sea,Q9BCD,Karenia mikimotoi,0,GAM,0.27780624022609246
-54,Barents Sea,Q9CYR,Karlodinium veneficum,0,GAM,0.2555162060165908
-54,Barents Sea,5XNK6,Chaetoceros concavicornis,0,GAM,0.24588340090369074
+54,Barents Sea,QSCF,Caprella mutica,2.5,GAM,0.6985308740547251
+54,Barents Sea,VJY5B,Lessardia elongata,0,GAM,0.694315547682757
+54,Barents Sea,SHPCB,Rhizosolenia setigera,0,GAM,0.667451850847167
+54,Barents Sea,NFDLC,Dinobryon faculiferum,0,GAM,0.6330253115842907
+54,Barents Sea,SHPG2,Rhizosolenia styliformis,0,GAM,0.610748845651022
+54,Barents Sea,36PZF,Dipolydora socialis,0,GAM,0.5808449200338855
+54,Barents Sea,RVKDP,Pronoctiluca pelagica,0,GAM,0.5754199347028808
+54,Barents Sea,RWNKZ,Prorocentrum cordatum,0,GAM,0.45762848322600863
+54,Barents Sea,Q9BCD,Karenia mikimotoi,0,GAM,0.27780624022609307
+54,Barents Sea,Q9CYR,Karlodinium veneficum,0,GAM,0.25632165450067507
+54,Barents Sea,5XNK6,Chaetoceros concavicornis,0,GAM,0.24588340083771282
